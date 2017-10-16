@@ -1,0 +1,124 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Crear carpetas &gt; mkdir &#8212; documentación de TerminalLinux - 0.0</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Copiar carpetas y archivos &gt; cp" href="cp.html" />
+    <link rel="prev" title="Mostrar carpetas y archivos &gt; ls" href="ls.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="cp.html" title="Copiar carpetas y archivos &gt; cp"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="ls.html" title="Mostrar carpetas y archivos &gt; ls"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">documentación de TerminalLinux - 0.0</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="comandos.html" accesskey="U">Comandos</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="crear-carpetas-mkdir">
+<h1>Crear carpetas &gt; mkdir<a class="headerlink" href="#crear-carpetas-mkdir" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> mkdir</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/mkdir">https://linux.die.net/man/1/mkdir</a></p>
+<p><strong>Descripción:</strong> Crear carpetas o directorios, siempre y cuando no existan.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">mkdir</span></code> o <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">mkdir</span> <span class="pre">&gt;</span> <span class="pre">mkdir.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
+<img alt="_images/mkdir.png" src="_images/mkdir.png" />
+<p><strong>Algunas Opciones:</strong></p>
+<p><code class="docutils literal"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Explique qué se está haciendo.</p>
+<p><code class="docutils literal"><span class="pre">-p,</span> <span class="pre">--parents</span></code> Si no hay errores, cree directorios para padres según sea necesario</p>
+<p><code class="docutils literal"><span class="pre">--version</span></code> Muestra la versión de la herramienta mkdir.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">-v</span> <span class="pre">hola</span></code>, lo más básico es crear un directorio, en el ejemplo se creará un nuevo folder llamado “hola”.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">-vp</span> <span class="pre">hola{1..5}/{1,2,3}</span></code>, en este ejemplo se crean varias carpetas a la vez. Se crearán 5 carpetas (hola1,hola2,hola3,hola4 y hola5) padres y 3 carpetas (1,2,3) hijas en cada uno de ellas.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Tema anterior</h4>
+  <p class="topless"><a href="ls.html"
+                        title="capítulo anterior">Mostrar carpetas y archivos &gt; ls</a></p>
+  <h4>Próximo tema</h4>
+  <p class="topless"><a href="cp.html"
+                        title="próximo capítulo">Copiar carpetas y archivos &gt; cp</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Esta página</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mkdir.rst.txt"
+            rel="nofollow">Mostrar el código</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Búsqueda rápida</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Ir a" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="cp.html" title="Copiar carpetas y archivos &gt; cp"
+             >siguiente</a> |</li>
+        <li class="right" >
+          <a href="ls.html" title="Mostrar carpetas y archivos &gt; ls"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">documentación de TerminalLinux - 0.0</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="comandos.html" >Comandos</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Derechos de autor 2017, Orlando Palencia Belloso.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
+    </div>
+  </body>
+</html>

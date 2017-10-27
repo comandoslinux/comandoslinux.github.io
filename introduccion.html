@@ -64,6 +64,22 @@ todos tienen algo en comun, UNA TERMINAL, con la cual se puede hacer grandes cos
 <div class="section" id="nota">
 <h2>Nota<a class="headerlink" href="#nota" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Toda línea que inicie con el símbolo de dolar ($), significa que hay que ejecutar dicha instrucción en una terminal, excepto dicho símbolo.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Para la manipulación de todo el contenido que se encuentra en / y para algunas herramientas como fdisk, es necesario anteponer <strong>sudo</strong> para que se ejecute la tarea a realizar.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Los comandos <code class="docutils literal"><span class="pre">$</span> <span class="pre">clear</span></code> y <code class="docutils literal"><span class="pre">$</span> <span class="pre">cd</span></code> son fundamentales y sólo los mencionaré en esta intro, el primero simplemente me limpia la terminal y el segundo cambia de directorio en la terminal.</p>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ fdisk -l
+bash: fdisk: command not found
+
+Si al ejecutar un comando y sale éste mensaje, significa dos cosas,
+la primera que dicho commando requiere permisos de sudo o la segunda
+que dicha herramienta que se pretende usar no está instalada en la distro.
+</pre></div>
+</div>
 </div>
 <div class="section" id="advertencia">
 <h2>Advertencia<a class="headerlink" href="#advertencia" title="Enlazar permanentemente con este título">¶</a></h2>

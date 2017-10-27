@@ -18,6 +18,24 @@ Nota
 
 Toda línea que inicie con el símbolo de dolar ($), significa que hay que ejecutar dicha instrucción en una terminal, excepto dicho símbolo.
 
+.. note::
+
+   Para la manipulación de todo el contenido que se encuentra en / y para algunas herramientas como fdisk, es necesario anteponer **sudo** para que se ejecute la tarea a realizar.
+
+.. note::
+
+   Los comandos ``$ clear`` y ``$ cd`` son fundamentales y sólo los mencionaré en esta intro, el primero simplemente me limpia la terminal y el segundo cambia de directorio en la terminal.
+
+::
+   
+   $ fdisk -l
+   bash: fdisk: command not found
+
+   Si al ejecutar un comando y sale éste mensaje, significa dos cosas,
+   la primera que dicho commando requiere permisos de sudo o la segunda 
+   que dicha herramienta que se pretende usar no está instalada en la distro.
+
+
 Advertencia
 -----------
 

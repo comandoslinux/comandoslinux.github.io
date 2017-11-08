@@ -16,3 +16,6 @@ Comandos
    chmod
    apropos
    wget
+   chown
+   ln
+   dd

@@ -32,6 +32,11 @@ Buscar carpetas y archivos > find
 
 **Ejemplo 4:** ``$ sudo find / -size +5M -name "*.jpg"``, busca todas las imagenes .jpg que su peso sea mayor a 5 MB.
 
+**Ejemplo 5:** ``$ find /home/opalencia -type d -empty > emptyDirec.txt``, busca todas las carpetas que estén vacías en la carpeta home del usuario opalencia y dicha lista la escribe en un archivo de texto.
+
+**Ejemplo 6:** ``$ find -type d -empty -delete``, busca todas las carpetas que estén vacías en la carpeta actual y las elimina. **Peligro:** Usar con prudencia éste ejemplo.
+
+ 
 
 
 

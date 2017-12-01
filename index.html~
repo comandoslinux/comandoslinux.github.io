@@ -23,8 +23,6 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/sidebar.js"></script>
-    <!-- Prueba chatango -->
-    <script id="cid0020000171802294627" data-cfasync="false" async src="https://st.chatango.com/js/gz/emb.js" style="width: 600px;height: 400px;">{"handle":"comandoslinux2","arch":"js","styles":{"a":"0084ef","b":100,"c":"FFFFFF","d":"FFFFFF","k":"0084ef","l":"0084ef","m":"0084ef","n":"FFFFFF","p":"10","q":"0084ef","r":100,"cv":1,"cvbg":"3366ff","cvw":100,"cvh":30,"pos":"br"}}</script>  
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Acerca de" href="acerca.html" /> 

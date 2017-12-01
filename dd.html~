@@ -23,37 +23,6 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/sidebar.js"></script>
-        <!-- Google structured data -->
-    <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "NewsArticle",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://comandoslinux.github.io/dd.html"
-  },
-  "headline": "Crear USB’s booteables > dd",
-  "image": [
-    "https://comandoslinux.github.io/_images/dd.png"
-   ],
-  "datePublished": "2017-11-22-22∶19∶00 CST",
-  "dateModified": "2017-11-22-22∶19∶00 CST",
-  "author": {
-    "@type": "Person",
-    "name": "Orlando Palencia Belloso"
-  },
-   "publisher": {
-    "@type": "Organization",
-    "name": "Github",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://github.com/fluidicon.png"
-    }
-  },
-  "description": "Crear USB’s booteables con el comando dd"
-}
-</script>
-    <!-- Google structured data -->
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Mostrar-Manipular informacion de red ip &gt; ip" href="ip.html" />

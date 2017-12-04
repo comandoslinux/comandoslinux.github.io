@@ -4,14 +4,14 @@ Introducción
 En el mundo de Linux hay diferentes distros (Sistemas Operativos), los cuales 
 todos tienen algo en comun, UNA TERMINAL, con la cual se puede hacer grandes cosas.
 
-Como usuario Linux, tarde o temprano, tendras de usar una terminal; es mejor comenzar temprano para evitarte dolores de cabeza al querer realizar alguna tarea que no has podido realizar, por el simple hecho que no conoces el poder que tiene un emulador de terminal.
+Como usuario Linux, tarde o temprano, tendrás que usar una terminal; es mejor comenzar temprano para evitarte dolores de cabeza al querer realizar alguna tarea que no has podido realizar, por el simple hecho que no conoces el poder que tiene un emulador de terminal.
 
-La comunicacion es directa, tu y tu computadora, el lenguage usado son los "commandos" para realizar alguna actividad.
+La comunicación es directa, tú y tu computadora, el lenguage usado son los "comandos" para realizar alguna actividad.
 
 Piensa en el siguiente caso:
  *Se te ha contratado como Administrador de Redes para un Banco del Sistema Financiero y la herramienta de trabajo que se te asigna es una simple consola. Que harias?*
 
-Este es una caso extremo, pero una vez hayas practicado con los comandos en una terminal, tu miedo a utilizar dicha herramienta ira desapareciendo.
+Este es una caso extremo, pero una vez hayas practicado con los comandos en una terminal, tu miedo a utilizar dicha herramienta irá desapareciendo.
 
 Nota
 ----
@@ -39,11 +39,11 @@ Toda línea que inicie con el símbolo de dolar ($), significa que hay que ejecu
 Advertencia
 -----------
 
-Utilizar algunos commandos puede ocasionar la destruccion de tu Sistema Operativo, por lo tanto hay que tener las precauciones necesarias para evitar formatear la Computadora o en el peor de los casos, si haces eso en tu trabajo, estaras despedido y con problemas muy graves.
+Utilizar algunos commandos puede ocasionar la destrucción de tu Sistema Operativo, por lo tanto hay que tener las precauciones necesarias para evitar formatear la Computadora o en el peor de los casos, si haces eso en tu trabajo, estarás despedido y con problemas muy graves.
 
-Formatear una particion del Disco Duro por ejemplo:
+Formatear una partición del Disco Duro por ejemplo:
 
 ``$ sudo mkfs.ext4 -v -L particionname /dev/sda1`` 
 
 
-Si la distro esta instalada en el /dev/sda1, en el ejemplo anterior, todo el sistema lo matarias. Por lo tanto, hay que estar bien seguro lo que se esta haciendo en la terminal.
+Si la distro esta instalada en el /dev/sda1, en el ejemplo anterior, todo el sistema lo matarías. Por lo tanto, hay que estar bien seguro lo que se está haciendo en la terminal.

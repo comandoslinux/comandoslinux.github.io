@@ -1,0 +1,137 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Formatear una usb o disco duro &#8212; documentación de TerminalLinux - 0.1</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Lista de pequeños videotutoriales" href="../tutoriales.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="../tutoriales.html" title="Lista de pequeños videotutoriales"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../tutoriales.html" accesskey="U">Lista de pequeños videotutoriales</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="formatear-una-usb-o-disco-duro">
+<h1>Formatear una usb o disco duro<a class="headerlink" href="#formatear-una-usb-o-disco-duro" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Ver el video</p>
+<p><a class="reference external" href="https://youtu.be/jWeuwrz2GpM">https://youtu.be/jWeuwrz2GpM</a></p>
+<p>Ver los pasos</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Tutorial para formatear una usb_disco
+
+!!REALIZAR RESPALDO ANTES DE FORMATEAR!!
+
+1. Identificar el disco o usb a formatear
+      $ lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE
+
+2. Desmontar el disco o usb
+      $ sudo umount -v /dev/sdbx
+
+3. Lanzamos la herramienta fdisk
+      $ sudo fdisk /dev/sdbx
+
+4. Creamos una nueva particion (ya dentro de fdisk)
+      $ n #dejar todo por defecto
+
+5. Escribir los cambios al disco o usb
+      $ w
+
+6. Volver a cargar los discos y usbs
+      $ sudo partprobe
+
+7. Formatear el disco o usb (ext2,3,4,fat,etc)
+      $ sudo mkfs.fat -F 32 -n 8GB -v /dev/sdbx # -F 12,16 o 32, -n label nombre
+      $ sudo mkfs.ext4 -v -L particionname /dev/sdax # para discos duros
+
+8. Si no se muestra la usb expulsarla
+      $ sudo eject -v /dev/sdbx
+
+9. Montar el disco o usb ya formateado
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Tema anterior</h4>
+  <p class="topless"><a href="../tutoriales.html"
+                        title="capítulo anterior">Lista de pequeños videotutoriales</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Esta página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/tutoriales/formatearusbdisco.rst.txt"
+            rel="nofollow">Mostrar el código</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Búsqueda rápida</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Ir a" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="../tutoriales.html" title="Lista de pequeños videotutoriales"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../tutoriales.html" >Lista de pequeños videotutoriales</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Derechos de autor 2017, Orlando Palencia Belloso.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
+  </body>
+</html>

@@ -5,4 +5,4 @@ Lista de pequeños videotutoriales
    :maxdepth: 2
    :caption: Tabla de Contenido:
 
-   formatearusbdisco
+   tutoriales/formatearusbdisco

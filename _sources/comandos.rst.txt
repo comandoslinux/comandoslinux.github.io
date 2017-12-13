@@ -5,19 +5,19 @@ Comandos
    :maxdepth: 2
    :caption: Tabla de Contenido:
 	
-   dir
-   ls
-   mkdir
-   cp
-   mv
-   rm
-   rename
-   find
-   chmod
-   apropos
-   wget
-   chown
-   ln
-   lsblk
-   dd
-   ip
+   comandos/dir
+   comandos/ls
+   comandos/mkdir
+   comandos/cp
+   comandos/mv
+   comandos/rm
+   comandos/rename
+   comandos/find
+   comandos/chmod
+   comandos/apropos
+   comandos/wget
+   comandos/chown
+   comandos/ln
+   comandos/lsblk
+   comandos/dd
+   comandos/ip

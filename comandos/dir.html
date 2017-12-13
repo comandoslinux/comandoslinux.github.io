@@ -1,0 +1,125 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mostrar carpetas y archivos &gt; dir &#8212; documentación de TerminalLinux - 0.1</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Mostrar carpetas y archivos &gt; ls" href="ls.html" />
+    <link rel="prev" title="Comandos" href="../comandos.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="ls.html" title="Mostrar carpetas y archivos &gt; ls"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="../comandos.html" title="Comandos"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../comandos.html" accesskey="U">Comandos</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mostrar-carpetas-y-archivos-dir">
+<h1>Mostrar carpetas y archivos &gt; dir<a class="headerlink" href="#mostrar-carpetas-y-archivos-dir" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> dir</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/dir">https://linux.die.net/man/1/dir</a></p>
+<p><strong>Descripción:</strong> Mostrar el contenido de un directorio o carpeta.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">dir</span></code> o <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">dir</span> <span class="pre">&gt;</span> <span class="pre">dir.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
+<img alt="../_images/dir2.png" src="../_images/dir2.png" />
+<p><strong>Algunas Opciones:</strong></p>
+<p><code class="docutils literal"><span class="pre">-I</span> <span class="pre">--ignore=PATTERN</span></code> No muestre las entradas implicadas que concuerden con el patrón de shell.</p>
+<p><code class="docutils literal"><span class="pre">-r,</span> <span class="pre">--reverse</span></code> Orden inverso mientras se clasifica.</p>
+<p><code class="docutils literal"><span class="pre">-m</span></code> Llenar el ancho con una lista de entradas separadas por comas.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">dir</span> <span class="pre">-I*.jpg</span></code>, para este caso el PATHERN es <code class="docutils literal"><span class="pre">*.jpg</span></code>, lo que implica que omitira todos los archivos que terminen en .jpg.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">dir</span> <span class="pre">-I*.jpg</span> <span class="pre">-I*.JPG</span> <span class="pre">-I*.png</span></code>, este ejemplo es igual que el anterior (omitirá todos los archivos que terminen en .jpg, .JPG y .png), se puede ver que es posible agregar varias opciones en una sola línea.</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">dir</span> <span class="pre">-r</span></code>, mostrará en orden descendente los archivos y carpetas, al usar dir sin argumentos por defecto los ordena ascendentemente.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Tema anterior</h4>
+  <p class="topless"><a href="../comandos.html"
+                        title="capítulo anterior">Comandos</a></p>
+  <h4>Próximo tema</h4>
+  <p class="topless"><a href="ls.html"
+                        title="próximo capítulo">Mostrar carpetas y archivos &gt; ls</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Esta página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/comandos/dir.rst.txt"
+            rel="nofollow">Mostrar el código</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Búsqueda rápida</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Ir a" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="ls.html" title="Mostrar carpetas y archivos &gt; ls"
+             >siguiente</a> |</li>
+        <li class="right" >
+          <a href="../comandos.html" title="Comandos"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../comandos.html" >Comandos</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Derechos de autor 2017, Orlando Palencia Belloso.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
+  </body>
+</html>

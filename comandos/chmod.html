@@ -1,0 +1,129 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Cambiar permisos a carpetas y archivos &gt; chmod &#8212; documentación de TerminalLinux - 0.1</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Buscar un comando por su descripción &gt; apropos" href="apropos.html" />
+    <link rel="prev" title="Buscar carpetas y archivos &gt; find" href="find.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="apropos.html" title="Buscar un comando por su descripción &gt; apropos"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="find.html" title="Buscar carpetas y archivos &gt; find"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../comandos.html" accesskey="U">Comandos</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cambiar-permisos-a-carpetas-y-archivos-chmod">
+<h1>Cambiar permisos a carpetas y archivos &gt; chmod<a class="headerlink" href="#cambiar-permisos-a-carpetas-y-archivos-chmod" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> chmod</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/chmod">https://linux.die.net/man/1/chmod</a></p>
+<p><strong>Descripción:</strong> Cambiar permisos a carpetas y archivos.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">chmod</span></code> o <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">chmod</span> <span class="pre">&gt;</span> <span class="pre">chmod.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
+<img alt="../_images/chmod.png" src="../_images/chmod.png" />
+<p><strong>Algunas Opciones:</strong></p>
+<p>“rwxXst” Estas son las letras que sirven como parámetros para realizar los cambios de permisos.</p>
+<p>“r = read = lectura”, “w = write = escritura”, “x = execute = ejecución”, “X = execute, sólo si el archivo es un folder”, “s = asignar a usuario o grupo un ID en ejecución”, “t = indicador de eliminación restringida”</p>
+<p>“+” El símbolo mas agrega el permiso a asignar (rwxXst).</p>
+<p>“-“ El símbolo menos quita el permiso a asignar (rwxXst).</p>
+<p>“ugoa” Controla el acceso de los usuarios al archivo o carpeta. “u = solo el dueño del archivo lo puede manipular, g = otros usuarios que pertenezcan al mismo grupo lo pueden manipular, o = otros usuarios que no pertenecen al mismo grupo lo pueden manipular, a = todos los usuarios lo pueden manipular (está por defecto sino se asigna ninguna ugoa)”.</p>
+<p><code class="docutils literal"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Explique qué se está haciendo.</p>
+<p><code class="docutils literal"><span class="pre">-c,</span> <span class="pre">--changes</span></code> Igual que verbose, pero sólo cuando los cambios se hayan realizado con éxito.</p>
+<p><code class="docutils literal"><span class="pre">-R,</span> <span class="pre">--recursive</span></code> Cambiar los archivos y carpetas de forma recursiva.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">chmod</span> <span class="pre">-v</span> <span class="pre">u+x</span> <span class="pre">backupFolder.sh</span></code>, he creado un archivo bash que realice un respaldo de la documentación que estoy haciendo y que lo guarde en Dropbox, sólo el usuario opalencia debe manipular dicho script (u) y para que se ejecute va la (x), como se puede apreciar en la imagen de arriba, si otro usuario trata de ejecutarlo no se lo permitirá por los permisos.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">chmod</span> <span class="pre">-cR</span> <span class="pre">a-w</span> <span class="pre">muchos</span></code>, tengo una carpeta “muchos” que contiene varias carpetas y archivos, lo que le digo es que le quite de forma recursiva los permisos de escritura (w) a todo su contenido y además que ningún usuario tenga permisos de escritura, incluido el dueño.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Tema anterior</h4>
+  <p class="topless"><a href="find.html"
+                        title="capítulo anterior">Buscar carpetas y archivos &gt; find</a></p>
+  <h4>Próximo tema</h4>
+  <p class="topless"><a href="apropos.html"
+                        title="próximo capítulo">Buscar un comando por su descripción &gt; apropos</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Esta página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/comandos/chmod.rst.txt"
+            rel="nofollow">Mostrar el código</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Búsqueda rápida</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Ir a" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="apropos.html" title="Buscar un comando por su descripción &gt; apropos"
+             >siguiente</a> |</li>
+        <li class="right" >
+          <a href="find.html" title="Buscar carpetas y archivos &gt; find"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../comandos.html" >Comandos</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Derechos de autor 2017, Orlando Palencia Belloso.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
+  </body>
+</html>

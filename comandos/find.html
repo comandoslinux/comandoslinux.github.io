@@ -1,0 +1,128 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Buscar carpetas y archivos &gt; find &#8212; documentación de TerminalLinux - 0.1</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Cambiar permisos a carpetas y archivos &gt; chmod" href="chmod.html" />
+    <link rel="prev" title="Renombrar archivos masivos &gt; rename" href="rename.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="chmod.html" title="Cambiar permisos a carpetas y archivos &gt; chmod"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="rename.html" title="Renombrar archivos masivos &gt; rename"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../comandos.html" accesskey="U">Comandos</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="buscar-carpetas-y-archivos-find">
+<h1>Buscar carpetas y archivos &gt; find<a class="headerlink" href="#buscar-carpetas-y-archivos-find" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> find</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/find">https://linux.die.net/man/1/find</a></p>
+<p><strong>Descripción:</strong> Buscar archivos en una jerarquía de directorios.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">find</span></code> o <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">find</span> <span class="pre">&gt;</span> <span class="pre">find.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
+<img alt="../_images/find.png" src="../_images/find.png" />
+<p><strong>Algunas Opciones:</strong></p>
+<p><code class="docutils literal"><span class="pre">-name</span> <span class="pre">pattern</span></code> Buscar por nombre según el patrón especificado.</p>
+<p><code class="docutils literal"><span class="pre">-iname</span> <span class="pre">pattern</span></code> Buscar por nombre según el patrón especificado, sin tomar en cuenta mayúsculas y minúsculas.</p>
+<p><code class="docutils literal"><span class="pre">-size</span> <span class="pre">n[cwbkMG]</span></code> Buscar por el tamaño de los archivos. [c = bytes, w = two-byte, b = 512-byte, k = Kilobytes, M = Megabytes, G = Gigabytes].</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">find</span> <span class="pre">Music</span> <span class="pre">-name</span> <span class="pre">&quot;*.txt&quot;</span></code>, busca todos los archivos con extensión .txt contenidos en la carpeta Music y sus respectivas subcarpetas. Es importante que el pattern valla encerrado en comillas así como está en el ejemplo, de lo contrario dará errores.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">/</span> <span class="pre">-iname</span> <span class="pre">&quot;boa&quot;</span></code>, busca en toda la distro por archivos o carpetas con el nombre de boa, sin importar si el nombre está en mayúsculas o minúsculas.</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">/</span> <span class="pre">-size</span> <span class="pre">+1G</span> <span class="pre">-and</span> <span class="pre">-size</span> <span class="pre">-10G</span></code>, busca los archivos en toda la distro que, su tamaño sea mayor a 1 GB y menor a 10 GB.</p>
+<p><strong>Ejemplo 4:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">/</span> <span class="pre">-size</span> <span class="pre">+5M</span> <span class="pre">-name</span> <span class="pre">&quot;*.jpg&quot;</span></code>, busca todas las imagenes .jpg que su peso sea mayor a 5 MB.</p>
+<p><strong>Ejemplo 5:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">find</span> <span class="pre">/home/opalencia</span> <span class="pre">-type</span> <span class="pre">d</span> <span class="pre">-empty</span> <span class="pre">&gt;</span> <span class="pre">emptyDirec.txt</span></code>, busca todas las carpetas que estén vacías en la carpeta home del usuario opalencia y dicha lista la escribe en un archivo de texto.</p>
+<p><strong>Ejemplo 6:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">find</span> <span class="pre">-type</span> <span class="pre">d</span> <span class="pre">-empty</span> <span class="pre">-delete</span></code>, busca todas las carpetas que estén vacías en la carpeta actual y las elimina. <strong>Peligro:</strong> Usar con prudencia éste ejemplo.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Tema anterior</h4>
+  <p class="topless"><a href="rename.html"
+                        title="capítulo anterior">Renombrar archivos masivos &gt; rename</a></p>
+  <h4>Próximo tema</h4>
+  <p class="topless"><a href="chmod.html"
+                        title="próximo capítulo">Cambiar permisos a carpetas y archivos &gt; chmod</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Esta página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/comandos/find.rst.txt"
+            rel="nofollow">Mostrar el código</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Búsqueda rápida</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Ir a" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="chmod.html" title="Cambiar permisos a carpetas y archivos &gt; chmod"
+             >siguiente</a> |</li>
+        <li class="right" >
+          <a href="rename.html" title="Renombrar archivos masivos &gt; rename"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../comandos.html" >Comandos</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Derechos de autor 2017, Orlando Palencia Belloso.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
+  </body>
+</html>

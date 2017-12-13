@@ -1,0 +1,124 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mostrar-Manipular informacion de red ip &gt; ip &#8212; documentación de TerminalLinux - 0.1</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Lista de pequeños videotutoriales" href="../tutoriales.html" />
+    <link rel="prev" title="Crear USB’s booteables &gt; dd" href="dd.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="../tutoriales.html" title="Lista de pequeños videotutoriales"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="dd.html" title="Crear USB’s booteables &gt; dd"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../comandos.html" accesskey="U">Comandos</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mostrar-manipular-informacion-de-red-ip-ip">
+<h1>Mostrar-Manipular informacion de red ip &gt; ip<a class="headerlink" href="#mostrar-manipular-informacion-de-red-ip-ip" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> ip</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/8/ip">https://linux.die.net/man/8/ip</a></p>
+<p><strong>Descripción:</strong> ip - mostrar / manipular enrutamiento, dispositivos, ruteo de políticas y túneles. Este comando es muy util para administradores de red, pero para usuarios comunes con éstas opciones será más que suficiente.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ip</span></code> o <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ip</span> <span class="pre">&gt;</span> <span class="pre">ip.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
+<img alt="../_images/ip.png" src="../_images/ip.png" />
+<p><strong>Algunas Opciones:</strong></p>
+<p><code class="docutils literal"><span class="pre">address</span></code> Dirección de protocolo (IPv4 o IPv6) en un dispositivo.</p>
+<p><code class="docutils literal"><span class="pre">-V,</span> <span class="pre">-Version</span></code> Imprima la versión de la utilidad ip y salga.</p>
+<p><code class="docutils literal"><span class="pre">route</span></code> Mostrar información relevante del router.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">ip</span> <span class="pre">address</span></code>, en este ejemplo se muestra toda la información relevante para un usuario común, solo necesitamos conocer cuál es nuestra ip privada (se puede ver en la imagen manchada de arriba), ya sea ésta del protocolo IPv4 o IPv6. Para quien no sepa, la ip privada identifica de manera única a un dispositivo, pc, celular, tablet, etc., por tanto es información delicada que no se debe divulgar.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">ip</span> <span class="pre">route</span></code>, en este ejemplo se muestra información relevante del router, específicamente nos interesa conocer la ip que tiene asignada dicho dispositivo para realizar configuraciones. Todo router se configura accediendo por medio de su ip en un navegador web y pide usuario y clave; una vez tengamos toda esa información fácilmente se puede realizar algunas configuraciones importantes, tales como cambiar el nombre del SSID y asignar una clave a la misma, ya que las configuraciones por defecto de los router no son seguras.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Tema anterior</h4>
+  <p class="topless"><a href="dd.html"
+                        title="capítulo anterior">Crear USB’s booteables &gt; dd</a></p>
+  <h4>Próximo tema</h4>
+  <p class="topless"><a href="../tutoriales.html"
+                        title="próximo capítulo">Lista de pequeños videotutoriales</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Esta página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/comandos/ip.rst.txt"
+            rel="nofollow">Mostrar el código</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Búsqueda rápida</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Ir a" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="../tutoriales.html" title="Lista de pequeños videotutoriales"
+             >siguiente</a> |</li>
+        <li class="right" >
+          <a href="dd.html" title="Crear USB’s booteables &gt; dd"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../comandos.html" >Comandos</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Derechos de autor 2017, Orlando Palencia Belloso.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Buscar un comando por su descripción &gt; apropos &#8212; documentación de TerminalLinux - 0.1</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Descargar archivos de internet &gt; wget" href="wget.html" />
+    <link rel="prev" title="Cambiar permisos a carpetas y archivos &gt; chmod" href="chmod.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="wget.html" title="Descargar archivos de internet &gt; wget"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="chmod.html" title="Cambiar permisos a carpetas y archivos &gt; chmod"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../comandos.html" accesskey="U">Comandos</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="buscar-un-comando-por-su-descripcion-apropos">
+<h1>Buscar un comando por su descripción &gt; apropos<a class="headerlink" href="#buscar-un-comando-por-su-descripcion-apropos" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> apropos</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/apropos">https://linux.die.net/man/1/apropos</a></p>
+<p><strong>Descripción:</strong> Busca los nombres y descripciones de los comandos que coincidan con la palabra clave a buscar, es decir, que no conocemos el nombre del comando sino que solo su acción. Es importante porque muestra el número exacto de la man page a la que se quire acceder, ya que un comando puede tener varias man pages. Ejemplo: $ apropos -e «mount», mostrará mount (2) y mount (8) y para mostrar la man page específica habrá que colocar su número ($ man 2 mount o $ man 8 mount).</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Por lo general las man pages están en inglés, por lo tanto, la palabra clave que describa la acción debe ser en dicho idioma.</p>
+</div>
+<p><strong>Man page local:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">apropos</span></code> o <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">apropos</span> <span class="pre">&gt;</span> <span class="pre">apropos.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
+<img alt="../_images/apropos.png" src="../_images/apropos.png" />
+<p><strong>Algunas Opciones:</strong></p>
+<p><code class="docutils literal"><span class="pre">-e,</span> <span class="pre">--exact</span></code> Cada palabra clave se emparejará exactamente con los nombres y las descripciones de las man pages.</p>
+<p><code class="docutils literal"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Explique qué se está haciendo.</p>
+<p><code class="docutils literal"><span class="pre">-a,</span> <span class="pre">--and</span></code> Mostrar solo elementos que coincidan con todas las palabras clave proporcionadas. El valor predeterminado es mostrar los elementos que coinciden con cualquier palabra clave.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">apropos</span> <span class="pre">-e</span> <span class="pre">mount</span></code>, que busque las man pages que contengan la palabra clave “mount”.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">apropos</span> <span class="pre">-ea</span> <span class="pre">manipulate</span> <span class="pre">disk</span></code>, que busque las man pages en las cuales la descripción contenga las dos palabras “manipulate” y “disk”.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Tema anterior</h4>
+  <p class="topless"><a href="chmod.html"
+                        title="capítulo anterior">Cambiar permisos a carpetas y archivos &gt; chmod</a></p>
+  <h4>Próximo tema</h4>
+  <p class="topless"><a href="wget.html"
+                        title="próximo capítulo">Descargar archivos de internet &gt; wget</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Esta página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/comandos/apropos.rst.txt"
+            rel="nofollow">Mostrar el código</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Búsqueda rápida</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Ir a" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="wget.html" title="Descargar archivos de internet &gt; wget"
+             >siguiente</a> |</li>
+        <li class="right" >
+          <a href="chmod.html" title="Cambiar permisos a carpetas y archivos &gt; chmod"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../comandos.html" >Comandos</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Derechos de autor 2017, Orlando Palencia Belloso.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
+  </body>
+</html>

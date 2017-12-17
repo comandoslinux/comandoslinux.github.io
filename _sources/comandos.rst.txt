@@ -21,3 +21,4 @@ Comandos
    comandos/lsblk
    comandos/dd
    comandos/ip
+   comandos/df

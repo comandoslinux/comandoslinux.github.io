@@ -22,3 +22,4 @@ Comandos
    comandos/dd
    comandos/ip
    comandos/df
+   comandos/diff

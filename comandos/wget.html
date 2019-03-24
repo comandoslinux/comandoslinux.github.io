@@ -4,31 +4,24 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Descargar archivos de internet &gt; wget &#8212; documentación de TerminalLinux - 0.1</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Cambiar propietario y grupo de archivos &gt; chown" href="chown.html" />
     <link rel="prev" title="Buscar un comando por su descripción &gt; apropos" href="apropos.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navegación</h3>
       <ul>
@@ -56,18 +49,18 @@
 <p><strong>Nombre del comando:</strong> wget</p>
 <p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/wget">https://linux.die.net/man/1/wget</a></p>
 <p><strong>Descripción:</strong> Descargar archivos de internet de forma no interactiva. Soporta los protocolos HTTP, HTTPS, FTP, FTPS. Lo fundamental de este commando es restaurar descargas interrumpidas (por fallas electricas, internet lento, servidores caídos, entre otras razones), dicha tarea no la realizan los navegadores.</p>
-<p><strong>Man page local:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">wget</span></code> o <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">wget</span> <span class="pre">&gt;</span> <span class="pre">wget.txt</span></code></p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">wget</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">wget</span> <span class="pre">&gt;</span> <span class="pre">wget.txt</span></code></p>
 <p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
 <img alt="../_images/wget.png" src="../_images/wget.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal"><span class="pre">-c,</span> <span class="pre">--continue</span></code> Continúa la descarga en donde se quedó al interrumpirse.</p>
-<p><code class="docutils literal"><span class="pre">-i</span> <span class="pre">file</span></code> Descargar de forma masiva, todas las rutas de los archivos contenidos en un archivo de texto.</p>
-<p><code class="docutils literal"><span class="pre">--retry-connrefused</span></code> Intentá conectarte al servidor nuevamente si hay alguna falla.</p>
-<p><code class="docutils literal"><span class="pre">-T</span> <span class="pre">seconds,</span> <span class="pre">--timeout=seconds</span></code> Es el tiempo de espera para realizar peticiones a la red de internet, pasado dicho tiempo en segundos la descarga se cancelaría al no haber respuesta.</p>
-<p><code class="docutils literal"><span class="pre">-t</span> <span class="pre">number,</span> <span class="pre">--tries=number</span></code> Intenta conectarte n veces, 0 o inf intentará conectarse infinitamente.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">http://cdimage.kali.org/kali-2017.2/kali-linux-2017.2-amd64.iso</span></code>, en este ejemplo se descargará kali en la carpeta actual, si se desea descargar en un lugar específico, agregar dicha ruta: $ wget URL –directory-prefix=/path/to/folder.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">--continue</span> <span class="pre">http://cdimage.kali.org/kali-2017.2/kali-linux-2017.2-amd64.iso</span></code>, en este ejemplo se continuará la descarga de kali si por algún motivo se interrumpió. La desventaja que tiene es que hay que realizar la invocación de forma manual, lo ideal sería que lo haga automáticamente. Por ejemplo, dejas en tu hojar descargando un archivo muy grande y te vas todo el dia, se fue la luz a los pocos minutos que dejaste la casa; dicha descarga no avanzará a menos que le pongas el parámetro –continue, pero no hay nadie en la casa, todo ese tiempo será desperdiciado. Leyendo mas a fondo la man page, éstos parámetros son los que se deben agregar para que después de interrumpida la descarga se vuelva a reanudar automáticamente.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ wget -c --retry-connrefused -t 0 -T 180 http://cdimage.kali.org/kali-2017.2/kali-linux-2017.2-amd64.iso
+<p><code class="docutils literal notranslate"><span class="pre">-c,</span> <span class="pre">--continue</span></code> Continúa la descarga en donde se quedó al interrumpirse.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-i</span> <span class="pre">file</span></code> Descargar de forma masiva, todas las rutas de los archivos contenidos en un archivo de texto.</p>
+<p><code class="docutils literal notranslate"><span class="pre">--retry-connrefused</span></code> Intentá conectarte al servidor nuevamente si hay alguna falla.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-T</span> <span class="pre">seconds,</span> <span class="pre">--timeout=seconds</span></code> Es el tiempo de espera para realizar peticiones a la red de internet, pasado dicho tiempo en segundos la descarga se cancelaría al no haber respuesta.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">number,</span> <span class="pre">--tries=number</span></code> Intenta conectarte n veces, 0 o inf intentará conectarse infinitamente.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">http://cdimage.kali.org/kali-2017.2/kali-linux-2017.2-amd64.iso</span></code>, en este ejemplo se descargará kali en la carpeta actual, si se desea descargar en un lugar específico, agregar dicha ruta: $ wget URL –directory-prefix=/path/to/folder.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">--continue</span> <span class="pre">http://cdimage.kali.org/kali-2017.2/kali-linux-2017.2-amd64.iso</span></code>, en este ejemplo se continuará la descarga de kali si por algún motivo se interrumpió. La desventaja que tiene es que hay que realizar la invocación de forma manual, lo ideal sería que lo haga automáticamente. Por ejemplo, dejas en tu hojar descargando un archivo muy grande y te vas todo el dia, se fue la luz a los pocos minutos que dejaste la casa; dicha descarga no avanzará a menos que le pongas el parámetro –continue, pero no hay nadie en la casa, todo ese tiempo será desperdiciado. Leyendo mas a fondo la man page, éstos parámetros son los que se deben agregar para que después de interrumpida la descarga se vuelva a reanudar automáticamente.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wget -c --retry-connrefused -t 0 -T 180 http://cdimage.kali.org/kali-2017.2/kali-linux-2017.2-amd64.iso
 
 --retry-connrefused, conectate al server nuevamente.
 
@@ -78,7 +71,7 @@ Le he asignado 3 minutos para el caso particular que se fue la luz y
 el router tiene que reiniciarce nuevamente.
 </pre></div>
 </div>
-<p><strong>Ejemplo 3:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">-i</span> <span class="pre">allpackages.txt</span></code>, en este ejemplo se descargarán a la carpeta actual todos los archivos que contenga URL’S propiamente definidas en el archivo de texto “allpackages.txt”. En el archivo “allpackages.txt” no debe haber espacios ni nada raro, solo las URL’S separadas por un ENTER.</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">-i</span> <span class="pre">allpackages.txt</span></code>, en este ejemplo se descargarán a la carpeta actual todos los archivos que contenga URL’S propiamente definidas en el archivo de texto “allpackages.txt”. En el archivo “allpackages.txt” no debe haber espacios ni nada raro, solo las URL’S separadas por un ENTER.</p>
 </div>
 
 
@@ -102,12 +95,14 @@ el router tiene que reiniciarce nuevamente.
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Búsqueda rápida</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Ir a" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Ir a" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -131,8 +126,8 @@ el router tiene que reiniciarce nuevamente.
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Derechos de autor 2017, Orlando Palencia Belloso.
-      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Derechos de autor 2017 - 2019, Orlando Palencia Belloso.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

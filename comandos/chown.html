@@ -4,31 +4,24 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Cambiar propietario y grupo de archivos &gt; chown &#8212; documentación de TerminalLinux - 0.1</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Crear enlaces entre archivos &gt; ln" href="ln.html" />
     <link rel="prev" title="Descargar archivos de internet &gt; wget" href="wget.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navegación</h3>
       <ul>
@@ -56,16 +49,16 @@
 <p><strong>Nombre del comando:</strong> chown</p>
 <p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/chown">https://linux.die.net/man/1/chown</a></p>
 <p><strong>Descripción:</strong> Cambiar propietario y/o grupo de archivos. Para cambiar tanto el dueño como el grupo a un archivo o carpeta se usan los dos puntos, asi: usuario:grupo. Éste comando requiere privilegios de sudo, de no anteponerlo da la advertencia de “operación no permitida”.</p>
-<p><strong>Man page local:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">chown</span></code> o <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">chown</span> <span class="pre">&gt;</span> <span class="pre">chown.txt</span></code></p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">chown</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">chown</span> <span class="pre">&gt;</span> <span class="pre">chown.txt</span></code></p>
 <p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
 <img alt="../_images/chown.png" src="../_images/chown.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal"><span class="pre">-R,</span> <span class="pre">-r,</span> <span class="pre">--recursive</span></code> Cambiar en archivos y directorios recursivamente.</p>
-<p><code class="docutils literal"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Explique qué se está haciendo.</p>
-<p><code class="docutils literal"><span class="pre">-c,</span> <span class="pre">--changes</span></code> Igual que verbose pero informa sólo cuando se realiza un cambio.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-c</span> <span class="pre">root:root</span> <span class="pre">multi2</span></code>, en este ejemplo le cambio el propietario y grupo a la carpeta “multi2”, ahora el dueño será el usuario “root”; pero no así de su contenido interno.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-R</span> <span class="pre">demo:demo</span> <span class="pre">multi2</span></code>, aquí cambio el propietario y grupo a la carpeta “multi2”, ahora al usuario y grupo “demo” les pertenece todo el contenido de dicha carpeta.</p>
-<p><strong>Ejemplo 3:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-vR</span> <span class="pre">:opalencia</span> <span class="pre">multi2</span></code>, en este ejemplo le cambio únicamente el grupo a la carpeta “multi2”, el dueño sigue siendo “demo”, pero no así el grupo que ahora pertenece a “opalencia”.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-R,</span> <span class="pre">-r,</span> <span class="pre">--recursive</span></code> Cambiar en archivos y directorios recursivamente.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Explique qué se está haciendo.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-c,</span> <span class="pre">--changes</span></code> Igual que verbose pero informa sólo cuando se realiza un cambio.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-c</span> <span class="pre">root:root</span> <span class="pre">multi2</span></code>, en este ejemplo le cambio el propietario y grupo a la carpeta “multi2”, ahora el dueño será el usuario “root”; pero no así de su contenido interno.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-R</span> <span class="pre">demo:demo</span> <span class="pre">multi2</span></code>, aquí cambio el propietario y grupo a la carpeta “multi2”, ahora al usuario y grupo “demo” les pertenece todo el contenido de dicha carpeta.</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-vR</span> <span class="pre">:opalencia</span> <span class="pre">multi2</span></code>, en este ejemplo le cambio únicamente el grupo a la carpeta “multi2”, el dueño sigue siendo “demo”, pero no así el grupo que ahora pertenece a “opalencia”.</p>
 </div>
 
 
@@ -89,12 +82,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Búsqueda rápida</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Ir a" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Ir a" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -118,8 +113,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Derechos de autor 2017, Orlando Palencia Belloso.
-      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Derechos de autor 2017 - 2019, Orlando Palencia Belloso.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

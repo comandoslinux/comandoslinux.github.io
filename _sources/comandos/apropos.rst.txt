@@ -5,7 +5,7 @@ Buscar un comando por su descripción > apropos
 
 **Man page online:** https://linux.die.net/man/1/apropos
 
-**Descripción:** Busca los nombres y descripciones de los comandos que coincidan con la palabra clave a buscar, es decir, que no conocemos el nombre del comando sino que solo su acción. Es importante porque muestra el número exacto de la man page a la que se quire acceder, ya que un comando puede tener varias man pages. Ejemplo: $ apropos -e "mount", mostrará mount (2) y mount (8) y para mostrar la man page específica habrá que colocar su número ($ man 2 mount o $ man 8 mount).
+**Descripción:** Busca los nombres y descripciones de los comandos que coincidan con la palabra clave a buscar, es decir, que no conocemos el nombre del comando sino que solo su acción. Es importante porque muestra el número exacto de la man page a la que se quire acceder, ya que un comando puede tener varias man pages. Ejemplo: $ apropos -e 'mount', mostrará mount (2) y mount (8) y para mostrar la man page específica habrá que colocar su número ($ man 2 mount o $ man 8 mount).
 
 .. note::
 

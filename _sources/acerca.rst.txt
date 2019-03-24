@@ -1,7 +1,7 @@
 Acerca de
 =========
 
-Mi nombre es Orlando Palencia Belloso, un salvadoreño apasionado del "open source", me he 
+Mi nombre es Orlando Palencia Belloso, un salvadoreño apasionado del 'open source', me he 
 decidido por recopilar los comandos que se usan desde una consola de comandos o mejor dicho emulador de terminal; con el fin de culturizarme aún más sobre ésta maravillosa 
 herramienta y de paso compartir los conocimientos adquiridos.
 

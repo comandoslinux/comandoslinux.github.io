@@ -5,7 +5,7 @@ Crear enlaces entre archivos > ln
 
 **Man page online:** https://linux.die.net/man/1/ln
 
-**Descripción:** Crear enlaces o hipervínculos entre archivos. **Importante:** no acepta varios parámetros a la vez cuando se usa el parámetro "-t".
+**Descripción:** Crear enlaces o hipervínculos entre archivos. **Importante:** no acepta varios parámetros a la vez cuando se usa el parámetro '-t'.
 
 **Man page local:** ``$ man ln`` o ``$ man ln > ln.txt``
 

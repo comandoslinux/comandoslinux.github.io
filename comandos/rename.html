@@ -4,31 +4,24 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Renombrar archivos masivos &gt; rename &#8212; documentación de TerminalLinux - 0.1</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Buscar carpetas y archivos &gt; find" href="find.html" />
     <link rel="prev" title="Eliminar carpetas y archivos &gt; rm" href="rm.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navegación</h3>
       <ul>
@@ -56,18 +49,18 @@
 <p><strong>Nombre del comando:</strong> rename</p>
 <p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/rename">https://linux.die.net/man/1/rename</a></p>
 <p><strong>Descripción:</strong> Renombra varios archivos a la vez en una instrucción, en pocas palabras sustituye una palabra por otra en los archivos a renombrar.</p>
-<p><strong>Man page local:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">rename</span></code> o <code class="docutils literal"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">rename</span> <span class="pre">&gt;</span> <span class="pre">rename.txt</span></code></p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">rename</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">rename</span> <span class="pre">&gt;</span> <span class="pre">rename.txt</span></code></p>
 <p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
 <img alt="../_images/rename.png" src="../_images/rename.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal"><span class="pre">-n,</span> <span class="pre">-nono</span></code> Sin acción: imprima los nombres de los archivos para cambiar el nombre, pero no los renombre, es decir, que no realice el renombrado.</p>
-<p><code class="docutils literal"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Explique qué se está haciendo.</p>
-<p><code class="docutils literal"><span class="pre">-f,</span> <span class="pre">-force</span></code> Sobre escritura: permita que los archivos existentes se sobrescriban.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">rename</span> <span class="pre">-n</span> <span class="pre">'s/copy/renamed/'</span> <span class="pre">*.txt</span></code>, de todos los archivos contenidos en el folder actual y que tienen la extensión .txt, cámbiele o renómbrele la palabra “copy” por “renamed”.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal"><span class="pre">$</span> <span class="pre">rename</span> <span class="pre">-n</span> <span class="pre">'s/^nose//'</span> <span class="pre">*.txt</span></code>, de todos los archivos contenidos en el folder actual y que tienen la extensión .txt y además inician con la palabra “nose”, cámbiele o renómbrele la palabra “nose” por “nada”, es decir, que le quite la palabra “nose”.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-n,</span> <span class="pre">-nono</span></code> Sin acción: imprima los nombres de los archivos para cambiar el nombre, pero no los renombre, es decir, que no realice el renombrado.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Explique qué se está haciendo.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-f,</span> <span class="pre">-force</span></code> Sobre escritura: permita que los archivos existentes se sobrescriban.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">rename</span> <span class="pre">-n</span> <span class="pre">'s/copy/renamed/'</span> <span class="pre">*.txt</span></code>, de todos los archivos contenidos en el folder actual y que tienen la extensión .txt, cámbiele o renómbrele la palabra “copy” por “renamed”.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">rename</span> <span class="pre">-n</span> <span class="pre">'s/^nose//'</span> <span class="pre">*.txt</span></code>, de todos los archivos contenidos en el folder actual y que tienen la extensión .txt y además inician con la palabra “nose”, cámbiele o renómbrele la palabra “nose” por “nada”, es decir, que le quite la palabra “nose”.</p>
 <p><strong>Ejemplo 3:</strong> Este es un ejemplo en el que se renombran varios archivos por la extensión que éstos tienen y se usa el commando mv en vez de rename. Para ejecutar el ejemplo hay que crear un scrip rename.sh, darle permisos de ejecución y colocarlo en la carpeta que contiene los archivos a renombrar y luego ejecutarlo con <cite>./rename.sh</cite>. <strong>Consideraciones</strong>: los archivos no deben iniciar con caracteres especiales y tampoco debe haber espaciones en los nombres de los archivos. <strong>-%nombre archivo.txt</strong>, este es un ejemplo claro que no deben llamarse de esa manera los archivos, lo correcto sería: <strong>nombre-archivo.txt</strong>, por mencionar un ejemplo.</p>
 <p>rename.sh</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 
 i=1
 for FILE in `ls *.jpg`; do
@@ -105,12 +98,14 @@ done
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Búsqueda rápida</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Ir a" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Ir a" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -134,8 +129,8 @@ done
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Derechos de autor 2017, Orlando Palencia Belloso.
-      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Derechos de autor 2017 - 2019, Orlando Palencia Belloso.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

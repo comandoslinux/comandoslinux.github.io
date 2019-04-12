@@ -6,3 +6,4 @@ Lista de pequeños videotutoriales
    :caption: Tabla de Contenido:
 
    tutoriales/formatearusbdisco
+   tutoriales/desactivarefimokutil

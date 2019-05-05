@@ -1,0 +1,47 @@
+Resolver problemas usando la TTY
+--------------------------------
+
+Ver el video
+
+https://youtu.be/JX7JR91DlsM
+
+**¿Qué es esto de la tty?**
+
+En pocas palabras no es más que la terminal que usamos constantemente, con la diferencia, que al entrar en la tty no existe GUI (Grafical User Interface) y solo interactuamos con la computadora a nivel de texto; o sea, a la antigua a puro comandos únicamente usando el teclado. Esto es vital porque en ocaciones tenemos que resolver problemas ya que nuestra GUI Desktop (GNOME, KDE, Cinnamon, MATE, Unity, Xfce, etc.) se queda congelada y no podemos interactuar con ella gráficamente.
+
+**¿Cómo entro a la tty?**
+
+Hay varias tty's a las que se puede acceder con la combinación de teclas siguientes:
+
+TTY1: Ctrl + Alt + F1
+
+TTY2: Ctrl + Alt + F2
+
+TTY3: Ctrl + Alt + F3
+
+
+**¿Cómo salgo de la tty?**
+
+Por lo general se sale de las tty's con la combinación de teclado siguiente:
+
+Ctrl + Alt + F7
+
+Pero como ya conocemos algunos comandos, tales como cp, mv, rm, ls, dir, etc., fácilmente podemos interactuar con la tty. Cuando la GUI Desktop se congela por lo general al reiniciar la computadora se resuelve el problema, pero de no ser así, entonces habrá que hacer uso de nuestros conocimentos adquiridos para, por lo menos realizar un respaldo de la información de nuestra computadora, todo esto se puede hacer dentro de la tty. Los comandos a usar en este video tutorial son los siguientes:
+
+**mount, umount, dir, ls, du, lsblk, cp, shudown**
+
+Ver los pasos
+
+::
+
+  Usando la tty
+
+
+  1. Leer la man page del comando a usar, por si no nos acordamos de los parámetros
+       $ man shutdown
+
+  2. Realizar respaldo de información valiosa en un disco duro externo o usb
+       $ sudo cp -vR /media/usuario/carpeta /mnt o /media/usuario/usb
+
+  3. Reiniciar la computadora
+       $ sudo shutdown -r now

@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Desactivar/Activar sistema de arranque EFI &#8212; documentación de TerminalLinux - 0.1</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -19,6 +17,7 @@
     
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Resolver problemas usando la TTY" href="tty.html" />
     <link rel="prev" title="Formatear una usb o disco duro" href="formatearusbdisco.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -27,6 +26,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="Índice General"
              accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="tty.html" title="Resolver problemas usando la TTY"
+             accesskey="N">siguiente</a> |</li>
         <li class="right" >
           <a href="formatearusbdisco.html" title="Formatear una usb o disco duro"
              accesskey="P">anterior</a> |</li>
@@ -46,13 +48,13 @@
 <p>Es lo mismo, sólo el nombre ha cambiado a través de los años.</p>
 <p><strong>¿Cómo saber si mi computadora usa EFI?</strong></p>
 <ol class="arabic">
-<li><p class="first">Ingresar el siguiente comando en una terminal:</p>
+<li><p>Ingresar el siguiente comando en una terminal:</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">dmesg</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">'EFI</span> <span class="pre">v'</span></code></p>
 </li>
 </ol>
 <img alt="../_images/efi.png" src="../_images/efi.png" />
 <ol class="arabic simple" start="2">
-<li>Cuando se está instalando una distro si el hardware trae EFI el SO pedirá que se cree una partición para dicho sistema de arranque, la cual se puede verificar en la aplicación “System Monitor” en la pestaña de “File Systems” una vez haya iniciado el sistema operativo. Por lo general cualquier distro trae instaladada por defecto la aplicación “System Monitor”.</li>
+<li><p>Cuando se está instalando una distro si el hardware trae EFI el SO pedirá que se cree una partición para dicho sistema de arranque, la cual se puede verificar en la aplicación “System Monitor” en la pestaña de “File Systems” una vez haya iniciado el sistema operativo. Por lo general cualquier distro trae instaladada por defecto la aplicación “System Monitor”.</p></li>
 </ol>
 <img alt="../_images/systemmonitor.png" src="../_images/systemmonitor.png" />
 <p><strong>¿Por qué desactivar la EFI?</strong></p>
@@ -60,49 +62,50 @@
 <p><strong>¿Es seguro desactivar la EFI?</strong></p>
 <p>Eso sólo tú lo puedes contestar. Lo único que voy a mencionar es que al desactivar la EFI la computadora es más lenta al arrancar. Si tienes el tiempo y la paciencia para solventar cada uno de los inconvenientes que se presentan a la hora de trabajar con aplicaciones de virtualización, pues no es necesario desactivarla.</p>
 <ol class="arabic simple">
-<li>Error en VirtualBox al tener activado la EFI: “Kernel driver not installed(rc=-1908)”.</li>
+<li><p>Error en VirtualBox al tener activado la EFI: “Kernel driver not installed(rc=-1908)”.</p></li>
 </ol>
 <img alt="../_images/errorEFIvbox.png" src="../_images/errorEFIvbox.png" />
 <ol class="arabic simple" start="2">
-<li>En Android Studio, ni siquiera muestra error sólo no carga el dispositivo a emular. El usuario puede perder mucho tiempo buscando en el código y demás entorno de desarrollo para ver el motivo de que no cargue; más no sabe que el verdadero motivo podría estar relacionado con la EFI.</li>
+<li><p>En Android Studio, ni siquiera muestra error sólo no carga el dispositivo a emular. El usuario puede perder mucho tiempo buscando en el código y demás entorno de desarrollo para ver el motivo de que no cargue; más no sabe que el verdadero motivo podría estar relacionado con la EFI.</p></li>
 </ol>
 <img alt="../_images/errorEFIandroid.png" src="../_images/errorEFIandroid.png" />
 <p><strong>Estos son los pasos para desactivar la EFI</strong></p>
 <p>Se asumirá que la EFI se encuentra activa para poder seguir los siguientes pasos:</p>
 <ol class="arabic">
-<li><p class="first">Ingresar el siguiente comando y agregar una clave que sean números ya que se pedirá la posición de algunos caracteres de dicha clave, es una clave temporal así que no vale la pena complicarse la vida buscando una compleja:</p>
+<li><p>Ingresar el siguiente comando y agregar una clave que sean números ya que se pedirá la posición de algunos caracteres de dicha clave, es una clave temporal así que no vale la pena complicarse la vida buscando una compleja:</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">mokutil</span> <span class="pre">--disable-validation</span></code></p>
 </li>
 </ol>
 <img alt="../_images/efi1.png" src="../_images/efi1.png" />
 <ol class="arabic simple" start="2">
-<li>Cerrar toda aplicación abierta y reiniciar la computadora.</li>
-<li>Estar pendientes para ingresar cualquier tecla del teclado para poder configurar la EFI una vez haya cargado el sistema de arranque.</li>
+<li><p>Cerrar toda aplicación abierta y reiniciar la computadora.</p></li>
+<li><p>Estar pendientes para ingresar cualquier tecla del teclado para poder configurar la EFI una vez haya cargado el sistema de arranque.</p></li>
 </ol>
 <img alt="../_images/efi2.png" src="../_images/efi2.png" />
 <ol class="arabic simple" start="4">
-<li>Una vez se haya ingresado a la configuración de la EFI, hay que seleccionar la opción de “Change Secure Boot state” de las opciones que se muestran.</li>
+<li><p>Una vez se haya ingresado a la configuración de la EFI, hay que seleccionar la opción de “Change Secure Boot state” de las opciones que se muestran.</p></li>
 </ol>
 <img alt="../_images/efi3.jpg" src="../_images/efi3.jpg" />
 <ol class="arabic simple" start="5">
-<li>En la siguiente pantalla se pedirá ingresar un caracter de la clave que se estableció en el paso 1, se ingresa varias veces un caracter de dicha clave. Por ejemplo: la clave ingresada en el paso 1 fue: 12345678, cuando en la pantalla aparezca lo siguiente: “Enter password character 4:”, por dar un ejemplo, se ingresará sólo ese número “4” y dar un enter con el teclado y así sucesivamente hasta pasar a la siguiente pantalla. Por eso es que no se debió ingresar una clave compleja en el paso 1.</li>
+<li><p>En la siguiente pantalla se pedirá ingresar un caracter de la clave que se estableció en el paso 1, se ingresa varias veces un caracter de dicha clave. Por ejemplo: la clave ingresada en el paso 1 fue: 12345678, cuando en la pantalla aparezca lo siguiente: “Enter password character 4:”, por dar un ejemplo, se ingresará sólo ese número “4” y dar un enter con el teclado y así sucesivamente hasta pasar a la siguiente pantalla. Por eso es que no se debió ingresar una clave compleja en el paso 1.</p></li>
 </ol>
 <img alt="../_images/efi4.jpg" src="../_images/efi4.jpg" />
 <ol class="arabic simple" start="6">
-<li>Ahora hay que seleccionar la opción de “Yes” cuando se muestre la opción de “Disable Secure Boot”</li>
+<li><p>Ahora hay que seleccionar la opción de “Yes” cuando se muestre la opción de “Disable Secure Boot”</p></li>
 </ol>
 <img alt="../_images/efi5.jpg" src="../_images/efi5.jpg" />
 <ol class="arabic simple" start="7">
-<li>Para que todos los cambios se se vean reflejados hay que reiniciar la computadora como se muestra en la siguiente imagen.</li>
+<li><p>Para que todos los cambios se se vean reflejados hay que reiniciar la computadora como se muestra en la siguiente imagen.</p></li>
 </ol>
 <img alt="../_images/efi6.jpg" src="../_images/efi6.jpg" />
 <ol class="arabic simple" start="8">
-<li>Cada vez que se inicie la computadora ahora se mostrará el siguiente mensaje: “Booting in insecure mode”.</li>
+<li><p>Cada vez que se inicie la computadora ahora se mostrará el siguiente mensaje: “Booting in insecure mode”.</p></li>
 </ol>
 <img alt="../_images/efi7.jpg" src="../_images/efi7.jpg" />
 <p><strong>Para activala EFI seguir los pasos del 1 al 8, con la diferencia que en el paso 1 se ingresará el siguiente comando:</strong></p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">mokutil</span> <span class="pre">--enable-validation</span></code></div></blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">mokutil</span> <span class="pre">--enable-validation</span></code></p>
+</div></blockquote>
 </div>
 
 
@@ -114,6 +117,9 @@
   <h4>Tema anterior</h4>
   <p class="topless"><a href="formatearusbdisco.html"
                         title="capítulo anterior">Formatear una usb o disco duro</a></p>
+  <h4>Próximo tema</h4>
+  <p class="topless"><a href="tty.html"
+                        title="próximo capítulo">Resolver problemas usando la TTY</a></p>
   <div role="note" aria-label="source link">
     <h3>Esta página</h3>
     <ul class="this-page-menu">
@@ -127,8 +133,6 @@
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Ir a" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -144,6 +148,9 @@
           <a href="../genindex.html" title="Índice General"
              >índice</a></li>
         <li class="right" >
+          <a href="tty.html" title="Resolver problemas usando la TTY"
+             >siguiente</a> |</li>
+        <li class="right" >
           <a href="formatearusbdisco.html" title="Formatear una usb o disco duro"
              >anterior</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
@@ -152,7 +159,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Derechos de autor 2017 - 2019, Orlando Palencia Belloso.
-      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.
     </div>
   </body>
 </html>

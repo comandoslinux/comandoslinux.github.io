@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Crear USB’s booteables &gt; dd &#8212; documentación de TerminalLinux - 0.1</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -51,8 +49,8 @@
 <p><strong>Consideraciones:</strong> a) Se da por entendido que dicho comando borrará todo el contenido de la USB a usar y que se debe realizar un respaldo antes de crear la USB booteable. b) El comando dd no muestra barra de progreso, una vez se da enter hay que esperar pacientemente a que termine. c) El formato de la USB debe ser fat o fat32. d) Se debe ingresar a la bios para que en el sistema de arranque (MBR o UEFI) se seleccione la USB a bootear. e) En algunas pc con UEFI no reconoce la USB, buscar en google como resolver dicho problema.</p>
 <p><strong>Descripción:</strong> Copie un archivo, conviértalo y formatee de acuerdo con los operandos. No usar dicho comando para copiar archivos, la función principal es crear USB booteables. <strong>Importante:</strong> Al crear algunas distros booteables como “freeBSD” e intentar revisar el contenido luego de haberlas creado no se muestra dicha usb en tus dispositivos, pero sí la reconocerá la bios de tu motherboard; para comprabar que dicha usb si la reconoce tu distro, colocar el siguiente comando en la terminal “lsblk”, aunque no se pueda visualizar gráficamente la usb.</p>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Éste comando puede causar grandes daños irreparables, se recomienda estar bien despierto al usarlo.</p>
+<p class="admonition-title">Nota</p>
+<p>Éste comando puede causar grandes daños irreparables, se recomienda estar bien despierto al usarlo.</p>
 </div>
 <p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">dd</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">dd</span> <span class="pre">&gt;</span> <span class="pre">dd.txt</span></code></p>
 <p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
@@ -91,8 +89,6 @@
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Ir a" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -119,7 +115,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Derechos de autor 2017 - 2019, Orlando Palencia Belloso.
-      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.
     </div>
   </body>
 </html>

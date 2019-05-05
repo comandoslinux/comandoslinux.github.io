@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Introducción &#8212; documentación de TerminalLinux - 0.1</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -49,21 +47,21 @@
 todos tienen algo en comun, UNA TERMINAL, con la cual se puede hacer grandes cosas.</p>
 <p>Como usuario Linux, tarde o temprano, tendrás que usar una terminal; es mejor comenzar temprano para evitarte dolores de cabeza al querer realizar alguna tarea que no has podido realizar, por el simple hecho que no conoces el poder que tiene un emulador de terminal.</p>
 <p>La comunicación es directa, tú y tu computadora, el lenguage usado son los «comandos» para realizar alguna actividad.</p>
-<dl class="docutils">
-<dt>Piensa en el siguiente caso:</dt>
-<dd><em>Se te ha contratado como Administrador de Redes para un Banco del Sistema Financiero y la herramienta de trabajo que se te asigna es una simple consola. Que harias?</em></dd>
+<dl class="simple">
+<dt>Piensa en el siguiente caso:</dt><dd><p><em>Se te ha contratado como Administrador de Redes para un Banco del Sistema Financiero y la herramienta de trabajo que se te asigna es una simple consola. Que harias?</em></p>
+</dd>
 </dl>
 <p>Este es una caso extremo, pero una vez hayas practicado con los comandos en una terminal, tu miedo a utilizar dicha herramienta irá desapareciendo.</p>
 <div class="section" id="nota">
 <h2>Nota<a class="headerlink" href="#nota" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Toda línea que inicie con el símbolo de dolar ($), significa que hay que ejecutar dicha instrucción en una terminal, excepto dicho símbolo.</p>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Para la manipulación de todo el contenido que se encuentra en / y para algunas herramientas como fdisk, es necesario anteponer <strong>sudo</strong> para que se ejecute la tarea a realizar.</p>
+<p class="admonition-title">Nota</p>
+<p>Para la manipulación de todo el contenido que se encuentra en / y para algunas herramientas como fdisk, es necesario anteponer <strong>sudo</strong> para que se ejecute la tarea a realizar.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Los comandos <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">clear</span></code> y <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span></code> son fundamentales y sólo los mencionaré en esta intro, el primero simplemente me limpia la terminal y el segundo cambia de directorio en la terminal.</p>
+<p class="admonition-title">Nota</p>
+<p>Los comandos <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">clear</span> <span class="pre">-x</span></code> y <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span></code> son fundamentales y sólo los mencionaré en esta intro, el primero simplemente me limpia la terminal y el segundo cambia de directorio en la terminal. Aunque en el perfil de la terminal no esté seleccionado “limitar el desplazamiento hacia atrás”, el comando “clear” limpiará todos o la mayoria de los comandos ingresados, así que para evitar esto, se agrega el parámetro “clear -x”; de esta forma tendremos disponible todo el historial de comandos de la sesión actual por si los necesitamos como referencia.</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ fdisk -l
 bash: fdisk: command not found
@@ -89,7 +87,7 @@ que dicha herramienta que se pretende usar no está instalada en la distro.
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
+  <h3><a href="index.html">Tabla de contenido</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Introducción</a><ul>
 <li><a class="reference internal" href="#nota">Nota</a></li>
@@ -117,8 +115,6 @@ que dicha herramienta que se pretende usar no está instalada en la distro.
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Ir a" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -144,7 +140,7 @@ que dicha herramienta que se pretende usar no está instalada en la distro.
     </div>
     <div class="footer" role="contentinfo">
         &#169; Derechos de autor 2017 - 2019, Orlando Palencia Belloso.
-      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.
     </div>
   </body>
 </html>

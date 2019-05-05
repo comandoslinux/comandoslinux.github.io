@@ -24,7 +24,7 @@ Toda línea que inicie con el símbolo de dolar ($), significa que hay que ejecu
 
 .. note::
 
-   Los comandos ``$ clear`` y ``$ cd`` son fundamentales y sólo los mencionaré en esta intro, el primero simplemente me limpia la terminal y el segundo cambia de directorio en la terminal.
+   Los comandos ``$ clear -x`` y ``$ cd`` son fundamentales y sólo los mencionaré en esta intro, el primero simplemente me limpia la terminal y el segundo cambia de directorio en la terminal. Aunque en el perfil de la terminal no esté seleccionado 'limitar el desplazamiento hacia atrás', el comando 'clear' limpiará todos o la mayoria de los comandos ingresados, así que para evitar esto, se agrega el parámetro 'clear -x'; de esta forma tendremos disponible todo el historial de comandos de la sesión actual por si los necesitamos como referencia.
 
 ::
    

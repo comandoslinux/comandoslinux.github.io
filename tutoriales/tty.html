@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>Formatear una usb o disco duro &#8212; documentación de TerminalLinux - 0.1</title>
+    <title>Resolver problemas usando la TTY &#8212; documentación de TerminalLinux - 0.1</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
@@ -17,8 +17,7 @@
     
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="Desactivar/Activar sistema de arranque EFI" href="desactivarefimokutil.html" />
-    <link rel="prev" title="Lista de pequeños videotutoriales" href="../tutoriales.html" /> 
+    <link rel="prev" title="Desactivar/Activar sistema de arranque EFI" href="desactivarefimokutil.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navegación</h3>
@@ -28,9 +27,6 @@
              accesskey="I">índice</a></li>
         <li class="right" >
           <a href="desactivarefimokutil.html" title="Desactivar/Activar sistema de arranque EFI"
-             accesskey="N">siguiente</a> |</li>
-        <li class="right" >
-          <a href="../tutoriales.html" title="Lista de pequeños videotutoriales"
              accesskey="P">anterior</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../tutoriales.html" accesskey="U">Lista de pequeños videotutoriales</a> &#187;</li> 
@@ -42,41 +38,34 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="formatear-una-usb-o-disco-duro">
-<h1>Formatear una usb o disco duro<a class="headerlink" href="#formatear-una-usb-o-disco-duro" title="Enlazar permanentemente con este título">¶</a></h1>
+  <div class="section" id="resolver-problemas-usando-la-tty">
+<h1>Resolver problemas usando la TTY<a class="headerlink" href="#resolver-problemas-usando-la-tty" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Ver el video</p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=aJe5ZswPuBw">https://www.youtube.com/watch?v=aJe5ZswPuBw</a></p>
+<p><a class="reference external" href="https://youtu.be/JX7JR91DlsM">https://youtu.be/JX7JR91DlsM</a></p>
+<p><strong>¿Qué es esto de la tty?</strong></p>
+<p>En pocas palabras no es más que la terminal que usamos constantemente, con la diferencia, que al entrar en la tty no existe GUI (Grafical User Interface) y solo interactuamos con la computadora a nivel de texto; o sea, a la antigua a puro comandos únicamente usando el teclado. Esto es vital porque en ocaciones tenemos que resolver problemas ya que nuestra GUI Desktop (GNOME, KDE, Cinnamon, MATE, Unity, Xfce, etc.) se queda congelada y no podemos interactuar con ella gráficamente.</p>
+<p><strong>¿Cómo entro a la tty?</strong></p>
+<p>Hay varias tty’s a las que se puede acceder con la combinación de teclas siguientes:</p>
+<p>TTY1: Ctrl + Alt + F1</p>
+<p>TTY2: Ctrl + Alt + F2</p>
+<p>TTY3: Ctrl + Alt + F3</p>
+<p><strong>¿Cómo salgo de la tty?</strong></p>
+<p>Por lo general se sale de las tty’s con la combinación de teclado siguiente:</p>
+<p>Ctrl + Alt + F7</p>
+<p>Pero como ya conocemos algunos comandos, tales como cp, mv, rm, ls, dir, etc., fácilmente podemos interactuar con la tty. Cuando la GUI Desktop se congela por lo general al reiniciar la computadora se resuelve el problema, pero de no ser así, entonces habrá que hacer uso de nuestros conocimentos adquiridos para, por lo menos realizar un respaldo de la información de nuestra computadora, todo esto se puede hacer dentro de la tty. Los comandos a usar en este video tutorial son los siguientes:</p>
+<p><strong>mount, umount, dir, ls, du, lsblk, cp, shudown</strong></p>
 <p>Ver los pasos</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Tutorial para formatear una usb_disco
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Usando la tty
 
-!!REALIZAR RESPALDO ANTES DE FORMATEAR!!
 
-1. Identificar el disco o usb a formatear
-      $ lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE
+1. Leer la man page del comando a usar, por si no nos acordamos de los parámetros
+     $ man shutdown
 
-2. Desmontar el disco o usb
-      $ sudo umount -v /dev/sdbx
+2. Realizar respaldo de información valiosa en un disco duro externo o usb
+     $ sudo cp -vR /media/usuario/carpeta /mnt o /media/usuario/usb
 
-3. Lanzamos la herramienta fdisk
-      $ sudo fdisk /dev/sdbx
-
-4. Creamos una nueva particion (ya dentro de fdisk)
-      $ n #dejar todo por defecto
-
-5. Escribir los cambios al disco o usb
-      $ w
-
-6. Volver a cargar los discos y usbs
-      $ sudo partprobe
-
-7. Formatear el disco o usb (ext2,3,4,fat,etc)
-      $ sudo mkfs.fat -F 32 -n 8GB -v /dev/sdbx # -F 12,16 o 32, -n label nombre
-      $ sudo mkfs.ext4 -v -L particionname /dev/sdax # para discos duros
-
-8. Si no se muestra la usb expulsarla
-      $ sudo eject -v /dev/sdbx
-
-9. Montar el disco o usb ya formateado
+3. Reiniciar la computadora
+     $ sudo shutdown -r now
 </pre></div>
 </div>
 </div>
@@ -88,15 +77,12 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Tema anterior</h4>
-  <p class="topless"><a href="../tutoriales.html"
-                        title="capítulo anterior">Lista de pequeños videotutoriales</a></p>
-  <h4>Próximo tema</h4>
   <p class="topless"><a href="desactivarefimokutil.html"
-                        title="próximo capítulo">Desactivar/Activar sistema de arranque EFI</a></p>
+                        title="capítulo anterior">Desactivar/Activar sistema de arranque EFI</a></p>
   <div role="note" aria-label="source link">
     <h3>Esta página</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/tutoriales/formatearusbdisco.rst.txt"
+      <li><a href="../_sources/tutoriales/tty.rst.txt"
             rel="nofollow">Mostrar el código</a></li>
     </ul>
    </div>
@@ -122,9 +108,6 @@
              >índice</a></li>
         <li class="right" >
           <a href="desactivarefimokutil.html" title="Desactivar/Activar sistema de arranque EFI"
-             >siguiente</a> |</li>
-        <li class="right" >
-          <a href="../tutoriales.html" title="Lista de pequeños videotutoriales"
              >anterior</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">documentación de TerminalLinux - 0.1</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../tutoriales.html" >Lista de pequeños videotutoriales</a> &#187;</li> 

@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Eliminar carpetas y archivos &gt; rm &mdash; documentación de TerminalLinux - 0.2</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Renombrar archivos masivos &gt; rename" href="rename.html" />
+    <link rel="prev" title="MoverRenombrar carpetas y archivos &gt; mv" href="mv.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> TerminalLinux
+          
+
+          
+            
+            <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tabla de Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../acerca.html">Acerca de</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduccion.html">Introducción</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../comandos.html">Comandos</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../carpetasarchivos.html">Carpetas y Archivos</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dir.html">Mostrar carpetas y archivos &gt; dir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ls.html">Mostrar carpetas y archivos &gt; ls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mkdir.html">Crear carpetas &gt; mkdir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cp.html">Copiar carpetas y archivos &gt; cp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mv.html">MoverRenombrar carpetas y archivos &gt; mv</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Eliminar carpetas y archivos &gt; rm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rename.html">Renombrar archivos masivos &gt; rename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="find.html">Buscar carpetas y archivos &gt; find</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chmod.html">Cambiar permisos a carpetas y archivos &gt; chmod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apropos.html">Buscar un comando por su descripción &gt; apropos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chown.html">Cambiar propietario y grupo de archivos &gt; chown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diff.html">Comparar dos archivos &gt; diff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ln.html">Crear enlaces entre archivos &gt; ln</a></li>
+<li class="toctree-l3"><a class="reference internal" href="du.html">Estimar el peso en disco de archivos y carpetas &gt; du</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internet.html">Internet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red.html">Componentes de Red</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutoriales.html">Lista de pequeños videotutoriales</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TerminalLinux</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../comandos.html">Comandos</a> &raquo;</li>
+        
+          <li><a href="../carpetasarchivos.html">Carpetas y Archivos</a> &raquo;</li>
+        
+      <li>Eliminar carpetas y archivos &gt; rm</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/comandos/carpetasarchivos/rm.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eliminar-carpetas-y-archivos-rm">
+<h1>Eliminar carpetas y archivos &gt; rm<a class="headerlink" href="#eliminar-carpetas-y-archivos-rm" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> rm</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/rm">https://linux.die.net/man/1/rm</a></p>
+<p><strong>Descripción:</strong> Elimina archivos o carpetas.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">rm</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">rm</span> <span class="pre">&gt;</span> <span class="pre">rm.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
+<img alt="../../_images/rm.png" src="../../_images/rm.png" />
+<p><strong>Algunas Opciones:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">-d,</span> <span class="pre">--dir</span></code> Elimina carpetas vacías.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-i</span></code> Preguntar antes de eliminar.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Explique qué se está haciendo.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-r,</span> <span class="pre">-R,</span> <span class="pre">--recursive</span></code> Eliminar directorios y sus contenidos recursivamente.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">rm</span> <span class="pre">-vd</span> <span class="pre">hola</span></code>, elimina la carpeta hola, siempre y cuando exista y esté vacía.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">rm</span> <span class="pre">-vir</span> <span class="pre">hola</span></code>, elimina la carpeta hola y todo su contenido, pero antes pregunta si se quiere realizar la acción.</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">rm</span> <span class="pre">-vir</span> <span class="pre">./-hola</span></code>, a veces hay carpetas y archivos que inician con algún caracter especial, para dichos casos ésta es la forma de eliminarlos.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rename.html" class="btn btn-neutral float-right" title="Renombrar archivos masivos &gt; rename" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mv.html" class="btn btn-neutral float-left" title="MoverRenombrar carpetas y archivos &gt; mv" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 - 2019, Orlando Palencia Belloso
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

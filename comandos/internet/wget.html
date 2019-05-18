@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Descargar archivos de internet &gt; wget &mdash; documentación de TerminalLinux - 0.2</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Componentes de Red" href="../red.html" />
+    <link rel="prev" title="Internet" href="../internet.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> TerminalLinux
+          
+
+          
+            
+            <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tabla de Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../acerca.html">Acerca de</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduccion.html">Introducción</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../comandos.html">Comandos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../carpetasarchivos.html">Carpetas y Archivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../internet.html">Internet</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Descargar archivos de internet &gt; wget</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../red.html">Componentes de Red</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutoriales.html">Lista de pequeños videotutoriales</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TerminalLinux</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../comandos.html">Comandos</a> &raquo;</li>
+        
+          <li><a href="../internet.html">Internet</a> &raquo;</li>
+        
+      <li>Descargar archivos de internet &gt; wget</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/comandos/internet/wget.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="descargar-archivos-de-internet-wget">
+<h1>Descargar archivos de internet &gt; wget<a class="headerlink" href="#descargar-archivos-de-internet-wget" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> wget</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/wget">https://linux.die.net/man/1/wget</a></p>
+<p><strong>Descripción:</strong> Descargar archivos de internet de forma no interactiva. Soporta los protocolos HTTP, HTTPS, FTP, FTPS. Lo fundamental de este commando es restaurar descargas interrumpidas (por fallas electricas, internet lento, servidores caídos, entre otras razones), dicha tarea no la realizan los navegadores.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">wget</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">wget</span> <span class="pre">&gt;</span> <span class="pre">wget.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
+<img alt="../../_images/wget.png" src="../../_images/wget.png" />
+<p><strong>Algunas Opciones:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">-c,</span> <span class="pre">--continue</span></code> Continúa la descarga en donde se quedó al interrumpirse.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-i</span> <span class="pre">file</span></code> Descargar de forma masiva, todas las rutas de los archivos contenidos en un archivo de texto.</p>
+<p><code class="docutils literal notranslate"><span class="pre">--retry-connrefused</span></code> Intentá conectarte al servidor nuevamente si hay alguna falla.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-T</span> <span class="pre">seconds,</span> <span class="pre">--timeout=seconds</span></code> Es el tiempo de espera para realizar peticiones a la red de internet, pasado dicho tiempo en segundos la descarga se cancelaría al no haber respuesta.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">number,</span> <span class="pre">--tries=number</span></code> Intenta conectarte n veces, 0 o inf intentará conectarse infinitamente.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">http://cdimage.kali.org/kali-2017.2/kali-linux-2017.2-amd64.iso</span></code>, en este ejemplo se descargará kali en la carpeta actual, si se desea descargar en un lugar específico, agregar dicha ruta: $ wget URL –directory-prefix=/path/to/folder.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">--continue</span> <span class="pre">http://cdimage.kali.org/kali-2017.2/kali-linux-2017.2-amd64.iso</span></code>, en este ejemplo se continuará la descarga de kali si por algún motivo se interrumpió. La desventaja que tiene es que hay que realizar la invocación de forma manual, lo ideal sería que lo haga automáticamente. Por ejemplo, dejas en tu hojar descargando un archivo muy grande y te vas todo el dia, se fue la luz a los pocos minutos que dejaste la casa; dicha descarga no avanzará a menos que le pongas el parámetro –continue, pero no hay nadie en la casa, todo ese tiempo será desperdiciado. Leyendo mas a fondo la man page, éstos parámetros son los que se deben agregar para que después de interrumpida la descarga se vuelva a reanudar automáticamente.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wget -c --retry-connrefused -t 0 -T 180 http://cdimage.kali.org/kali-2017.2/kali-linux-2017.2-amd64.iso
+
+--retry-connrefused, conectate al server nuevamente.
+
+-t 0, intenta conectarte n veces, 0 significa infinitamente hasta descargar por completo el archivo.
+
+-T 180, si la descarga no se ha reaunudado despues de 3 minutos, ésta se cancelará.
+Le he asignado 3 minutos para el caso particular que se fue la luz y
+el router tiene que reiniciarce nuevamente.
+</pre></div>
+</div>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">wget</span> <span class="pre">-i</span> <span class="pre">allpackages.txt</span></code>, en este ejemplo se descargarán a la carpeta actual todos los archivos que contenga URL’S propiamente definidas en el archivo de texto “allpackages.txt”. En el archivo “allpackages.txt” no debe haber espacios ni nada raro, solo las URL’S separadas por un ENTER.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../red.html" class="btn btn-neutral float-right" title="Componentes de Red" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../internet.html" class="btn btn-neutral float-left" title="Internet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 - 2019, Orlando Palencia Belloso
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+Estimar el peso en disco de archivos y carpetas > du
+----------------------------------------------------
+
+**Nombre del comando:** du
+
+**Man page online:** https://linux.die.net/man/1/du
+
+**Descripción:** Resumir el espacio que ocupa un archivo o carpeta en una unidad de almacenamiento.
+
+**Man page local:** ``$ man du`` o ``$ man du > du.txt``
+
+**Instalado por defecto:** Sí, al menos en Linux Mint. 
+   
+
+.. image:: /_static/imgs/du.png
+
+
+**Algunas Opciones:**
+
+``-a, --all`` Mostrar el peso de todos los archivos y no solo las carpetas.
+
+``-c, --total`` Mostrar el total entre varias carpetas seleccionadas.
+
+``-h, --human-readable`` Mostrar el peso en datos entendibles para los humanos, (1K (Kilobytes), 1M (MegaBytes), 1G (GigaBytes), etc.).
+
+``-s, --summarize`` Mostrar solo el total del archivo o carpeta seleccionado.
+
+
+**Ejemplo 1:** ``$ du -chs Documentos geny Descargas terminalhistory.txt``, mostrar el total de espacio ocupado en disco de las carpetas: 'Documentos', 'geny', 'Descargas' y del archivo 'terminalhistory.txt' y sume el total combinado de todos ellos en datos entendibles para los humanos.
+
+**Ejemplo 2:** ``$ du -ah geny``, mostrar el peso ocupado en disco de cada uno de los archivos contenidos en la carpeta 'geny'.

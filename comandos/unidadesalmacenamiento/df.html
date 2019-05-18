@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Mostrar informacion del uso del disco duro &gt; df &mdash; documentación de TerminalLinux - 0.2</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Internet" href="../internet.html" />
+    <link rel="prev" title="Crear USB’s booteables &gt; dd" href="dd.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> TerminalLinux
+          
+
+          
+            
+            <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tabla de Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../acerca.html">Acerca de</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduccion.html">Introducción</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../comandos.html">Comandos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../carpetasarchivos.html">Carpetas y Archivos</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lsblk.html">Mostrar los dispositivos como usb y discos duros &gt; lsblk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dd.html">Crear USB’s booteables &gt; dd</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Mostrar informacion del uso del disco duro &gt; df</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../internet.html">Internet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red.html">Componentes de Red</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutoriales.html">Lista de pequeños videotutoriales</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TerminalLinux</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../comandos.html">Comandos</a> &raquo;</li>
+        
+          <li><a href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a> &raquo;</li>
+        
+      <li>Mostrar informacion del uso del disco duro &gt; df</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/comandos/unidadesalmacenamiento/df.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mostrar-informacion-del-uso-del-disco-duro-df">
+<h1>Mostrar informacion del uso del disco duro &gt; df<a class="headerlink" href="#mostrar-informacion-del-uso-del-disco-duro-df" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> df</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/df">https://linux.die.net/man/1/df</a></p>
+<p><strong>Descripción:</strong> df muestra la cantidad de espacio de disco disponible en el sistema de archivos. Si no se proporciona un nombre de archivo, se muestran todas las particiones accesibles que están montadas. Solo muestra el uso de los discos cuando éstos están montados.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">df</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">df</span> <span class="pre">&gt;</span> <span class="pre">df.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Linux Mint.</p>
+<img alt="../../_images/df.png" src="../../_images/df.png" />
+<p><strong>Algunas Opciones:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--human-readable</span></code> Tamaños de impresión en potencias de 1024 (por ejemplo, 1023M).</p>
+<p><code class="docutils literal notranslate"><span class="pre">-t,</span> <span class="pre">--type=TYPE</span></code> Limitar el listado a sistemas de archivos de tipo TYPE.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-T,</span> <span class="pre">--print-type</span></code> Imprimir tipo de sistema de archivos.</p>
+<p><code class="docutils literal notranslate"><span class="pre">--total</span></code> Elide todas las entradas insignificantes al espacio disponible, y producen un gran total.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">df</span> <span class="pre">-hT</span> <span class="pre">--total</span></code>, en este ejemplo se muestra toda la información relevante de los sistemas de archivos accesibles, tales como su tipo de archivos, el tamaño, la cantidad usada en múltiplos y porcentaje, la cantidad disponible y el lugar de montaje. Como se aprecia en la imagen de arriba, se muestran varios sistemas de archivos del tipo tmpfs, éstos sirven como memoria de intercambio y no se graban permanentemente; más bien, funcionan igual que la memoria RAM. Con los parámetros hT y total le digo que me muestre las cantidades en datos fáciles de leer e interpretar.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">df</span> <span class="pre">-h</span> <span class="pre">-t</span> <span class="pre">ext4</span></code>, en este ejemplo le digo que muestre los sistemas de archivos del tipo ext4 con sus respectivos datos agrupados de forma que sean legibles para cualquier persona.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../internet.html" class="btn btn-neutral float-right" title="Internet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dd.html" class="btn btn-neutral float-left" title="Crear USB’s booteables &gt; dd" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 - 2019, Orlando Palencia Belloso
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

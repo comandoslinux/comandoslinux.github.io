@@ -1,0 +1,41 @@
+Crear USB's booteables > dd
+---------------------------
+
+**Nombre del comando:** dd
+
+**Man page online:** https://linux.die.net/man/1/dd
+
+**Consideraciones:** a) Se da por entendido que dicho comando borrará todo el contenido de la USB a usar y que se debe realizar un respaldo antes de crear la USB booteable. b) El comando dd no muestra barra de progreso, una vez se da enter hay que esperar pacientemente a que termine. c) El formato de la USB debe ser fat o fat32. d) Se debe ingresar a la bios para que en el sistema de arranque (MBR o UEFI) se seleccione la USB a bootear. e) En algunas pc con UEFI no reconoce la USB, buscar en google como resolver dicho problema.
+
+**Descripción:** Copie un archivo, conviértalo y formatee de acuerdo con los operandos. No usar dicho comando para copiar archivos, la función principal es crear USB booteables. **Importante:** Al crear algunas distros booteables como 'freeBSD' e intentar revisar el contenido luego de haberlas creado no se muestra dicha usb en tus dispositivos, pero sí la reconocerá la bios de tu motherboard; para comprabar que dicha usb si la reconoce tu distro, colocar el siguiente comando en la terminal 'lsblk', aunque no se pueda visualizar gráficamente la usb. 
+
+.. note::
+
+   Éste comando puede causar grandes daños irreparables, se recomienda estar bien despierto al usarlo. 
+
+**Man page local:** ``$ man dd`` o ``$ man dd > dd.txt``
+
+**Instalado por defecto:** Sí, al menos en Debian. 
+   
+
+.. image:: /_static/imgs/dd.png
+
+
+**Algunas Opciones:**
+
+``if=FILE`` Origen de donde se lee los datos.
+
+``of=FILE`` Destino donde se escriben los datos.
+
+``bs=N`` Lee (del archivo origen) y escribe (al archivo destino) N bytes.
+
+``sync`` Rellena cada bloque leído con ceros, hasta el tamaño determinado por ibs.
+
+
+**Ejemplo 1:** ``$ sudo dd if=kubuntu.iso of=/dev/sdb  bs=1024 conv=noerror,sync``, en este ejemplo creo la usb 'sdb' booteable con la distro de kubuntu, que los datos a leer y escribir sean de 1 MB y que rellene con ceros los bloques. **Importante:** al usar el comando 'lsblk' se muestran las USB's en dos o más partes: en el ejemplo, sdb, sdb1 sdb2; para crear USB'S booteables siempre se debe elejir la USB completa; es decir, la primer parte. Por lo general cualquier distro funcionaría, pero es recomendable leer las indicaciones oficiales de la distro a bootear. Es recomendable crear USB's booteables y evitar las MicroSD (a veces no funcionan bien), además el tamaño de las mismas no debe sobrepasar los 4 u 8 GB, dependiendo del tamaño de la imagen .iso a bootear. 
+
+
+**Ejemplo 2:** ``$ sudo dd if=/dev/sr0 of=/home/opalencia/kubuntu.iso bs=1024 conv=noerror,sync``, en este ejemplo hay una distro ya booteable en el CD/DVD-ROM y lo que hago es el proceso inverso de crear un archivo comprimido en imagen kubuntu.iso.
+
+
+

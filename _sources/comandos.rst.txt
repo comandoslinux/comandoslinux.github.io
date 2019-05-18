@@ -3,23 +3,9 @@ Comandos
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tabla de Contenido:
-	
-   comandos/dir
-   comandos/ls
-   comandos/mkdir
-   comandos/cp
-   comandos/mv
-   comandos/rm
-   comandos/rename
-   comandos/find
-   comandos/chmod
-   comandos/apropos
-   comandos/wget
-   comandos/chown
-   comandos/ln
-   comandos/lsblk
-   comandos/dd
-   comandos/ip
-   comandos/df
-   comandos/diff
+   :caption: Tabla de Contenido
+      
+   comandos/carpetasarchivos
+   comandos/unidadesalmacenamiento
+   comandos/internet
+   comandos/red

@@ -9,3 +9,4 @@ Comandos
    comandos/unidadesalmacenamiento
    comandos/internet
    comandos/red
+   comandos/administracionsistema

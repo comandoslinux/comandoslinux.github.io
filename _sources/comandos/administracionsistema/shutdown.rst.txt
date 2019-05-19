@@ -1,0 +1,34 @@
+Apagar-Reiniciar el sistema > shutdown
+--------------------------------------
+
+**Nombre del comando:** shutdown
+
+**Man page online:** https://linux.die.net/man/8/shutdown
+
+**Descripción:** Suspender, reiniciar o apagar el sistema. Para agregar el tiempo en que se realizará la acción de shutdown hay dos formatos a agregar: 'hh:mm' en este se agrega la hora a la que se va realizar la acción en formato de 24 horas y '+m' sumará los minutos a la hora actual en que se quiere realizar la acción respectiva. Ver los ejemplos más abajo para mayor comprensión. Para usar este comando se requiere tener permisos de sudo.
+
+**Man page local:** ``$ man shutdown`` o ``$ man shutdown > shutdown.txt``
+
+**Instalado por defecto:** Sí, al menos en Linux Mint. 
+   
+
+.. image:: /_static/imgs/shutdown.png
+
+
+**Algunas Opciones:**
+
+``-r, --reboot`` Reiniciar el sistema.
+
+``-H, --halt`` Suspender el sistema.
+
+``-c`` Cancelar la invocación de una orden shutdown.
+
+
+**Ejemplo 1:** ``$ sudo shutdown 11:15``, apague el sistema a las 11:15.
+
+**Ejemplo 2:** ``$ sudo shutdown +05``, apaque el sistema en 05 minutos a partir de la hora actual.
+
+**Ejemplo 3:** ``$ sudo shutdown -H 12:00``, hiberne el sistema a las 12 horas.
+
+**Ejemplo 4:** ``$ sudo shutdown -r now``, reinicie el sistema inmediatamente.
+

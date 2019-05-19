@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Mostrar informacion del uso del disco duro &gt; df &mdash; documentación de TerminalLinux - 0.2</title>
+  <title>Apagar-Reiniciar el sistema &gt; shutdown &mdash; documentación de TerminalLinux - 0.2</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Internet" href="../internet.html" />
-    <link rel="prev" title="Crear USB’s booteables &gt; dd" href="dd.html" /> 
+    <link rel="next" title="Lista de pequeños videotutoriales" href="../../tutoriales.html" />
+    <link rel="prev" title="Administración del Sistema" href="../administracionsistema.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,15 +94,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../introduccion.html">Introducción</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../comandos.html">Comandos</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../carpetasarchivos.html">Carpetas y Archivos</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="lsblk.html">Mostrar los dispositivos como usb y discos duros &gt; lsblk</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dd.html">Crear USB’s booteables &gt; dd</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Mostrar informacion del uso del disco duro &gt; df</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../internet.html">Internet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../red.html">Componentes de Red</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../administracionsistema.html">Administración del Sistema</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../administracionsistema.html">Administración del Sistema</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Apagar-Reiniciar el sistema &gt; shutdown</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutoriales.html">Lista de pequeños videotutoriales</a></li>
@@ -153,15 +151,15 @@
         
           <li><a href="../../comandos.html">Comandos</a> &raquo;</li>
         
-          <li><a href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a> &raquo;</li>
+          <li><a href="../administracionsistema.html">Administración del Sistema</a> &raquo;</li>
         
-      <li>Mostrar informacion del uso del disco duro &gt; df</li>
+      <li>Apagar-Reiniciar el sistema &gt; shutdown</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/comandos/unidadesalmacenamiento/df.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/comandos/administracionsistema/shutdown.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -174,21 +172,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="mostrar-informacion-del-uso-del-disco-duro-df">
-<h1>Mostrar informacion del uso del disco duro &gt; df<a class="headerlink" href="#mostrar-informacion-del-uso-del-disco-duro-df" title="Enlazar permanentemente con este título">¶</a></h1>
-<p><strong>Nombre del comando:</strong> df</p>
-<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/df">https://linux.die.net/man/1/df</a></p>
-<p><strong>Descripción:</strong> df muestra la cantidad de espacio de disco disponible en el sistema de archivos. Si no se proporciona un nombre de archivo, se muestran todas las particiones accesibles que están montadas. Solo muestra el uso de los discos cuando éstos están montados.</p>
-<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">df</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">df</span> <span class="pre">&gt;</span> <span class="pre">df.txt</span></code></p>
+  <div class="section" id="apagar-reiniciar-el-sistema-shutdown">
+<h1>Apagar-Reiniciar el sistema &gt; shutdown<a class="headerlink" href="#apagar-reiniciar-el-sistema-shutdown" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> shutdown</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/8/shutdown">https://linux.die.net/man/8/shutdown</a></p>
+<p><strong>Descripción:</strong> Suspender, reiniciar o apagar el sistema. Para agregar el tiempo en que se realizará la acción de shutdown hay dos formatos a agregar: “hh:mm” en este se agrega la hora a la que se va realizar la acción en formato de 24 horas y “+m” sumará los minutos a la hora actual en que se quiere realizar la acción respectiva. Ver los ejemplos más abajo para mayor comprensión. Para usar este comando se requiere tener permisos de sudo.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">shutdown</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">shutdown</span> <span class="pre">&gt;</span> <span class="pre">shutdown.txt</span></code></p>
 <p><strong>Instalado por defecto:</strong> Sí, al menos en Linux Mint.</p>
-<img alt="../../_images/df.png" src="../../_images/df.png" />
+<img alt="../../_images/shutdown.png" src="../../_images/shutdown.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--human-readable</span></code> Tamaños de impresión en potencias de 1024 (por ejemplo, 1023M).</p>
-<p><code class="docutils literal notranslate"><span class="pre">-t,</span> <span class="pre">--type=TYPE</span></code> Limitar el listado a sistemas de archivos de tipo TYPE.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-T,</span> <span class="pre">--print-type</span></code> Imprimir tipo de sistema de archivos.</p>
-<p><code class="docutils literal notranslate"><span class="pre">--total</span></code> Elide todas las entradas insignificantes al espacio disponible, y producen un gran total.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">df</span> <span class="pre">-hT</span> <span class="pre">--total</span></code>, en este ejemplo se muestra toda la información relevante de los sistemas de archivos accesibles, tales como su tipo de archivos, el tamaño, la cantidad usada en múltiplos y porcentaje, la cantidad disponible y el lugar de montaje. Como se aprecia en la imagen de arriba, se muestran varios sistemas de archivos del tipo tmpfs, éstos sirven como memoria de intercambio y no se graban permanentemente; más bien, funcionan igual que la memoria RAM. Con los parámetros hT y total le digo que me muestre las cantidades en datos fáciles de leer e interpretar.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">df</span> <span class="pre">-h</span> <span class="pre">-t</span> <span class="pre">ext4</span></code>, en este ejemplo le digo que muestre los sistemas de archivos del tipo ext4 con sus respectivos datos agrupados de forma que sean legibles para cualquier persona.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-r,</span> <span class="pre">--reboot</span></code> Reiniciar el sistema.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-H,</span> <span class="pre">--halt</span></code> Suspender el sistema.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-c</span></code> Cancelar la invocación de una orden shutdown.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">shutdown</span> <span class="pre">11:15</span></code>, apague el sistema a las 11:15.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">shutdown</span> <span class="pre">+05</span></code>, apaque el sistema en 05 minutos a partir de la hora actual.</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">shutdown</span> <span class="pre">-H</span> <span class="pre">12:00</span></code>, hiberne el sistema a las 12 horas.</p>
+<p><strong>Ejemplo 4:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">shutdown</span> <span class="pre">-r</span> <span class="pre">now</span></code>, reinicie el sistema inmediatamente.</p>
 </div>
 
 
@@ -199,10 +198,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../internet.html" class="btn btn-neutral float-right" title="Internet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../tutoriales.html" class="btn btn-neutral float-right" title="Lista de pequeños videotutoriales" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="dd.html" class="btn btn-neutral float-left" title="Crear USB’s booteables &gt; dd" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../administracionsistema.html" class="btn btn-neutral float-left" title="Administración del Sistema" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

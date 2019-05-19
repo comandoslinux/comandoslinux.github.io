@@ -1,0 +1,8 @@
+Administración del Sistema
+==========================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tabla de Contenido:
+	
+   administracionsistema/shutdown

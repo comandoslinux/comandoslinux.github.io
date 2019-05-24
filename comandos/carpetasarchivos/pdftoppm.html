@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Crear carpetas &gt; mkdir &mdash; documentación de TerminalLinux - 0.2</title>
+  <title>Convertir documentos pdf a imágenes (.jpg o .png) &gt; pdftoppm &mdash; documentación de TerminalLinux - 0.2</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Copiar carpetas y archivos &gt; cp" href="cp.html" />
-    <link rel="prev" title="Mostrar carpetas y archivos &gt; ls" href="ls.html" /> 
+    <link rel="next" title="Unidades de Almacenamiento" href="../unidadesalmacenamiento.html" />
+    <link rel="prev" title="Estimar el peso en disco de archivos y carpetas &gt; du" href="du.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,7 +96,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../carpetasarchivos.html">Carpetas y Archivos</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dir.html">Mostrar carpetas y archivos &gt; dir</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ls.html">Mostrar carpetas y archivos &gt; ls</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Crear carpetas &gt; mkdir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mkdir.html">Crear carpetas &gt; mkdir</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cp.html">Copiar carpetas y archivos &gt; cp</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mv.html">MoverRenombrar carpetas y archivos &gt; mv</a></li>
 <li class="toctree-l3"><a class="reference internal" href="rm.html">Eliminar carpetas y archivos &gt; rm</a></li>
@@ -108,7 +108,7 @@
 <li class="toctree-l3"><a class="reference internal" href="diff.html">Comparar dos archivos &gt; diff</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ln.html">Crear enlaces entre archivos &gt; ln</a></li>
 <li class="toctree-l3"><a class="reference internal" href="du.html">Estimar el peso en disco de archivos y carpetas &gt; du</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pdftoppm.html">Convertir documentos pdf a imágenes (.jpg o .png) &gt; pdftoppm</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Convertir documentos pdf a imágenes (.jpg o .png) &gt; pdftoppm</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
@@ -167,13 +167,13 @@
         
           <li><a href="../carpetasarchivos.html">Carpetas y Archivos</a> &raquo;</li>
         
-      <li>Crear carpetas &gt; mkdir</li>
+      <li>Convertir documentos pdf a imágenes (.jpg o .png) &gt; pdftoppm</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/comandos/carpetasarchivos/mkdir.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/comandos/carpetasarchivos/pdftoppm.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -186,20 +186,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="crear-carpetas-mkdir">
-<h1>Crear carpetas &gt; mkdir<a class="headerlink" href="#crear-carpetas-mkdir" title="Enlazar permanentemente con este título">¶</a></h1>
-<p><strong>Nombre del comando:</strong> mkdir</p>
-<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/mkdir">https://linux.die.net/man/1/mkdir</a></p>
-<p><strong>Descripción:</strong> Crear carpetas o directorios, siempre y cuando no existan.</p>
-<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">mkdir</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">mkdir</span> <span class="pre">&gt;</span> <span class="pre">mkdir.txt</span></code></p>
-<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
-<img alt="../../_images/mkdir.png" src="../../_images/mkdir.png" />
+  <div class="section" id="convertir-documentos-pdf-a-imagenes-jpg-o-png-pdftoppm">
+<h1>Convertir documentos pdf a imágenes (.jpg o .png) &gt; pdftoppm<a class="headerlink" href="#convertir-documentos-pdf-a-imagenes-jpg-o-png-pdftoppm" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> pdftoppm</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/pdftoppm">https://linux.die.net/man/1/pdftoppm</a></p>
+<p><strong>Descripción:</strong> Convierte documentos pdf a imágenes en formatos .jpg o .png. Fácil de usar para convertir archivos completos en pdf a una serie de imágenes con alta calidad. Este comando tiene muchas opciones interesantes, si trabajas con imágenes todo el tiempo, recomendaría que pruebes dichas opciones, leyendo la man page por supuesto.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">pdftoppm</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">pdftoppm</span> <span class="pre">&gt;</span> <span class="pre">pdftoppm.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Linux Mint.</p>
+<img alt="../../_images/pdftoppm.png" src="../../_images/pdftoppm.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Explique qué se está haciendo.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-p,</span> <span class="pre">--parents</span></code> Si no hay errores, cree directorios para padres según sea necesario</p>
-<p><code class="docutils literal notranslate"><span class="pre">--version</span></code> Muestra la versión de la herramienta mkdir.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">-v</span> <span class="pre">hola</span></code>, lo más básico es crear un directorio, en el ejemplo se creará un nuevo folder llamado “hola”.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">-vp</span> <span class="pre">hola{1..5}/{1,2,3}</span></code>, en este ejemplo se crean varias carpetas a la vez. Se crearán 5 carpetas (hola1,hola2,hola3,hola4 y hola5) padres y 3 carpetas (1,2,3) hijas en cada uno de ellas.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-png</span></code> Convierte el archivo .pdf a imágenes con formato .png.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-jpeg</span></code> Convierte el archivo .pdf a imágenes con formato .jpg.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-f</span> <span class="pre">number</span></code> Elija el número por el cual quiere comenzar a convertir el documento .pdf al formato de imagen seleccionado. Por ejemplo, si mi .pdf tiene 25 páginas  y quiero comenzar a convertir desde la página 15 hasta la 25, entonces debería agregar “-f 15”; lo cual ignoraría las primeras 14 páginas y no las convertirá. Ver los ejemplos más abajo para mayor detalle.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pdftoppm</span> <span class="pre">-jpeg</span> <span class="pre">EnglishVerbsComplete.pdf</span> <span class="pre">englishverbs</span></code>, convierta todo el documento “EnglishVerbsComplete.pdf” a imágenes en formato .jpg.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pdftoppm</span> <span class="pre">-f</span> <span class="pre">15</span> <span class="pre">-png</span> <span class="pre">EnglishVerbsComplete.pdf</span> <span class="pre">englishverbs</span></code>, convierta desde la 15 hasta la última página del documento “EnglishVerbsComplete.pdf” a imágenes en formato .png. Las primeras 14 páginas son ignoradas.</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pdftoppm</span> <span class="pre">-l</span> <span class="pre">15</span> <span class="pre">-png</span> <span class="pre">EnglishVerbsComplete.pdf</span> <span class="pre">englishverbs</span></code>, convierta desde la 1 hasta la 15 página del documento “EnglishVerbsComplete.pdf” a imágenes en formato .png. Las páginas desde la 15 hasta la última de dicho documento son ignoradas.</p>
 </div>
 
 
@@ -210,10 +211,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cp.html" class="btn btn-neutral float-right" title="Copiar carpetas y archivos &gt; cp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../unidadesalmacenamiento.html" class="btn btn-neutral float-right" title="Unidades de Almacenamiento" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ls.html" class="btn btn-neutral float-left" title="Mostrar carpetas y archivos &gt; ls" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="du.html" class="btn btn-neutral float-left" title="Estimar el peso en disco de archivos y carpetas &gt; du" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -19,3 +19,4 @@ Carpetas y Archivos
    carpetasarchivos/diff
    carpetasarchivos/ln
    carpetasarchivos/du
+   carpetasarchivos/pdftoppm

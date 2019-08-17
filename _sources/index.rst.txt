@@ -16,12 +16,3 @@ Documentación que recopila toda la información posible de los comandos usados 
    introduccion
    comandos
    tutoriales
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

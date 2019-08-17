@@ -20,3 +20,4 @@ Carpetas y Archivos
    carpetasarchivos/ln
    carpetasarchivos/du
    carpetasarchivos/pdftoppm
+   carpetasarchivos/img2pdf

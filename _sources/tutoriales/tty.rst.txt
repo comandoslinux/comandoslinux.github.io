@@ -19,12 +19,20 @@ TTY2: Ctrl + Alt + F2
 
 TTY3: Ctrl + Alt + F3
 
+Abrir una terminal y ejecutar el siguiente comando:
+
+``$ sudo chvt 3``
+
 
 **¿Cómo salgo de la tty?**
 
 Por lo general se sale de las tty's con la combinación de teclado siguiente:
 
 Ctrl + Alt + F7
+
+Abrir una terminal y ejecutar el siguiente comando:
+
+``$ sudo chvt 7``
 
 Pero como ya conocemos algunos comandos, tales como cp, mv, rm, ls, dir, etc., fácilmente podemos interactuar con la tty. Cuando la GUI Desktop se congela por lo general al reiniciar la computadora se resuelve el problema, pero de no ser así, entonces habrá que hacer uso de nuestros conocimentos adquiridos para, por lo menos realizar un respaldo de la información de nuestra computadora, todo esto se puede hacer dentro de la tty. Los comandos a usar en este video tutorial son los siguientes:
 

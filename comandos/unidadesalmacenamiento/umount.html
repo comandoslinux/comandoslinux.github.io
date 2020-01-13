@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Crear enlaces entre archivos &gt; ln &mdash; documentación de TerminalLinux - 0.2</title>
+  <title>Desmontar una unidad de almacenamiento &gt; umount &mdash; documentación de TerminalLinux - 0.2</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Estimar el peso en disco de archivos y carpetas &gt; du" href="du.html" />
-    <link rel="prev" title="Comparar dos archivos &gt; diff" href="diff.html" /> 
+    <link rel="next" title="Internet" href="../internet.html" />
+    <link rel="prev" title="Montar una unidad de almacenamiento &gt; mount" href="mount.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,26 +93,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../acerca.html">Acerca de</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../introduccion.html">Introducción</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../comandos.html">Comandos</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../carpetasarchivos.html">Carpetas y Archivos</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="dir.html">Mostrar carpetas y archivos &gt; dir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ls.html">Mostrar carpetas y archivos &gt; ls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mkdir.html">Crear carpetas &gt; mkdir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cp.html">Copiar carpetas y archivos &gt; cp</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mv.html">MoverRenombrar carpetas y archivos &gt; mv</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rm.html">Eliminar carpetas y archivos &gt; rm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rename.html">Renombrar archivos masivos &gt; rename</a></li>
-<li class="toctree-l3"><a class="reference internal" href="find.html">Buscar carpetas y archivos &gt; find</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chmod.html">Cambiar permisos a carpetas y archivos &gt; chmod</a></li>
-<li class="toctree-l3"><a class="reference internal" href="apropos.html">Buscar un comando por su descripción &gt; apropos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chown.html">Cambiar propietario y grupo de archivos &gt; chown</a></li>
-<li class="toctree-l3"><a class="reference internal" href="diff.html">Comparar dos archivos &gt; diff</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Crear enlaces entre archivos &gt; ln</a></li>
-<li class="toctree-l3"><a class="reference internal" href="du.html">Estimar el peso en disco de archivos y carpetas &gt; du</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pdftoppm.html">Convertir documentos pdf a imágenes (.jpg o .png) &gt; pdftoppm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="img2pdf.html">Convertir imágenes a un archivo pdf &gt; img2pdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../carpetasarchivos.html">Carpetas y Archivos</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lsblk.html">Mostrar los dispositivos como usb y discos duros &gt; lsblk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dd.html">Crear USB’s booteables &gt; dd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="df.html">Mostrar informacion del uso del disco duro &gt; df</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mount.html">Montar una unidad de almacenamiento &gt; mount</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Desmontar una unidad de almacenamiento &gt; umount</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../internet.html">Internet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../red.html">Componentes de Red</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../administracionsistema.html">Administración del Sistema</a></li>
@@ -166,15 +155,15 @@
         
           <li><a href="../../comandos.html">Comandos</a> &raquo;</li>
         
-          <li><a href="../carpetasarchivos.html">Carpetas y Archivos</a> &raquo;</li>
+          <li><a href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a> &raquo;</li>
         
-      <li>Crear enlaces entre archivos &gt; ln</li>
+      <li>Desmontar una unidad de almacenamiento &gt; umount</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/comandos/carpetasarchivos/ln.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/comandos/unidadesalmacenamiento/umount.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -187,20 +176,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="crear-enlaces-entre-archivos-ln">
-<h1>Crear enlaces entre archivos &gt; ln<a class="headerlink" href="#crear-enlaces-entre-archivos-ln" title="Enlazar permanentemente con este título">¶</a></h1>
-<p><strong>Nombre del comando:</strong> ln</p>
-<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/ln">https://linux.die.net/man/1/ln</a></p>
-<p><strong>Descripción:</strong> Crear enlaces o hipervínculos entre archivos. <strong>Importante:</strong> no acepta varios parámetros a la vez cuando se usa el parámetro “-t”.</p>
-<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ln</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ln</span> <span class="pre">&gt;</span> <span class="pre">ln.txt</span></code></p>
-<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
-<img alt="../../_images/ln.png" src="../../_images/ln.png" />
+  <div class="section" id="desmontar-una-unidad-de-almacenamiento-umount">
+<h1>Desmontar una unidad de almacenamiento &gt; umount<a class="headerlink" href="#desmontar-una-unidad-de-almacenamiento-umount" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> umount</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/8/umount">https://linux.die.net/man/8/umount</a></p>
+<p><strong>Descripción:</strong> Este comando sirve para desmontar una unidad previamente montada de forma segura.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>No se debe intentar desmontar una unidad que esté en uso, si está un archivo abierto, se está copiando algún contenido o cualquier actividad que esté manipulando la unidad de almacenamiento; ya que puede alterar o dañar dicha unidad de forma permanente o en el mejor de los casos el contenido de la misma se vuelve ilegible. Es buena práctica colocar el tipo de formato de la unidad a desmontar, aunque no es obligatorio, esto con el fin dar el detalle exacto de la unidad que deseamos desmontar. Esto es algo obvio pero no está de más mencionarlo, si una unidad no se encuentra montada entonces dirá el siguiente mensaje “not mounted”.</p>
+</div>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">umount</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">umount</span> <span class="pre">&gt;</span> <span class="pre">umount.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Linux Mint.</p>
+<img alt="../../_images/umount.png" src="../../_images/umount.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">-s,</span> <span class="pre">--symbolic</span></code> Realizar enlaces simbólicos en lugar de enlaces duros.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-t,</span> <span class="pre">--target-directory=DIRECTORY</span></code> Especifica el DIRECTORIO en el cual crear los enlaces.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Imprimir el nombre de cada archivo vinculado.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ln</span> <span class="pre">-t</span> <span class="pre">Desktop</span> <span class="pre">Desktop/hola/hola.txt</span></code>, en este ejemplo se creará un enlace al archivo hola.txt con el mismo nombre y dicho enlace se guardará en la ruta /home/currentuser/Desktop.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ln</span> <span class="pre">-vs</span> <span class="pre">hola/hola.txt</span> <span class="pre">holaLink</span></code>, en este ejemplo se creará un enlace simbólico al archivo hola.txt con el nombre de holaLink.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-f,</span> <span class="pre">--force</span></code> Desmonte la unidad de almacenamiento a la fuerza. Sino se está usando la unidad y no quiere desmontarse este parámetro puede obligarla a realizar dicha tarea.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--help</span></code> Muestra toda la información disponible de los parámetros en forma resumida.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-t,</span> <span class="pre">--types</span></code> En este parámetro se debe ingresar el tipo de sistema de archivos que tiene asignada la unidad de almacenamiento a desmontar, el comando “lsblk -f” en la columna “FSTYPE” indica a qué formato pertenece la unidad de almacenamiento que se ha insertado en algún puerto USB.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">umount</span> <span class="pre">-vt</span> <span class="pre">vfat</span> <span class="pre">/dev/sdc1</span></code>, desmonte la unidad de almacenamiento “sdc1” con formato “vfat” sin importar en qué punto se encuentre montada y que me indique si el comando se ejecuta con éxito.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">umount</span> <span class="pre">-vf</span> <span class="pre">-t</span> <span class="pre">vfat</span> <span class="pre">/dev/sdd1</span></code>, obligue el desmonte de la unidad de almacenamiento “sdd1” con formato “vfat” aunque se encuentre en uso. Esto es posible que funcione como que no, en todo caso habrá que esperar a que el dispositivo se desocupe de la tarea que esté realizando.</p>
 </div>
 
 
@@ -211,10 +204,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="du.html" class="btn btn-neutral float-right" title="Estimar el peso en disco de archivos y carpetas &gt; du" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../internet.html" class="btn btn-neutral float-right" title="Internet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="diff.html" class="btn btn-neutral float-left" title="Comparar dos archivos &gt; diff" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mount.html" class="btn btn-neutral float-left" title="Montar una unidad de almacenamiento &gt; mount" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

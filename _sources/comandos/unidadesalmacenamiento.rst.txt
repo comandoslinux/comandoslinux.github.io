@@ -8,3 +8,5 @@ Unidades de Almacenamiento
    unidadesalmacenamiento/lsblk
    unidadesalmacenamiento/dd   
    unidadesalmacenamiento/df
+   unidadesalmacenamiento/mount
+   unidadesalmacenamiento/umount

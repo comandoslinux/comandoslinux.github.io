@@ -27,7 +27,7 @@ https://gitlab.mister-muffin.de/josch/img2pdf
 
 .. note::
 
-   Para facilitar las cosas se deben copiar las imágenes (cuando son muchas) que se quieren convertir a un archivo pdf en una nueva carpeta y que tengan el mismo formato, ya sea png, jpg u otro. Si son imágenes con distinto formato, entonces habrá que escribir el nombre y formato de dichas imágenes de manera individual, ver ejemplo 2 mas abajo. Para renombrar muchas imágenes con números incrementales, buscar en esta documentación el comando **rename**. Recordar que las imágenes no deben tener espacios en los nombres ni comenzar con caracteres especiales.
+   Para facilitar las cosas se deben copiar las imágenes (cuando son muchas) que se quieren convertir a un archivo pdf en una nueva carpeta y que tengan el mismo formato, ya sea png, jpg u otro. Si son imágenes con distinto formato, entonces habrá que escribir el nombre y formato de dichas imágenes de manera individual, ver ejemplo 2 mas abajo. Para renombrar muchas imágenes con números incrementales, buscar en esta documentación el comando **rename** :doc:`/comandos/carpetasarchivos/rename`. Recordar que las imágenes no deben tener espacios en los nombres ni comenzar con caracteres especiales.
 
 
 **Ejemplo 1:** ``$ img2pdf *.jpg -o englishverb.pdf``, convierta todas aquellas imágenes .jpg contenidas en la carpeta actual en un archivo pdf llamado 'englishverb.pdf'.

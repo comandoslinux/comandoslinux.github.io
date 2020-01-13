@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Crear USB’s booteables &gt; dd &mdash; documentación de TerminalLinux - 0.2</title>
+  <title>Montar una unidad de almacenamiento &gt; mount &mdash; documentación de TerminalLinux - 0.2</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Mostrar informacion del uso del disco duro &gt; df" href="df.html" />
-    <link rel="prev" title="Mostrar los dispositivos como usb y discos duros &gt; lsblk" href="lsblk.html" /> 
+    <link rel="next" title="Desmontar una unidad de almacenamiento &gt; umount" href="umount.html" />
+    <link rel="prev" title="Mostrar informacion del uso del disco duro &gt; df" href="df.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,9 +96,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../carpetasarchivos.html">Carpetas y Archivos</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="lsblk.html">Mostrar los dispositivos como usb y discos duros &gt; lsblk</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Crear USB’s booteables &gt; dd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dd.html">Crear USB’s booteables &gt; dd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="df.html">Mostrar informacion del uso del disco duro &gt; df</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mount.html">Montar una unidad de almacenamiento &gt; mount</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Montar una unidad de almacenamiento &gt; mount</a></li>
 <li class="toctree-l3"><a class="reference internal" href="umount.html">Desmontar una unidad de almacenamiento &gt; umount</a></li>
 </ul>
 </li>
@@ -157,13 +157,13 @@
         
           <li><a href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a> &raquo;</li>
         
-      <li>Crear USB’s booteables &gt; dd</li>
+      <li>Montar una unidad de almacenamiento &gt; mount</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/comandos/unidadesalmacenamiento/dd.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/comandos/unidadesalmacenamiento/mount.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -176,26 +176,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="crear-usb-s-booteables-dd">
-<h1>Crear USB’s booteables &gt; dd<a class="headerlink" href="#crear-usb-s-booteables-dd" title="Enlazar permanentemente con este título">¶</a></h1>
-<p><strong>Nombre del comando:</strong> dd</p>
-<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/dd">https://linux.die.net/man/1/dd</a></p>
-<p><strong>Consideraciones:</strong> a) Se da por entendido que dicho comando borrará todo el contenido de la USB a usar y que se debe realizar un respaldo antes de crear la USB booteable. b) La usb tiene de estar desmontada antes de usar el comando “dd”. c) El comando “dd” no muestra barra de progreso, una vez se da enter hay que esperar pacientemente a que termine. d) El formato de la USB debe ser fat o fat32. e) Se debe ingresar a la bios para que en el sistema de arranque (MBR o UEFI) se seleccione la USB a bootear. f) En algunas pc con UEFI no reconoce la USB, buscar en google como resolver dicho problema.</p>
-<p><strong>Descripción:</strong> Copie un archivo, conviértalo y formatee de acuerdo con los operandos. No usar dicho comando para copiar archivos, la función principal es crear USB booteables. <strong>Importante:</strong> Al crear algunas distros booteables como “freeBSD” e intentar revisar el contenido luego de haberlas creado no se muestra dicha usb en tus dispositivos, pero sí la reconocerá la bios de tu motherboard; para comprabar que dicha usb si la reconoce tu distro, colocar el siguiente comando en la terminal “lsblk”, aunque no se pueda visualizar gráficamente la usb.</p>
+  <div class="section" id="montar-una-unidad-de-almacenamiento-mount">
+<h1>Montar una unidad de almacenamiento &gt; mount<a class="headerlink" href="#montar-una-unidad-de-almacenamiento-mount" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> mount</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/8/mount">https://linux.die.net/man/8/mount</a></p>
+<p><strong>Descripción:</strong> Este comando sirve para montar una unidad de almacenamiento en algún punto de la raíz “/” de la distro con el fin de visualizar o modificar su contenido; la carpeta “/mnt” está diseñada para tal propósito. Por lo general cualquier unidad de almacenamiento que se inserte en un puerto USB se adjunta de forma automática a algún punto dentro de la raíz, comúnmente en “/media/$USER”, sin embargo, no siempre sucede así y habrá que montar dicha unidad de forma manual. Este comando requiere que se anteponga el sudo. “$USER” es una variable de sistema que sirve para indicar el nombre del usuario activo.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>Éste comando puede causar grandes daños irreparables, se recomienda estar bien despierto al usarlo.</p>
+<p>Cuando no se especifica el formato (ext4, ntfs, vfat, etc) que tiene la unidad de almacenamiento a montar entonces da un error que dice “mount point does not exist”, este error sólo ocurre cuando se monta la unidad en un punto del usuario actual “/media/$USER”, no así cuando se adjunta en “/mnt”; por tal motivo es recomendable colocar el formato de la unidad de almacenamiento a la hora de montarla. Toda distro que utilice el kernel de linux tendría el mismo comportamiento, pero eso no es garantía; asi que, si se presentan problemas para montar una unidad de almacenamiento leer la documentación oficial de tu distro. No se puede montar varias unidades en el mismo punto de montaje, por ejemplo, si tengo dos USB’s y las quiero montar en “/mnt”, se reconocerá únicamente la última que he montado; por lo tanto hay que elejir puntos distintos para cada unidad.</p>
 </div>
-<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">dd</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">dd</span> <span class="pre">&gt;</span> <span class="pre">dd.txt</span></code></p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">mount</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">mount</span> <span class="pre">&gt;</span> <span class="pre">mount.txt</span></code></p>
 <p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
-<img alt="../../_images/dd.png" src="../../_images/dd.png" />
+<img alt="../../_images/mount.png" src="../../_images/mount.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">if=FILE</span></code> Origen de donde se lee los datos.</p>
-<p><code class="docutils literal notranslate"><span class="pre">of=FILE</span></code> Destino donde se escriben los datos.</p>
-<p><code class="docutils literal notranslate"><span class="pre">bs=N</span></code> Lee (del archivo origen) y escribe (al archivo destino) N bytes.</p>
-<p><code class="docutils literal notranslate"><span class="pre">sync</span></code> Rellena cada bloque leído con ceros, hasta el tamaño determinado por ibs.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">dd</span> <span class="pre">if=kubuntu.iso</span> <span class="pre">of=/dev/sdb</span>&#160; <span class="pre">bs=1024</span> <span class="pre">conv=noerror,sync</span></code>, en este ejemplo creo la usb “sdb” booteable con la distro de kubuntu, que los datos a leer y escribir sean de 1 MB y que rellene con ceros los bloques. <strong>Importante:</strong> al usar el comando “lsblk” se muestran las USB’s en dos o más partes: en el ejemplo, sdb, sdb1 sdb2; para crear USB’S booteables siempre se debe elejir la USB completa; es decir, la primer parte. Por lo general cualquier distro funcionaría, pero es recomendable leer las indicaciones oficiales de la distro a bootear. Es recomendable crear USB’s booteables y evitar las MicroSD (a veces no funcionan bien), además el tamaño de las mismas no debe sobrepasar los 4 u 8 GB, dependiendo del tamaño de la imagen .iso a bootear.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">dd</span> <span class="pre">if=/dev/sr0</span> <span class="pre">of=/home/opalencia/kubuntu.iso</span> <span class="pre">bs=1024</span> <span class="pre">conv=noerror,sync</span></code>, en este ejemplo hay una distro ya booteable en el CD/DVD-ROM y lo que hago es el proceso inverso de crear un archivo comprimido en imagen kubuntu.iso.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-r,</span> <span class="pre">--read-only</span></code> Monte o adjunte la unidad de almacenamiento en modo sólo de lectura, es decir, no podrá realizar modificaciones a su contenido; esto está sujeto al tipo de formato que tenga la unidad de almacenamiento y varía en base a eso.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--help</span></code> Muestra toda la información disponible de los parámetros en forma resumida.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-t,</span> <span class="pre">--types</span></code> En este parámetro se debe ingresar el tipo de sistema de archivos que tiene asignada la unidad de almacenamiento a montar, el comando “lsblk -f” en la columna “FSTYPE” indica a qué formato pertenece la unidad de almacenamiento que se ha insertado en algún puerto USB.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">mount</span> <span class="pre">-vt</span> <span class="pre">vfat</span> <span class="pre">/dev/sdb1</span> <span class="pre">/media/$USER</span></code>, adjunte la unidad de almacenamiento “sdb1” con formato “vfat” al punto de montaje del usuario actual que ha iniciado sesión que se encuentra en “/media/nombreusuario” y que me indique si el comando se ejecuta con éxito.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">mount</span> <span class="pre">-vt</span> <span class="pre">vfat</span> <span class="pre">/dev/sdb1</span> <span class="pre">/mnt</span></code>, adjunte la USB llamada “sdb1” en el punto de montaje “/mnt”. Cuando se monta o adjunta una unidad de almacenamiento en este lugar hay que ir explícitamente hasta esta carpeta para visualizar dicho punto de montaje.</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">mount</span> <span class="pre">-vrt</span> <span class="pre">vfat</span> <span class="pre">/dev/sdb1</span> <span class="pre">/media/$USER</span></code>, adjunte la unidad de almacenamiento “sdb1” con formato “vfat” al punto de montaje del usuario actual que ha iniciado sesión que se encuentra en “/media/nombreusuario”, que me indique si el comando se ejecuta con éxito y además que sólo sea de lectura, es decir, no se podrá agregar o quitar contenido a dicha unidad.</p>
 </div>
 
 
@@ -206,10 +205,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="df.html" class="btn btn-neutral float-right" title="Mostrar informacion del uso del disco duro &gt; df" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="umount.html" class="btn btn-neutral float-right" title="Desmontar una unidad de almacenamiento &gt; umount" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="lsblk.html" class="btn btn-neutral float-left" title="Mostrar los dispositivos como usb y discos duros &gt; lsblk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="df.html" class="btn btn-neutral float-left" title="Mostrar informacion del uso del disco duro &gt; df" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

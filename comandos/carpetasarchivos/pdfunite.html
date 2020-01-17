@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Buscar un comando por su descripción &gt; apropos &mdash; documentación de TerminalLinux - 0.2</title>
+  <title>Combine dos o más archivos pdf en uno solo &gt; pdfunite &mdash; documentación de TerminalLinux - 0.2</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Cambiar propietario y grupo de archivos &gt; chown" href="chown.html" />
-    <link rel="prev" title="Cambiar permisos a carpetas y archivos &gt; chmod" href="chmod.html" /> 
+    <link rel="next" title="Unidades de Almacenamiento" href="../unidadesalmacenamiento.html" />
+    <link rel="prev" title="Convertir imágenes a un archivo pdf &gt; img2pdf" href="img2pdf.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,14 +103,14 @@
 <li class="toctree-l3"><a class="reference internal" href="rename.html">Renombrar archivos masivos &gt; rename</a></li>
 <li class="toctree-l3"><a class="reference internal" href="find.html">Buscar carpetas y archivos &gt; find</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chmod.html">Cambiar permisos a carpetas y archivos &gt; chmod</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Buscar un comando por su descripción &gt; apropos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apropos.html">Buscar un comando por su descripción &gt; apropos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chown.html">Cambiar propietario y grupo de archivos &gt; chown</a></li>
 <li class="toctree-l3"><a class="reference internal" href="diff.html">Comparar dos archivos &gt; diff</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ln.html">Crear enlaces entre archivos &gt; ln</a></li>
 <li class="toctree-l3"><a class="reference internal" href="du.html">Estimar el peso en disco de archivos y carpetas &gt; du</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pdftoppm.html">Convertir documentos pdf a imágenes (.jpg o .png) &gt; pdftoppm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="img2pdf.html">Convertir imágenes a un archivo pdf &gt; img2pdf</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pdfunite.html">Combine dos o más archivos pdf en uno solo &gt; pdfunite</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Combine dos o más archivos pdf en uno solo &gt; pdfunite</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
@@ -169,13 +169,13 @@
         
           <li><a href="../carpetasarchivos.html">Carpetas y Archivos</a> &raquo;</li>
         
-      <li>Buscar un comando por su descripción &gt; apropos</li>
+      <li>Combine dos o más archivos pdf en uno solo &gt; pdfunite</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/comandos/carpetasarchivos/apropos.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/comandos/carpetasarchivos/pdfunite.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -188,24 +188,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="buscar-un-comando-por-su-descripcion-apropos">
-<h1>Buscar un comando por su descripción &gt; apropos<a class="headerlink" href="#buscar-un-comando-por-su-descripcion-apropos" title="Enlazar permanentemente con este título">¶</a></h1>
-<p><strong>Nombre del comando:</strong> apropos</p>
-<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/apropos">https://linux.die.net/man/1/apropos</a></p>
-<p><strong>Descripción:</strong> Busca los nombres y descripciones de los comandos que coincidan con la palabra clave a buscar, es decir, que no conocemos el nombre del comando sino que solo su acción. Es importante porque muestra el número exacto de la man page a la que se quire acceder, ya que un comando puede tener varias man pages. Ejemplo: $ apropos -e “mount”, mostrará mount (2) y mount (8) y para mostrar la man page específica habrá que colocar su número ($ man 2 mount o $ man 8 mount).</p>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Por lo general las man pages están en inglés, por lo tanto, la palabra clave que describa la acción debe ser en dicho idioma.</p>
-</div>
-<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">apropos</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">apropos</span> <span class="pre">&gt;</span> <span class="pre">apropos.txt</span></code></p>
-<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
-<img alt="../../_images/apropos.png" src="../../_images/apropos.png" />
+  <div class="section" id="combine-dos-o-mas-archivos-pdf-en-uno-solo-pdfunite">
+<h1>Combine dos o más archivos pdf en uno solo &gt; pdfunite<a class="headerlink" href="#combine-dos-o-mas-archivos-pdf-en-uno-solo-pdfunite" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> pdfunite</p>
+<p><strong>Man page online:</strong> oficial no tiene</p>
+<p><strong>Descripción:</strong> Combine dos o más archivos en formato pdf en uno solo, dicho archivo generado contiene las mismas características de los documentos originales. Es tan fácil de usar que únicamente requiere los nombres de los archivos pdf’s a unir y luego darle un nombre a dicho archivo combinado, sin embargo, el orden en que se escriban los archivos es importante porque en base a ese orden así se unirán.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">pdfunite</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">pdfunite</span> <span class="pre">&gt;</span> <span class="pre">pdfunite.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Linux Mint.</p>
+<img alt="../../_images/pdfunite.png" src="../../_images/pdfunite.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">-e,</span> <span class="pre">--exact</span></code> Cada palabra clave se emparejará exactamente con los nombres y las descripciones de las man pages.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Explique qué se está haciendo.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-a,</span> <span class="pre">--and</span></code> Mostrar solo elementos que coincidan con todas las palabras clave proporcionadas. El valor predeterminado es mostrar los elementos que coinciden con cualquier palabra clave.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">apropos</span> <span class="pre">-e</span> <span class="pre">mount</span></code>, que busque las man pages que contengan la palabra clave “mount”.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">apropos</span> <span class="pre">-ea</span> <span class="pre">manipulate</span> <span class="pre">disk</span></code>, que busque las man pages en las cuales la descripción contenga las dos palabras “manipulate” y “disk”.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-h</span></code> Imprima las opciones de ayuda del comando.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-v</span></code> Imprima la versión del comando.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pdfunite</span> <span class="pre">address1.pdf</span> <span class="pre">address2.pdf</span> <span class="pre">address3.pdf</span> <span class="pre">address.pdf</span></code>, combine los archivos “address1.pdf”, “address2.pdf” y “address3.pdf” y nombre dicho archivo combinado como “address.pdf”.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pdfunite</span> <span class="pre">-h</span></code>, muestre las opciones de ayuda de dicho comando.</p>
 </div>
 
 
@@ -216,10 +211,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="chown.html" class="btn btn-neutral float-right" title="Cambiar propietario y grupo de archivos &gt; chown" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../unidadesalmacenamiento.html" class="btn btn-neutral float-right" title="Unidades de Almacenamiento" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="chmod.html" class="btn btn-neutral float-left" title="Cambiar permisos a carpetas y archivos &gt; chmod" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="img2pdf.html" class="btn btn-neutral float-left" title="Convertir imágenes a un archivo pdf &gt; img2pdf" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

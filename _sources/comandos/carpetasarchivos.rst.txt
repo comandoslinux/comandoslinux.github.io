@@ -21,3 +21,4 @@ Carpetas y Archivos
    carpetasarchivos/du
    carpetasarchivos/pdftoppm
    carpetasarchivos/img2pdf
+   carpetasarchivos/pdfunite

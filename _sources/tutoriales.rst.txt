@@ -8,3 +8,4 @@ Lista de pequeños videotutoriales
    tutoriales/formatearusbdisco
    tutoriales/desactivarefimokutil
    tutoriales/tty
+   tutoriales/mpv

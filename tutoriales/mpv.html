@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reproducir música desde la terminal &mdash; documentación de TerminalLinux - 0.2</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Resolver problemas usando la TTY" href="tty.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> TerminalLinux
+          
+
+          
+            
+            <img src="../_static/logo128x128.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tabla de Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../acerca.html">Acerca de</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../comandos.html">Comandos</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutoriales.html">Lista de pequeños videotutoriales</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="formatearusbdisco.html">Formatear una usb o disco duro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desactivarefimokutil.html">Desactivar/Activar sistema de arranque EFI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tty.html">Resolver problemas usando la TTY</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Reproducir música desde la terminal</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TerminalLinux</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../tutoriales.html">Lista de pequeños videotutoriales</a> &raquo;</li>
+        
+      <li>Reproducir música desde la terminal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutoriales/mpv.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reproducir-musica-desde-la-terminal">
+<h1>Reproducir música desde la terminal<a class="headerlink" href="#reproducir-musica-desde-la-terminal" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>El nombre de este reproductor de música y video se llama “mpv” y funciona desde la terminal.</p>
+<p>Esto es algo fuera de lo común, pero solo me tomó un día usándolo para darme cuenta que para escuchar música es todo lo que necesito e inmediatamente dejé de usar mis antiguos reproductores de música. A cualquier persona le puede parecer absurdo escuchar música desde la terminal, habiendo tantos reproductores de música y video en el mercado con excelentes interfaces gráficas; pero habemos personas únicas y especiales que vamos más alla de lo común y ordinario, para todos ustedes es que escribo este pequeño tutorial.</p>
+<p><strong>¿Cómo lo instalo en mi distro?</strong></p>
+<p>En este enlace está la documentación oficial de instalación:</p>
+<p><a class="reference external" href="https://mpv.io/installation/">https://mpv.io/installation/</a></p>
+<p>Y en este enlace está la documentación oficial de cómo usarlo:</p>
+<p><a class="reference external" href="https://mpv.io/manual/master/">https://mpv.io/manual/master/</a></p>
+<p><strong>Ventajas</strong></p>
+<ul class="simple">
+<li><p>Es liviano</p></li>
+<li><p>Es fácil de usar</p></li>
+<li><p>No muestra notificaciones de la canción que está sonando. Para mí esto es perfecto, hay otras notificaciones importantes que necesito escuchar y ver como las del correo electrónico, algún sitio web que uso, entre otras.</p></li>
+<li><p>Se puede personalizar al gusto del usuario</p></li>
+</ul>
+<p><strong>Desventajas</strong></p>
+<ul class="simple">
+<li><p>Para pausar, reanudar, cambiar una canción hay que posicionarnos en la ventana de la terminal que está reproduciendo la música.</p></li>
+<li><p>No le he econtrado otras desventajas, esto dependerá de cada usuario.</p></li>
+</ul>
+<p><strong>Reproducir música con mpv dando dos clics del ratón o un simple enter del teclado</strong></p>
+<ol class="arabic simple">
+<li><p>Primero hay que confirmar que la instalación de mpv haya sido satisfactoria. Para ello solo es necesario abrir una terminal y escribir “mpv” y dar un enter, si se instaló correctamente, aparecerá la versión del reproductor y otros datos.</p></li>
+</ol>
+<img alt="../_images/mpv1.png" src="../_images/mpv1.png" />
+<ol class="arabic simple" start="2">
+<li><p>Crear una carpeta que se llame “bash” en el usuario actual que inició sesión, es decir, en “/home/nombreusuario/bash” y crear ahí un archivo llamado “playMusic.sh” el cual va a contener el siguiente comando:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># play my music in terminal</span>
+
+<span class="n">mpv</span> <span class="o">--</span><span class="n">shuffle</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">video</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">opalencia</span><span class="o">/</span><span class="n">Música</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Reemplazar “/home/opalencia/Música/” por el lugar en donde guardas tu música.</p>
+<p>“mpv –shuffle –no-video /home/opalencia/Música/”, este comando lo que hace es que reproduce toda la música en forma aleatoria y que no me muestre los álbunes que traen algunas canciones. Unas canciones traen archivos de imágenes con sus álbunes ya sea integrados o separados, para mi gusto no quiero estar viendo en una ventana aparte dicha imagen, por eso es que le agrego el parámetro “–no-video”.</p>
+<img alt="../_images/mpv2.png" src="../_images/mpv2.png" />
+<ol class="arabic simple" start="3">
+<li><p>Dar permisos de ejecución al archivo recién creado. Para ello, abrir una terminal y hacer un “cd” a la carpeta recién creada y escribir el siguiente comando:</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">playMusic.sh</span></code></p>
+<img alt="../_images/mpv3.png" src="../_images/mpv3.png" />
+<ol class="arabic simple" start="4">
+<li><p>Abrir un editor de texto y escribir lo siguiente para crear un lanzador, llamar al archivo “playMusic.desktop” y guardarlo en el escritorio:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Desktop</span> <span class="n">Entry</span><span class="p">]</span>
+<span class="n">Name</span><span class="o">=</span><span class="n">Play</span> <span class="n">Music</span>
+<span class="n">Comment</span><span class="o">=</span><span class="n">Listen</span> <span class="n">my</span> <span class="n">music</span> <span class="ow">in</span> <span class="n">terminal</span>
+<span class="n">Exec</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">opalencia</span><span class="o">/</span><span class="n">bash</span><span class="o">/</span><span class="n">playMusic</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">Icon</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">opalencia</span><span class="o">/</span><span class="n">bash</span><span class="o">/</span><span class="n">mpv</span><span class="o">-</span><span class="n">logo</span><span class="o">.</span><span class="n">png</span>
+<span class="n">Terminal</span><span class="o">=</span><span class="n">true</span>
+<span class="n">Type</span><span class="o">=</span><span class="n">Application</span>
+</pre></div>
+</div>
+<p>Los parámetros “Exec” e “Icon” serán diferentes para cada usuario, es el lugar en donde está guardado el archivo bash y el ícono que vamos a usar, para el icono descarga cualquier imagen que desees o la que sugiero.</p>
+<img alt="../_images/mpv4.png" src="../_images/mpv4.png" />
+<ol class="arabic simple" start="5">
+<li><p>Dar permisos de ejecución al lanzador recién creado. Para ello, abrir una terminal y hacer un “cd” al escritorio y escribir el siguiente comando:</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">playMusic.desktop</span></code></p>
+<img alt="../_images/mpv5.png" src="../_images/mpv5.png" />
+<ol class="arabic simple" start="6">
+<li><p>Ahora solo faltará dar dos clics con el ratón o un enter con el teclado al lanzador que creamos en el escritorio cada vez que querramos escuchar música.</p></li>
+</ol>
+<img alt="../_images/mpv6.png" src="../_images/mpv6.png" />
+<p>Leer la documentación de cómo usar el teclado y el ratón para desplazarse por las diferentes canciones, aquí dejo las teclas del teclado que yo uso:</p>
+<p><strong>TECLADO</strong></p>
+<p>Barra espaciadora: detener y reanudar una canción</p>
+<p>Shift + &gt; “mayor que” : reproducir la siguiente canción</p>
+<p>&lt; “menor que”: reproducir la canción anterior</p>
+<p>&gt; “tecla desplazamiento derecha” : aumentar la velocidad de una canción uno segundos adelante</p>
+<p>&lt; “tecla desplazamiento izquierda” : disminuir la velocidad de una canción unos segundos atrás</p>
+<p>“q” letra q para salir y dejar de esuchar música</p>
+<p>Aquí puedes descargar los archivos que utilizo yo, con el fin de comprobar que hayamos escrito bien todo.</p>
+<p><a class="reference external" href="https://mega.nz/file/WdAR1YJA#3iLLk_LO5X938K8Pkk4rz7Ulrr0pqYWva6gYQkxU7Gc">https://mega.nz/file/WdAR1YJA#3iLLk_LO5X938K8Pkk4rz7Ulrr0pqYWva6gYQkxU7Gc</a></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="tty.html" class="btn btn-neutral float-left" title="Resolver problemas usando la TTY" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 - 2020, Orlando Palencia Belloso
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

@@ -71,6 +71,6 @@ Se asumirá que la EFI se encuentra activa para poder seguir los siguientes paso
 
 .. image:: /_static/imgs/efi7.jpg
 
-**Para activala EFI seguir los pasos del 1 al 8, con la diferencia que en el paso 1 se ingresará el siguiente comando:**
+**Para activar la EFI seguir los pasos del 1 al 8, con la diferencia que en el paso 1 se ingresará el siguiente comando:**
 
  ``$ sudo mokutil --enable-validation``

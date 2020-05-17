@@ -3,7 +3,7 @@ Desactivar/Activar sistema de arranque EFI
 
 **¿UEFI o EFI?**
 
-Es lo mismo, sólo el nombre ha cambiado a través de los años.
+Es lo mismo, solo el nombre ha cambiado a través de los años.
 
 **¿Cómo saber si mi computadora usa EFI?**
 

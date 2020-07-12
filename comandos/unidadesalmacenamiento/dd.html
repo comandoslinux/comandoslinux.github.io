@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<html class="writer-html5" lang="es" >
 <head>
   <meta charset="utf-8">
   
@@ -12,28 +11,30 @@
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
     <link rel="next" title="Mostrar informacion del uso del disco duro &gt; df" href="df.html" />
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> TerminalLinux
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> TerminalLinux
           
 
           
@@ -81,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -113,6 +115,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -151,7 +154,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../../comandos.html">Comandos</a> &raquo;</li>
         
@@ -194,8 +197,9 @@
 <p><code class="docutils literal notranslate"><span class="pre">of=FILE</span></code> Destino donde se escriben los datos.</p>
 <p><code class="docutils literal notranslate"><span class="pre">bs=N</span></code> Lee (del archivo origen) y escribe (al archivo destino) N bytes.</p>
 <p><code class="docutils literal notranslate"><span class="pre">sync</span></code> Rellena cada bloque leído con ceros, hasta el tamaño determinado por ibs.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">dd</span> <span class="pre">if=kubuntu.iso</span> <span class="pre">of=/dev/sdb</span>&#160; <span class="pre">bs=1024</span> <span class="pre">conv=noerror,sync</span></code>, en este ejemplo creo la usb “sdb” booteable con la distro de kubuntu, que los datos a leer y escribir sean de 1 MB y que rellene con ceros los bloques. <strong>Importante:</strong> al usar el comando “lsblk” se muestran las USB’s en dos o más partes: en el ejemplo, sdb, sdb1 sdb2; para crear USB’S booteables siempre se debe elejir la USB completa; es decir, la primer parte. Por lo general cualquier distro funcionaría, pero es recomendable leer las indicaciones oficiales de la distro a bootear. Es recomendable crear USB’s booteables y evitar las MicroSD (a veces no funcionan bien), además el tamaño de las mismas no debe sobrepasar los 4 u 8 GB, dependiendo del tamaño de la imagen .iso a bootear.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">dd</span> <span class="pre">if=/dev/sr0</span> <span class="pre">of=/home/opalencia/kubuntu.iso</span> <span class="pre">bs=1024</span> <span class="pre">conv=noerror,sync</span></code>, en este ejemplo hay una distro ya booteable en el CD/DVD-ROM y lo que hago es el proceso inverso de crear un archivo comprimido en imagen kubuntu.iso.</p>
+<p><code class="docutils literal notranslate"><span class="pre">status=progress</span></code> Mostrar la información que está siendo copiada. El equivalente a una barra de progreso.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">dd</span> <span class="pre">if=kubuntu.iso</span> <span class="pre">of=/dev/sdb</span> <span class="pre">status=progress</span> <span class="pre">bs=1024</span> <span class="pre">conv=noerror,sync</span></code>, en este ejemplo creo la usb “sdb” booteable con la distro de kubuntu, que los datos a leer y escribir sean de 1 MB y que rellene con ceros los bloques. <strong>Importante:</strong> al usar el comando “lsblk” se muestran las USB’s en dos o más partes: en el ejemplo, sdb, sdb1 sdb2; para crear USB’S booteables siempre se debe elejir la USB completa; es decir, la primer parte (sdb, para este ejemplo). Por lo general cualquier distro funcionaría, pero es recomendable leer las indicaciones oficiales de la distro a bootear. Es recomendable crear USB’s booteables y evitar las MicroSD (a veces no funcionan bien), además el tamaño de las mismas no debe sobrepasar los 4 u 8 GB, dependiendo del tamaño de la imagen .iso a bootear.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">dd</span> <span class="pre">if=/dev/sr0</span> <span class="pre">of=/home/opalencia/kubuntu.iso</span> <span class="pre">status=progress</span> <span class="pre">bs=1024</span> <span class="pre">conv=noerror,sync</span></code>, en este ejemplo hay una distro ya booteable en el CD/DVD-ROM y lo que hago es el proceso inverso de crear un archivo comprimido en imagen kubuntu.iso.</p>
 </div>
 
 
@@ -218,11 +222,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2017 - 2020, Orlando Palencia Belloso
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -233,7 +245,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<html class="writer-html5" lang="es" >
 <head>
   <meta charset="utf-8">
   
@@ -12,28 +11,30 @@
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
     <link rel="next" title="Montar una unidad de almacenamiento &gt; mount" href="mount.html" />
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> TerminalLinux
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> TerminalLinux
           
 
           
@@ -81,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -113,6 +115,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -151,7 +154,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../../comandos.html">Comandos</a> &raquo;</li>
         
@@ -188,7 +191,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--human-readable</span></code> Tamaños de impresión en potencias de 1024 (por ejemplo, 1023M).</p>
 <p><code class="docutils literal notranslate"><span class="pre">-t,</span> <span class="pre">--type=TYPE</span></code> Limitar el listado a sistemas de archivos de tipo TYPE.</p>
 <p><code class="docutils literal notranslate"><span class="pre">-T,</span> <span class="pre">--print-type</span></code> Imprimir tipo de sistema de archivos.</p>
-<p><code class="docutils literal notranslate"><span class="pre">--total</span></code> Elide todas las entradas insignificantes al espacio disponible, y producen un gran total.</p>
+<p><code class="docutils literal notranslate"><span class="pre">--total</span></code> Evite todas las entradas insignificantes para el espacio disponible y produzca un gran total.</p>
 <p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">df</span> <span class="pre">-hT</span> <span class="pre">--total</span></code>, en este ejemplo se muestra toda la información relevante de los sistemas de archivos accesibles, tales como su tipo de archivos, el tamaño, la cantidad usada en múltiplos y porcentaje, la cantidad disponible y el lugar de montaje. Como se aprecia en la imagen de arriba, se muestran varios sistemas de archivos del tipo tmpfs, éstos sirven como memoria de intercambio y no se graban permanentemente; más bien, funcionan igual que la memoria RAM. Con los parámetros hT y total le digo que me muestre las cantidades en datos fáciles de leer e interpretar.</p>
 <p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">df</span> <span class="pre">-h</span> <span class="pre">-t</span> <span class="pre">ext4</span></code>, en este ejemplo le digo que muestre los sistemas de archivos del tipo ext4 con sus respectivos datos agrupados de forma que sean legibles para cualquier persona.</p>
 </div>
@@ -213,11 +216,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2017 - 2020, Orlando Palencia Belloso
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -228,7 +239,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

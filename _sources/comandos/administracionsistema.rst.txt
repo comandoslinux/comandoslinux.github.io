@@ -6,3 +6,4 @@ Administración del Sistema
    :caption: Tabla de Contenido:
 	
    administracionsistema/shutdown
+   administracionsistema/uptime

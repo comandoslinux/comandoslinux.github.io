@@ -6,3 +6,5 @@ Componentes de Red
    :caption: Tabla de Contenido:
 	
    red/ip
+   red/ping
+   red/ssh

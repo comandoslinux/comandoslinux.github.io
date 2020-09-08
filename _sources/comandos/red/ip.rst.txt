@@ -5,7 +5,7 @@ Mostrar-Manipular informacion de red ip > ip
 
 **Man page online:** https://linux.die.net/man/8/ip
 
-**Descripción:** ip - mostrar / manipular enrutamiento, dispositivos, ruteo de políticas y túneles. Este comando es muy util para administradores de red, pero para usuarios comunes con éstas opciones será más que suficiente.
+**Descripción:** ip - mostrar / manipular enrutamiento, dispositivos, ruteo de políticas y túneles. Este comando es muy útil para administradores de red, pero para usuarios comunes con éstas opciones será más que suficiente.
 
 **Man page local:** ``$ man ip`` o ``$ man ip > ip.txt``
 

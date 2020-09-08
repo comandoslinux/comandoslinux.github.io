@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Mostrar-Manipular informacion de red ip &gt; ip &mdash; documentación de TerminalLinux - 0.2</title>
+  <title>Verificar si un servidor está disponible &gt; ping &mdash; documentación de TerminalLinux - 0.2</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Verificar si un servidor está disponible &gt; ping" href="ping.html" />
-    <link rel="prev" title="Componentes de Red" href="../red.html" /> 
+    <link rel="next" title="Conectarse remotamente a un servidor &gt; ssh" href="ssh.html" />
+    <link rel="prev" title="Mostrar-Manipular informacion de red ip &gt; ip" href="ip.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -99,8 +99,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../internet.html">Internet</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../red.html">Componentes de Red</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Mostrar-Manipular informacion de red ip &gt; ip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ping.html">Verificar si un servidor está disponible &gt; ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ip.html">Mostrar-Manipular informacion de red ip &gt; ip</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Verificar si un servidor está disponible &gt; ping</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ssh.html">Conectarse remotamente a un servidor &gt; ssh</a></li>
 </ul>
 </li>
@@ -158,13 +158,13 @@
         
           <li><a href="../red.html">Componentes de Red</a> &raquo;</li>
         
-      <li>Mostrar-Manipular informacion de red ip &gt; ip</li>
+      <li>Verificar si un servidor está disponible &gt; ping</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/comandos/red/ip.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/comandos/red/ping.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -177,20 +177,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="mostrar-manipular-informacion-de-red-ip-ip">
-<h1>Mostrar-Manipular informacion de red ip &gt; ip<a class="headerlink" href="#mostrar-manipular-informacion-de-red-ip-ip" title="Enlazar permanentemente con este título">¶</a></h1>
-<p><strong>Nombre del comando:</strong> ip</p>
-<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/8/ip">https://linux.die.net/man/8/ip</a></p>
-<p><strong>Descripción:</strong> ip - mostrar / manipular enrutamiento, dispositivos, ruteo de políticas y túneles. Este comando es muy útil para administradores de red, pero para usuarios comunes con éstas opciones será más que suficiente.</p>
-<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ip</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ip</span> <span class="pre">&gt;</span> <span class="pre">ip.txt</span></code></p>
-<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
-<img alt="../../_images/ip.png" src="../../_images/ip.png" />
+  <div class="section" id="verificar-si-un-servidor-esta-disponible-ping">
+<h1>Verificar si un servidor está disponible &gt; ping<a class="headerlink" href="#verificar-si-un-servidor-esta-disponible-ping" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> ping</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/8/ping">https://linux.die.net/man/8/ping</a></p>
+<p><strong>Descripción:</strong> ping funciona tanto con IPv4 como con IPv6. Usando solo uno de ellos explícitamente
+se puede hacer cumplir especificando -4 o -6. Al usar el comando “ip addr” se muestra las dos versiones de IP, IPv4 aparece con el nombre “inet” e IPv6 aparece con el nombre “inet6”, de esta forma se identifica cuál de todas las IPs que se muestran corresponden a la versión 4 y 6 respectivamente. IPv4 no requiere usar la interfaz, pero la IPv6 sí la necesita. Sino se puede hacer ping a un servidor será por dos motivos, 1 el servidor no está disponible y 2 el servidor tiene deshabilitado el realizar un ping.  Recordar que si hay paquetes recibidos significa que el servidor o servicio consultado está disponible, de lo contrario no está disponible en un momento dado; ésta es la función principal de este comando.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ping</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ping</span> <span class="pre">&gt;</span> <span class="pre">ping.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Linux Mint.</p>
+<img alt="../../_images/ping.png" src="../../_images/ping.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">address</span></code> Dirección de protocolo (IPv4 o IPv6) en un dispositivo.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-V,</span> <span class="pre">-Version</span></code> Imprima la versión de la utilidad ip y salga.</p>
-<p><code class="docutils literal notranslate"><span class="pre">route</span></code> Mostrar información relevante del router.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ip</span> <span class="pre">address</span></code>, en este ejemplo se muestra toda la información relevante para un usuario común, solo necesitamos conocer cuál es nuestra ip privada (se puede ver en la imagen manchada de arriba), ya sea ésta del protocolo IPv4 o IPv6. Para quien no sepa, la ip privada identifica de manera única a un dispositivo, pc, celular, tablet, etc., por tanto es información delicada que no se debe divulgar.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ip</span> <span class="pre">route</span></code>, en este ejemplo se muestra información relevante del router, específicamente nos interesa conocer la ip que tiene asignada dicho dispositivo para realizar configuraciones. Todo router se configura accediendo por medio de su ip en un navegador web y pide usuario y clave; una vez tengamos toda esa información fácilmente se puede realizar algunas configuraciones importantes, tales como cambiar el nombre del SSID y asignar una clave a la misma, ya que las configuraciones por defecto de los router no son seguras.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">count</span></code> Deténgase después de enviar el recuento de paquetes ECHO_REQUEST. Con la opción de tiempo límite, ping espera el recuento de paquetes ECHO_REPLY, hasta que expira el tiempo de espera. En otras palabras quiero que envíes este número de pings al servidor.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-I</span> <span class="pre">interface</span></code> Interfaz es una dirección o un nombre de interfaz. Si la interfaz es una dirección, establece la dirección de origen en la dirección de interfaz especificada. Si interfaz en un nombre de interfaz, establece la interfaz de origen a la interfaz especificada. NOTA: Para IPv6, al hacer ping a una dirección de alcance local de enlace, especificación de enlace (por el “%” - notación en el destino, o por esta opción) se puede usar pero ya no es necesario. De nuevo el comando “ip addr” es útil para identificar cuál es la interfaz que estoy usando, se enumeran desde 1 a n seguida de dos puntos, asi la primer interfaz se llamaría “lo”, la segunda se llamaría “enp2s0” y las otras tendrían otros nombres. La interfaz que estoy usando sería aquella en donde se muestra las IPs tanto la IPv4 como la IPv6.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-q</span></code> Salida silenciosa. No se muestra nada excepto las líneas de resumen en el momento del inicio y cuando finaliza.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ping6</span> <span class="pre">-c</span> <span class="pre">3</span> <span class="pre">-q</span> <span class="pre">fa70::i834:8xx7:138c:l432</span> <span class="pre">-I</span> <span class="pre">enp2s0</span></code>, en este ejemplo le digo que haga 3 pings con IPv6 al servidor y que lo muestre en forma de resumen. La IPv6 es ese número raro y poco común que se muestra “fa70::i834:8xx7:138c:l432”, cuando se usa el comando “ip addr” se muestra de esta forma “fa70::i834:8xx7:138c:l432/64” en donde el “/64” se omite. Si el servidor está disponible dirá que 3 paquetes fueron recibidos, de lo contrario dirá que 100% de los paquetes se perdieron.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ping</span> <span class="pre">-c</span> <span class="pre">3</span> <span class="pre">-q</span> <span class="pre">148.238.4.6</span></code>, en este ejemplo le digo que haga 3 pings con IPv4 al servidor y que lo muestre en forma de resumen. Si el servidor está disponible dirá que 3 paquetes fueron recibidos, de lo contrario dirá que 100% de los paquetes se perdieron.</p>
 </div>
 
 
@@ -201,10 +202,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ping.html" class="btn btn-neutral float-right" title="Verificar si un servidor está disponible &gt; ping" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ssh.html" class="btn btn-neutral float-right" title="Conectarse remotamente a un servidor &gt; ssh" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../red.html" class="btn btn-neutral float-left" title="Componentes de Red" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ip.html" class="btn btn-neutral float-left" title="Mostrar-Manipular informacion de red ip &gt; ip" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

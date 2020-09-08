@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Conectarse remotamente a un servidor &gt; ssh &mdash; documentación de TerminalLinux - 0.2</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Administración del Sistema" href="../administracionsistema.html" />
+    <link rel="prev" title="Verificar si un servidor está disponible &gt; ping" href="ping.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> TerminalLinux
+          
+
+          
+            
+            <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tabla de Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../acerca.html">Acerca de</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduccion.html">Introducción</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../comandos.html">Comandos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../carpetasarchivos.html">Carpetas y Archivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internet.html">Internet</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../red.html">Componentes de Red</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ip.html">Mostrar-Manipular informacion de red ip &gt; ip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ping.html">Verificar si un servidor está disponible &gt; ping</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Conectarse remotamente a un servidor &gt; ssh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../administracionsistema.html">Administración del Sistema</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutoriales.html">Lista de pequeños videotutoriales</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TerminalLinux</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../comandos.html">Comandos</a> &raquo;</li>
+        
+          <li><a href="../red.html">Componentes de Red</a> &raquo;</li>
+        
+      <li>Conectarse remotamente a un servidor &gt; ssh</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/comandos/red/ssh.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="conectarse-remotamente-a-un-servidor-ssh">
+<h1>Conectarse remotamente a un servidor &gt; ssh<a class="headerlink" href="#conectarse-remotamente-a-un-servidor-ssh" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> ssh</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/ssh">https://linux.die.net/man/1/ssh</a></p>
+<p><strong>Descripción:</strong> ssh (cliente SSH) es un programa para iniciar sesión en una máquina remota y para ejecutar comandos en una máquina remota. Su objetivo es proporcionar comunicaciones cifradas seguras entre dos hosts no confiables a través de una red insegura. Las conexiones X11, los puertos TCP arbitrarios y los sockets de dominio UNIX también se pueden reenviar a través del canal seguro. ssh se conecta y registra en el destino especificado, que puede especificarse como [user&#64;]hostname o una URI de la forma  <a class="reference external" href="ssh://[user&#64;]hostname[:port">ssh://[user&#64;]hostname[:port</a>]. El usuario debe demostrar su identidad a la máquina remota utilizando uno de varios métodos (ver más abajo). Si se especifica un comando, se ejecuta en el host remoto en lugar de la terminal del anfitrión. Nota para el administrador del servidor: el servidor remoto debe tener activo el “sshd” daemon para permitir recibir conexiones de otro cliente “ssh”, para ello se comprueba con el siguiente comando <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">systemctl</span> <span class="pre">status</span> <span class="pre">sshd</span></code>. Al conectarse remotamente a cualquier servidor, se nos tiene que dar por lo menos las siguientes credenciales: usuario, clave, ip o dominio y puerto de dicho servidor. Cuando las credenciales ingresadas son correctas y el servidor está disponible, entonces rápidamente se nos pedirá confirmación de la clave del usuario, de lo contrario tardará mucho tiempo y al final nos dará una serie de mensajes de error, dependiendo del problema que tenga el sistema operativo anfitrión o el sistema operativo remoto. Algunas alertas son:</p>
+<p><strong>Connection refused</strong> Este error indica que el servidor no está encendido en este momento o el puerto ingresado no está abierto. Este error se dispara al instante y no espera el tiempo ingresado en la opción ConnectTimeout.</p>
+<p><strong>Name or service not known</strong> En este error algún caracter hemos escrito mal, se dispara al instante y habrá que confirmar las credenciales que nos dieron. También se dispara al escribir el puerto seguido del dominio o ip, <a class="reference external" href="mailto:'user&#37;&#52;&#48;domainOrIP">“user<span>&#64;</span>domainOrIP</a>:22”, por lo que es mejor agregar el puerto de esta forma “-p 22 <a class="reference external" href="mailto:user&#37;&#52;&#48;domainOrIP">user<span>&#64;</span>domainOrIP</a>”.</p>
+<p><strong>Connection timed out</strong> En este error el servidor no responde porque tiene bloqueada las conexiones ssh en el firewall o el puerto ingresado también está bloqueado.</p>
+<p><strong>WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</strong> En una red local las IPs son estáticas y por tanto es bastante raro que un dispositivo tenga otra IP de la que se configuró inicialmente. También es raro cambiar la IP de un servidor que se esté abierto (que tenga un servicio disponible) en internet; sin embargo, si por algún motivo la IP cambia nos presentará este error. Este es un error del cliente ssh, el cual ya ha registrado una llave por cada servidor remoto al que nos hemos conectado, y si algo ha cambiado entonces no nos dejará conectarnos. Este problema se resuelve eliminando la llave que genera conflicto y conectarnos nuevamente para que genere una llave nueva. De este forma:</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ssh-keygen</span> <span class="pre">-f</span> <span class="pre">&quot;~/.ssh/known_hosts&quot;</span> <span class="pre">-R</span> <span class="pre">&quot;IP&quot;</span></code></p>
+<p><strong>Permission denied (publickey,password)</strong> Este error se genera por dos motivos, el primero es que las credenciales ingresadas de usuario o clave son incorrectas y el segundo es que dichas credenciales no existen en el servidor. Hay dos tipos de usuarios que pueden connectarse a un servidor remoto y estos son: usuarios del sistema operativo y usuarios de alguna aplicación. Todo sistema operativo requiere un inicio de sesión con un usuario y una clave (con estas credenciales se puede conectar remotamente), pero también hay aplicaciones que definen en sus configuraciones qué usuarios se pueden conectar a ellas (estas otras credenciales también permiten conectarse remotamente, por tal motivo “SSHelper” tiene esos espacios de configuración de usuario y clave). En resumen, alguno de los usuarios antes mencionados debe existir, de lo contrario la conexión remota no se realizará.</p>
+<p><strong>No route to host</strong> Este error es muy común y se dispara cuando el dominio o IP o puerto ingresado no existe.</p>
+<p><strong>Formas válidas y correctas de conexión</strong></p>
+<ol class="arabic simple">
+<li><p>La más común: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ssh</span> <span class="pre">user&#64;domainOrIP</span></code></p></li>
+<li><p>La versión clásica: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ssh</span> <span class="pre">-p</span> <span class="pre">22</span> <span class="pre">domainOrIP</span> <span class="pre">-l</span> <span class="pre">user</span></code></p></li>
+<li><p>Medio correcta: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ssh</span> <span class="pre">domainOrIP</span></code>, para realizar conexiones ssh, scp o rsync se requiere especificar un usuario y una clave. Sino se ingresa el usuario el ssh tomará el usuario del cliente ssh que inició sesión, solo funcionará si el usuario del ciente ssh es igual al usuario remoto del servidor. También se puede configurar el servidor para agregar permanentemente las IP y los usuarios que se conectarán a él, pero eso no lo explicaré aquí.</p></li>
+</ol>
+<p><strong>¿Qué aplicaciones necesito para relizar una conexión remota?</strong></p>
+<ol class="arabic simple">
+<li><p>“openssh-server”: esta aplicación es la que tiene el daemon sshd, sino está instalada y activa no se podrá conectar remotamente a su servidor.</p></li>
+<li><p>“openssh-client”: esta aplicación es necesaria para el que quiera realizar la conexión remota a otro dispositivo.</p></li>
+<li><p>“SSHelper”: esta aplicación es para android, si se requiere conectar remotamente a un dispositivo android, habrá que instalar esta aplicación u otra similar.</p></li>
+</ol>
+<p><strong>¿Cómo determinar si un servidor está disponible?</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ping</span> <span class="pre">-c</span> <span class="pre">3</span> <span class="pre">domainorIP</span></code>, por si alguien no entiende lo que un dominio o IP es, lo aclaro con un ejemplo. ¿Está google disponible en este momento?</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ping</span> <span class="pre">-c</span> <span class="pre">3</span> <span class="pre">google.com</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ping</span> <span class="pre">-c</span> <span class="pre">3</span> <span class="pre">172.217.15.206</span></code>, si está disponible en este momento dará la respuesta de 3 paquetes recibidos, de lo contrario dirá que el 100% de los paquetes se perdieron. Sino se puede hacer ping a un servidor será por dos motivos, 1 el servidor no está disponible y 2 el servidor tiene deshabilitado el realizar un ping.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ssh</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ssh</span> <span class="pre">&gt;</span> <span class="pre">ssh.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Linux Mint.</p>
+<img alt="../../_images/ssh.png" src="../../_images/ssh.png" />
+<p><strong>Algunas Opciones:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">-o</span> <span class="pre">option</span></code> Aquí tiene una gran cantidad de opciones que por tal motivo hay otra man page dedicada específicamente para describirlas (la cual se llama “man 5 ssh_config”). Solo pondré la opción “ConnectTimeout”, la cual especifica el tiempo de espera (en segundos) utilizado cuando se conecta al servidor SSH.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-p</span> <span class="pre">port</span></code> Puerto del servidor al cual queremos conectarnos. El puerto por defecto es “22”, pero se puede configurar según el administrador del servidor lo desee. El puerto debe estar abierto (esta es una configuración realizada en el firewall y/o en el router del servidor y solo la puede realizar el usuario administrador del mismo) para poder usarlo, de lo contrario no será posible realizar una conexión remota.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-X</span></code> Permite el reenvío X11. En palabras simples, permite ejecutar una aplicación gráfica en el entorno del cliente que realizó la conexión ssh, siempre y cuando dicha aplicación esté instalada en el servidor. La mayoria de servidores linux no tienen una interfaz gráfica sino que solo son una consola y por ende no se puede abrir una aplicación gráfica directamente. Por ejemplo para editar archivos de configuración en un servidor se usa editores como “nano” o “vim”, si se quiere usar un editor de texto más cómodo como “gedit” habrá que instalarlo en el servidor. Todas las configuraciones de un servidor se pueden hacer desde una consola de comandos, sin embargo, por comodidad se pueden instalar aplicaciones gráficas y es ahí donde este parámetro es útil a la hora de realizar una conexión ssh.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ssh</span> <span class="pre">-o</span> <span class="pre">ConnectTimeout=5</span> <span class="pre">-X</span> <span class="pre">-p</span> <span class="pre">22</span> <span class="pre">fedora&#64;188.144.10.5</span></code>, en este ejemplo estoy realizando una conexión remota a un servidor “fedora” y le digo que sino hay respuesta en 5 segundos entonces que no continue esperando respuesta. Estas son las credenciales usadas para este ejemplo: usuario = fedora, clave = miclavefedora, puerto = 22, domainOrIP = 188.144.10.5. Como voy a usar una aplicación gráfica le agrego el parámetro “-X”, como se aprecia en la imagen de arriba, he cargado una ventana de “xterm” instalada en fedora que se ejecuta en mi sistema operativo.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ssh</span> <span class="pre">-o</span> <span class="pre">ConnectTimeout=5</span> <span class="pre">-X</span> <span class="pre">-p</span> <span class="pre">22</span> <span class="pre">fedora&#64;188.144.10.4</span></code>, este ejemplo es el mismo que el ejemplo 1 con la variante que el último número de la IP es 4, como mi servidor no tiene esa IP entonces no lo encuentra.</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ssh</span> <span class="pre">-o</span> <span class="pre">ConnectTimeout=5</span> <span class="pre">-X</span> <span class="pre">-p</span> <span class="pre">2240</span> <span class="pre">fedora&#64;188.144.10.5</span></code>, en este ejemplo he agregado un puerto que no existe por ende no realizará la conexión remota.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../administracionsistema.html" class="btn btn-neutral float-right" title="Administración del Sistema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ping.html" class="btn btn-neutral float-left" title="Verificar si un servidor está disponible &gt; ping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2017 - 2020, Orlando Palencia Belloso
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

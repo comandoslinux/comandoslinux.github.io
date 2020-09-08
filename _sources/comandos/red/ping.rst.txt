@@ -1,0 +1,34 @@
+Verificar si un servidor está disponible > ping
+-----------------------------------------------
+
+**Nombre del comando:** ping
+
+**Man page online:** https://linux.die.net/man/8/ping
+
+**Descripción:** ping funciona tanto con IPv4 como con IPv6. Usando solo uno de ellos explícitamente
+se puede hacer cumplir especificando -4 o -6. Al usar el comando 'ip addr' se muestra las dos versiones de IP, IPv4 aparece con el nombre 'inet' e IPv6 aparece con el nombre 'inet6', de esta forma se identifica cuál de todas las IPs que se muestran corresponden a la versión 4 y 6 respectivamente. IPv4 no requiere usar la interfaz, pero la IPv6 sí la necesita. Sino se puede hacer ping a un servidor será por dos motivos, 1 el servidor no está disponible y 2 el servidor tiene deshabilitado el realizar un ping.  Recordar que si hay paquetes recibidos significa que el servidor o servicio consultado está disponible, de lo contrario no está disponible en un momento dado; ésta es la función principal de este comando.
+
+**Man page local:** ``$ man ping`` o ``$ man ping > ping.txt``
+
+**Instalado por defecto:** Sí, al menos en Linux Mint. 
+   
+
+.. image:: /_static/imgs/ping.png
+
+
+**Algunas Opciones:**
+
+``-c count`` Deténgase después de enviar el recuento de paquetes ECHO_REQUEST. Con la opción de tiempo límite, ping espera el recuento de paquetes ECHO_REPLY, hasta que expira el tiempo de espera. En otras palabras quiero que envíes este número de pings al servidor.
+
+``-I interface`` Interfaz es una dirección o un nombre de interfaz. Si la interfaz es una dirección, establece la dirección de origen en la dirección de interfaz especificada. Si interfaz en un nombre de interfaz, establece la interfaz de origen a la interfaz especificada. NOTA: Para IPv6, al hacer ping a una dirección de alcance local de enlace, especificación de enlace (por el '%' - notación en el destino, o por esta opción) se puede usar pero ya no es necesario. De nuevo el comando 'ip addr' es útil para identificar cuál es la interfaz que estoy usando, se enumeran desde 1 a n seguida de dos puntos, asi la primer interfaz se llamaría 'lo', la segunda se llamaría 'enp2s0' y las otras tendrían otros nombres. La interfaz que estoy usando sería aquella en donde se muestra las IPs tanto la IPv4 como la IPv6.
+
+``-q`` Salida silenciosa. No se muestra nada excepto las líneas de resumen en el momento del inicio y cuando finaliza.
+
+
+**Ejemplo 1:** ``$ ping6 -c 3 -q fa70::i834:8xx7:138c:l432 -I enp2s0``, en este ejemplo le digo que haga 3 pings con IPv6 al servidor y que lo muestre en forma de resumen. La IPv6 es ese número raro y poco común que se muestra 'fa70::i834:8xx7:138c:l432', cuando se usa el comando 'ip addr' se muestra de esta forma 'fa70::i834:8xx7:138c:l432/64' en donde el '/64' se omite. Si el servidor está disponible dirá que 3 paquetes fueron recibidos, de lo contrario dirá que 100% de los paquetes se perdieron.
+
+**Ejemplo 2:** ``$ ping -c 3 -q 148.238.4.6``, en este ejemplo le digo que haga 3 pings con IPv4 al servidor y que lo muestre en forma de resumen. Si el servidor está disponible dirá que 3 paquetes fueron recibidos, de lo contrario dirá que 100% de los paquetes se perdieron.
+
+
+
+

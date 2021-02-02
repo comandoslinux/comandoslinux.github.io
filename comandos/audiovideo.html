@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Unidades de Almacenamiento &mdash; documentación de TerminalLinux - 0.2</title>
+  <title>Audio y Video &mdash; documentación de TerminalLinux - 0.2</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="Mostrar los dispositivos como usb y discos duros &gt; lsblk" href="unidadesalmacenamiento/lsblk.html" />
-    <link rel="prev" title="Leer-crear archivos desde la terminal &gt; cat" href="carpetasarchivos/cat.html" /> 
+    <link rel="next" title="Convertir videos a otros formatos&gt; ffmpeg" href="audiovideo/ffmpeg.html" />
+    <link rel="prev" title="Tiempo en que el sistema ha estado encendido &gt; uptime" href="administracionsistema/uptime.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,18 +96,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">Introducción</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../comandos.html">Comandos</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="carpetasarchivos.html">Carpetas y Archivos</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Unidades de Almacenamiento</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="unidadesalmacenamiento/lsblk.html">Mostrar los dispositivos como usb y discos duros &gt; lsblk</a></li>
-<li class="toctree-l3"><a class="reference internal" href="unidadesalmacenamiento/dd.html">Crear USB’s booteables &gt; dd</a></li>
-<li class="toctree-l3"><a class="reference internal" href="unidadesalmacenamiento/df.html">Mostrar informacion del uso del disco duro &gt; df</a></li>
-<li class="toctree-l3"><a class="reference internal" href="unidadesalmacenamiento/mount.html">Montar una unidad de almacenamiento &gt; mount</a></li>
-<li class="toctree-l3"><a class="reference internal" href="unidadesalmacenamiento/umount.html">Desmontar una unidad de almacenamiento &gt; umount</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
 <li class="toctree-l2"><a class="reference internal" href="internet.html">Internet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="red.html">Componentes de Red</a></li>
 <li class="toctree-l2"><a class="reference internal" href="administracionsistema.html">Administración del Sistema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="audiovideo.html">Audio y Video</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Audio y Video</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="audiovideo/ffmpeg.html">Convertir videos a otros formatos&gt; ffmpeg</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutoriales.html">Lista de pequeños videotutoriales</a></li>
@@ -159,13 +155,13 @@
         
           <li><a href="../comandos.html">Comandos</a> &raquo;</li>
         
-      <li>Unidades de Almacenamiento</li>
+      <li>Audio y Video</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/comandos/unidadesalmacenamiento.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/comandos/audiovideo.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -178,16 +174,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="unidades-de-almacenamiento">
-<h1>Unidades de Almacenamiento<a class="headerlink" href="#unidades-de-almacenamiento" title="Enlazar permanentemente con este título">¶</a></h1>
+  <div class="section" id="audio-y-video">
+<h1>Audio y Video<a class="headerlink" href="#audio-y-video" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Tabla de Contenido:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="unidadesalmacenamiento/lsblk.html">Mostrar los dispositivos como usb y discos duros &gt; lsblk</a></li>
-<li class="toctree-l1"><a class="reference internal" href="unidadesalmacenamiento/dd.html">Crear USB’s booteables &gt; dd</a></li>
-<li class="toctree-l1"><a class="reference internal" href="unidadesalmacenamiento/df.html">Mostrar informacion del uso del disco duro &gt; df</a></li>
-<li class="toctree-l1"><a class="reference internal" href="unidadesalmacenamiento/mount.html">Montar una unidad de almacenamiento &gt; mount</a></li>
-<li class="toctree-l1"><a class="reference internal" href="unidadesalmacenamiento/umount.html">Desmontar una unidad de almacenamiento &gt; umount</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audiovideo/ffmpeg.html">Convertir videos a otros formatos&gt; ffmpeg</a></li>
 </ul>
 </div>
 </div>
@@ -200,10 +192,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="unidadesalmacenamiento/lsblk.html" class="btn btn-neutral float-right" title="Mostrar los dispositivos como usb y discos duros &gt; lsblk" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="audiovideo/ffmpeg.html" class="btn btn-neutral float-right" title="Convertir videos a otros formatos&gt; ffmpeg" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="carpetasarchivos/cat.html" class="btn btn-neutral float-left" title="Leer-crear archivos desde la terminal &gt; cat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="administracionsistema/uptime.html" class="btn btn-neutral float-left" title="Tiempo en que el sistema ha estado encendido &gt; uptime" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

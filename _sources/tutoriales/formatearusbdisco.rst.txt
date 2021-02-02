@@ -3,9 +3,13 @@ Formatear una usb o disco duro
 
 Ver el video
 
-https://youtu.be/jWeuwrz2GpM
+https://www.youtube.com/watch?v=aJe5ZswPuBw
 
-Ver los pasos
+¿Por qué elegir un formato tan obsoleto de fat32?
+
+Simple y sencillamente porque es universal y ese formato lo reconoce todo tipo de plataformas (linux, unix, windows, apple, etc.) y la mayoria de dispositivos (pc, laptop, televisor, equipo de sonido, entre otros). Lo negativo es que es lenta la transferencia y el peso máximo por archivo individual es de 4 GB.
+
+Ver los pasos, son una muestra nada más, en el video se muestra bien completo.
 
 ::
 

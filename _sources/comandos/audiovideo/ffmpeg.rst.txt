@@ -1,0 +1,73 @@
+Convertir videos a otros formatos> ffmpeg
+-----------------------------------------
+
+**Nombre del comando:** ffmpeg
+
+**Man page online:** https://linux.die.net/man/1/ffmpeg
+
+**Descripción:** ffmpeg es una herramienta para convertir audio y video de forma rápida, tanto archivos locales como videos transmitidos en vivo. Tiene muchas opciones pero por el momento solo voy a convertir de un formato a otro un video específico con sus caracteristicas originales; es decir, sin modificar nada de dicho video sino que solo realizar una copia a otro formato.
+
+Estos comandos serán de utilidad a la hora de usar ffmpeg:
+
+'$ ffmpeg -version', ver la versión de ffmpeg y confirmar si se compiló correctamente.
+
+'$ ffprobe Alizee.mkv', ver el formato original del audio y video del archivo.
+
+'$ ffmpeg -formats', ver los formatos soportados.
+
+'$ ffmpeg -codecs', ver los codecs soportados.
+
+**Man page local:** ``$ man ffmpeg`` o ``$ man ffmpeg > ffmpeg.txt``
+
+**Instalado por defecto:** Sí, al menos en Linux Mint. Pero para convertir al formato mp3 habrá que compilar una nueva versión de ffmpeg, sino deseo convertir al formato mp3 algún video entonces no es necesario compilar la herramienta LAME ni el ffmpeg, bastará con el ffmpeg que trae instalado la distro para convertir a algunos tipos de video y audio. Estos enlaces serán útiles para compilar estas herramientas:
+
+
+**LAME** (herramienta para convertir a formato mp3)
+
+https://sourceforge.net/projects/lame/files/
+
+**Compilar ffmpeg para Debian y sus derivados**
+
+(Si se compila ffmpeg siguiendo estas instrucciones, ya va incluido el LAME aquí y no es necesario el paso de arriba).
+
+https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu#FFmpeg
+
+**Resumen general para compilar código fuente**
+
+::
+
+  1. Descargar el código fuente
+  
+  2. Descomprimir el archivo
+  
+  3. Buscar el archivo README o INSTALL que viene con el código fuente y seguir las indicaciones
+  
+  4. No olvidar instalar las dependencias incluidas en el archivo README o INSTALL
+  
+  5. Abrir una terminal y posicionarnos en la carpeta donde está el código fuente ya descomprimido
+  
+  6. '$ ./configure'
+  
+  7. '$ make'
+  
+  8. '$ sudo make install'
+
+.. image:: /_static/imgs/ffmpeg.png
+
+
+**Algunas Opciones:**
+
+``-i url (input)`` Especificar la ubicación y nombre del archivo de audio o video.
+
+``-acodec codec (input/output)`` Configurar el codec de audio. Para ver los codecs soportados '$ ffmpeg -encoders'
+
+``-vcodec codec (output)`` Configurar el codec de video. Para ver los codecs soportados '$ ffmpeg -encoders'
+
+``Stream copy`` Hace que ffmpeg omita el paso de decodificación y codificación para la secuencia especificada, por lo que solo hace demuxing y muxing. Dado que no hay decodificación ni codificación, es muy rápido y no hay pérdida de calidad. Sin embargo, es posible que no funcione en algunos casos debido a muchos factores.
+
+
+**Ejemplo 1:** ``$ ffmpeg -i 001.mp4 -acodec copy -vcodec copy 001.mkv``, en este ejemplo solo convierto el video y audio original llamado '001.mp4' al formato '001.mkv' sin hacer modificación alguna a la calidad del video y audio. Este ejemplo es genérico y funciona para convertir casi cualquier formato de video solo bastaría cambiar la extensión del video al que se requiere convertir. Si deseo convertir a avi este mismo video solo cambio la extensión. De esta forma 'ffmpeg -i 001.mp4 -vcodec copy -acodec copy 001.avi'
+
+**Ejemplo 2:** ``$ ffmpeg -i Alizee.mkv -acodec aac Alizee.aac``, extraer el audio de un video al formato 'aac', en este caso el video 'Alizee.mkv' lo convierto a 'Alizee.aac' extrayendo su audio únicamente. 
+ 
+**Ejemplo 3:** ``$ ffmpeg -i Alizee.mkv Alizee.mp3``, extraer el audio de un video al formato universal 'mp3'. El ffmpeg que viene con la distro trae desactivado el LAME (--enable-libmp3lame), por tal razón mostrará un mensaje de error y pedirá que se active y eso solo se puede configurar al compilar una nueva versión de ffmpeg.

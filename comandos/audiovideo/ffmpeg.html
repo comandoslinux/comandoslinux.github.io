@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Convertir videos a otros formatos&gt; ffmpeg &mdash; documentación de TerminalLinux - 0.2</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Lista de pequeños videotutoriales" href="../../tutoriales.html" />
+    <link rel="prev" title="Audio y Video" href="../audiovideo.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> TerminalLinux
+          
+
+          
+            
+            <img src="../../_static/logo128x128.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tabla de Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../acerca.html">Acerca de</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduccion.html">Introducción</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../comandos.html">Comandos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../carpetasarchivos.html">Carpetas y Archivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internet.html">Internet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../red.html">Componentes de Red</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administracionsistema.html">Administración del Sistema</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../audiovideo.html">Audio y Video</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Convertir videos a otros formatos&gt; ffmpeg</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutoriales.html">Lista de pequeños videotutoriales</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TerminalLinux</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../comandos.html">Comandos</a> &raquo;</li>
+        
+          <li><a href="../audiovideo.html">Audio y Video</a> &raquo;</li>
+        
+      <li>Convertir videos a otros formatos&gt; ffmpeg</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/comandos/audiovideo/ffmpeg.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="convertir-videos-a-otros-formatos-ffmpeg">
+<h1>Convertir videos a otros formatos&gt; ffmpeg<a class="headerlink" href="#convertir-videos-a-otros-formatos-ffmpeg" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> ffmpeg</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/ffmpeg">https://linux.die.net/man/1/ffmpeg</a></p>
+<p><strong>Descripción:</strong> ffmpeg es una herramienta para convertir audio y video de forma rápida, tanto archivos locales como videos transmitidos en vivo. Tiene muchas opciones pero por el momento solo voy a convertir de un formato a otro un video específico con sus caracteristicas originales; es decir, sin modificar nada de dicho video sino que solo realizar una copia a otro formato.</p>
+<p>Estos comandos serán de utilidad a la hora de usar ffmpeg:</p>
+<p>“$ ffmpeg -version”, ver la versión de ffmpeg y confirmar si se compiló correctamente.</p>
+<p>“$ ffprobe Alizee.mkv”, ver el formato original del audio y video del archivo.</p>
+<p>“$ ffmpeg -formats”, ver los formatos soportados.</p>
+<p>“$ ffmpeg -codecs”, ver los codecs soportados.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ffmpeg</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ffmpeg</span> <span class="pre">&gt;</span> <span class="pre">ffmpeg.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Linux Mint. Pero para convertir al formato mp3 habrá que compilar una nueva versión de ffmpeg, sino deseo convertir al formato mp3 algún video entonces no es necesario compilar la herramienta LAME ni el ffmpeg, bastará con el ffmpeg que trae instalado la distro para convertir a algunos tipos de video y audio. Estos enlaces serán útiles para compilar estas herramientas:</p>
+<p><strong>LAME</strong> (herramienta para convertir a formato mp3)</p>
+<p><a class="reference external" href="https://sourceforge.net/projects/lame/files/">https://sourceforge.net/projects/lame/files/</a></p>
+<p><strong>Compilar ffmpeg para Debian y sus derivados</strong></p>
+<p>(Si se compila ffmpeg siguiendo estas instrucciones, ya va incluido el LAME aquí y no es necesario el paso de arriba).</p>
+<p><a class="reference external" href="https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu#FFmpeg">https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu#FFmpeg</a></p>
+<p><strong>Resumen general para compilar código fuente</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Descargar</span> <span class="n">el</span> <span class="n">código</span> <span class="n">fuente</span>
+
+<span class="mf">2.</span> <span class="n">Descomprimir</span> <span class="n">el</span> <span class="n">archivo</span>
+
+<span class="mf">3.</span> <span class="n">Buscar</span> <span class="n">el</span> <span class="n">archivo</span> <span class="n">README</span> <span class="n">o</span> <span class="n">INSTALL</span> <span class="n">que</span> <span class="n">viene</span> <span class="n">con</span> <span class="n">el</span> <span class="n">código</span> <span class="n">fuente</span> <span class="n">y</span> <span class="n">seguir</span> <span class="n">las</span> <span class="n">indicaciones</span>
+
+<span class="mf">4.</span> <span class="n">No</span> <span class="n">olvidar</span> <span class="n">instalar</span> <span class="n">las</span> <span class="n">dependencias</span> <span class="n">incluidas</span> <span class="n">en</span> <span class="n">el</span> <span class="n">archivo</span> <span class="n">README</span> <span class="n">o</span> <span class="n">INSTALL</span>
+
+<span class="mf">5.</span> <span class="n">Abrir</span> <span class="n">una</span> <span class="n">terminal</span> <span class="n">y</span> <span class="n">posicionarnos</span> <span class="n">en</span> <span class="n">la</span> <span class="n">carpeta</span> <span class="n">donde</span> <span class="n">está</span> <span class="n">el</span> <span class="n">código</span> <span class="n">fuente</span> <span class="n">ya</span> <span class="n">descomprimido</span>
+
+<span class="mf">6.</span> <span class="s1">&#39;$ ./configure&#39;</span>
+
+<span class="mf">7.</span> <span class="s1">&#39;$ make&#39;</span>
+
+<span class="mf">8.</span> <span class="s1">&#39;$ sudo make install&#39;</span>
+</pre></div>
+</div>
+<img alt="../../_images/ffmpeg.png" src="../../_images/ffmpeg.png" />
+<p><strong>Algunas Opciones:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">-i</span> <span class="pre">url</span> <span class="pre">(input)</span></code> Especificar la ubicación y nombre del archivo de audio o video.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-acodec</span> <span class="pre">codec</span> <span class="pre">(input/output)</span></code> Configurar el codec de audio. Para ver los codecs soportados “$ ffmpeg -encoders”</p>
+<p><code class="docutils literal notranslate"><span class="pre">-vcodec</span> <span class="pre">codec</span> <span class="pre">(output)</span></code> Configurar el codec de video. Para ver los codecs soportados “$ ffmpeg -encoders”</p>
+<p><code class="docutils literal notranslate"><span class="pre">Stream</span> <span class="pre">copy</span></code> Hace que ffmpeg omita el paso de decodificación y codificación para la secuencia especificada, por lo que solo hace demuxing y muxing. Dado que no hay decodificación ni codificación, es muy rápido y no hay pérdida de calidad. Sin embargo, es posible que no funcione en algunos casos debido a muchos factores.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ffmpeg</span> <span class="pre">-i</span> <span class="pre">001.mp4</span> <span class="pre">-acodec</span> <span class="pre">copy</span> <span class="pre">-vcodec</span> <span class="pre">copy</span> <span class="pre">001.mkv</span></code>, en este ejemplo solo convierto el video y audio original llamado “001.mp4” al formato “001.mkv” sin hacer modificación alguna a la calidad del video y audio. Este ejemplo es genérico y funciona para convertir casi cualquier formato de video solo bastaría cambiar la extensión del video al que se requiere convertir. Si deseo convertir a avi este mismo video solo cambio la extensión. De esta forma “ffmpeg -i 001.mp4 -vcodec copy -acodec copy 001.avi”</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ffmpeg</span> <span class="pre">-i</span> <span class="pre">Alizee.mkv</span> <span class="pre">-acodec</span> <span class="pre">aac</span> <span class="pre">Alizee.aac</span></code>, extraer el audio de un video al formato “aac”, en este caso el video “Alizee.mkv” lo convierto a “Alizee.aac” extrayendo su audio únicamente.</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ffmpeg</span> <span class="pre">-i</span> <span class="pre">Alizee.mkv</span> <span class="pre">Alizee.mp3</span></code>, extraer el audio de un video al formato universal “mp3”. El ffmpeg que viene con la distro trae desactivado el LAME (–enable-libmp3lame), por tal razón mostrará un mensaje de error y pedirá que se active y eso solo se puede configurar al compilar una nueva versión de ffmpeg.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../tutoriales.html" class="btn btn-neutral float-right" title="Lista de pequeños videotutoriales" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../audiovideo.html" class="btn btn-neutral float-left" title="Audio y Video" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2017 - 2021, Orlando Palencia Belloso
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

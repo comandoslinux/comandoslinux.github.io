@@ -10,3 +10,4 @@ Comandos
    comandos/internet
    comandos/red
    comandos/administracionsistema
+   comandos/audiovideo

@@ -9,227 +9,237 @@
 
 <url>
   <loc>https://comandoslinux.github.io/</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/acerca.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/introduccion.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/tutoriales.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/unidadesalmacenamiento.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/internet.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/red.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/administracionsistema.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://comandoslinux.github.io/comandos/audiovideo.html</loc>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/tutoriales/formatearusbdisco.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/tutoriales/desactivarefimokutil.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/tutoriales/tty.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/tutoriales/mpv.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/index.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/dir.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/ls.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/mkdir.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/cp.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/mv.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/rm.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/rename.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/find.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/chmod.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/apropos.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/chown.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/diff.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/ln.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/du.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/pdftoppm.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/img2pdf.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/pdfunite.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/sort.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/carpetasarchivos/cat.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/unidadesalmacenamiento/lsblk.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/unidadesalmacenamiento/dd.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/unidadesalmacenamiento/df.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/unidadesalmacenamiento/mount.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/unidadesalmacenamiento/umount.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/internet/wget.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/red/ip.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/red/ping.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/red/ssh.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/administracionsistema/shutdown.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://comandoslinux.github.io/comandos/administracionsistema/uptime.html</loc>
-  <lastmod>2021-01-03T16:03:55+00:00</lastmod>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://comandoslinux.github.io/comandos/audiovideo/ffmpeg.html</loc>
+  <lastmod>2021-02-02T13:09:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 

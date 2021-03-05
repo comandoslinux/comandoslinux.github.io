@@ -9,3 +9,4 @@ Lista de pequeños videotutoriales
    tutoriales/desactivarefimokutil
    tutoriales/tty
    tutoriales/mpv
+   tutoriales/varioscomandosalavez

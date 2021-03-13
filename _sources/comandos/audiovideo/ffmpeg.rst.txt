@@ -59,9 +59,9 @@ https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu#FFmpeg
 
 ``-i url (input)`` Especificar la ubicación y nombre del archivo de audio o video.
 
-``-acodec codec (input/output)`` Configurar el codec de audio. Para ver los codecs soportados '$ ffmpeg -encoders'
+``-acodec codec (input/output)`` Configurar el codec de audio. Para ver los codecs soportados '$ ffmpeg -encoders'. Se recomienda siempre agregar el codec para evitar perder calidad en el video.
 
-``-vcodec codec (output)`` Configurar el codec de video. Para ver los codecs soportados '$ ffmpeg -encoders'
+``-vcodec codec (output)`` Configurar el codec de video. Para ver los codecs soportados '$ ffmpeg -encoders'. Se recomienda siempre agregar el codec para evitar perder calidad en el audio.
 
 ``Stream copy`` Hace que ffmpeg omita el paso de decodificación y codificación para la secuencia especificada, por lo que solo hace demuxing y muxing. Dado que no hay decodificación ni codificación, es muy rápido y no hay pérdida de calidad. Sin embargo, es posible que no funcione en algunos casos debido a muchos factores.
 
@@ -70,4 +70,4 @@ https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu#FFmpeg
 
 **Ejemplo 2:** ``$ ffmpeg -i Alizee.mkv -acodec aac Alizee.aac``, extraer el audio de un video al formato 'aac', en este caso el video 'Alizee.mkv' lo convierto a 'Alizee.aac' extrayendo su audio únicamente. 
  
-**Ejemplo 3:** ``$ ffmpeg -i Alizee.mkv Alizee.mp3``, extraer el audio de un video al formato universal 'mp3'. El ffmpeg que viene con la distro trae desactivado el LAME (--enable-libmp3lame), por tal razón mostrará un mensaje de error y pedirá que se active y eso solo se puede configurar al compilar una nueva versión de ffmpeg.
+**Ejemplo 3:** ``$ ffmpeg -i Alizee.mkv -acodec mp3 Alizee.mp3``, extraer el audio de un video al formato universal 'mp3'. El ffmpeg que viene con la distro trae desactivado el LAME (--enable-libmp3lame), por tal razón mostrará un mensaje de error y pedirá que se active y eso solo se puede configurar al compilar una nueva versión de ffmpeg.

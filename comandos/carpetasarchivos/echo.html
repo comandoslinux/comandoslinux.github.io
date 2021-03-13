@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Cambiar propietario y grupo de archivos &gt; chown &mdash; documentación de TerminalLinux - 0.2</title>
+  <title>Leer en pantalla o escribir a un archivo el valor de una variable &gt; echo &mdash; documentación de TerminalLinux - 0.2</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Comparar dos archivos &gt; diff" href="diff.html" />
-    <link rel="prev" title="Buscar un comando por su descripción &gt; apropos" href="apropos.html" /> 
+    <link rel="next" title="Unidades de Almacenamiento" href="../unidadesalmacenamiento.html" />
+    <link rel="prev" title="Leer-crear archivos desde la terminal &gt; cat" href="cat.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -106,7 +106,7 @@
 <li class="toctree-l3"><a class="reference internal" href="find.html">Buscar carpetas y archivos &gt; find</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chmod.html">Cambiar permisos a carpetas y archivos &gt; chmod</a></li>
 <li class="toctree-l3"><a class="reference internal" href="apropos.html">Buscar un comando por su descripción &gt; apropos</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Cambiar propietario y grupo de archivos &gt; chown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chown.html">Cambiar propietario y grupo de archivos &gt; chown</a></li>
 <li class="toctree-l3"><a class="reference internal" href="diff.html">Comparar dos archivos &gt; diff</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ln.html">Crear enlaces entre archivos &gt; ln</a></li>
 <li class="toctree-l3"><a class="reference internal" href="du.html">Estimar el peso en disco de archivos y carpetas &gt; du</a></li>
@@ -115,7 +115,7 @@
 <li class="toctree-l3"><a class="reference internal" href="pdfunite.html">Combine dos o más archivos pdf en uno solo &gt; pdfunite</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sort.html">Ordenar el contenido de archivos de texto y crear lista de reproducción de videos &gt; sort</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cat.html">Leer-crear archivos desde la terminal &gt; cat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="echo.html">Leer en pantalla o escribir a un archivo el valor de una variable &gt; echo</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Leer en pantalla o escribir a un archivo el valor de una variable &gt; echo</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
@@ -176,13 +176,13 @@
         
           <li><a href="../carpetasarchivos.html">Carpetas y Archivos</a> &raquo;</li>
         
-      <li>Cambiar propietario y grupo de archivos &gt; chown</li>
+      <li>Leer en pantalla o escribir a un archivo el valor de una variable &gt; echo</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/comandos/carpetasarchivos/chown.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/comandos/carpetasarchivos/echo.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -195,21 +195,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="cambiar-propietario-y-grupo-de-archivos-chown">
-<h1>Cambiar propietario y grupo de archivos &gt; chown<a class="headerlink" href="#cambiar-propietario-y-grupo-de-archivos-chown" title="Enlazar permanentemente con este título">¶</a></h1>
-<p><strong>Nombre del comando:</strong> chown</p>
-<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/chown">https://linux.die.net/man/1/chown</a></p>
-<p><strong>Descripción:</strong> Cambiar propietario y/o grupo de archivos. Para cambiar tanto el dueño como el grupo a un archivo o carpeta se usan los dos puntos, asi: usuario:grupo. Éste comando requiere privilegios de sudo, de no anteponerlo da la advertencia de “operación no permitida”.</p>
-<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">chown</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">chown</span> <span class="pre">&gt;</span> <span class="pre">chown.txt</span></code></p>
-<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
-<img alt="../../_images/chown.png" src="../../_images/chown.png" />
+  <div class="section" id="leer-en-pantalla-o-escribir-a-un-archivo-el-valor-de-una-variable-echo">
+<h1>Leer en pantalla o escribir a un archivo el valor de una variable &gt; echo<a class="headerlink" href="#leer-en-pantalla-o-escribir-a-un-archivo-el-valor-de-una-variable-echo" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> echo</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/echo">https://linux.die.net/man/1/echo</a></p>
+<p><strong>Descripción:</strong> Mostrar una línea de texto. Este comando es muy útil para imprimir información de ayuda al usuario para que sepa lo que una aplicación está haciendo; dicha información por lo general se almacena en variables temporales o permanentes, las cuales fueron creadas por la distro o definidas por el usuario. Algunas variables de entorno muy importantes que se crearon al instalar la distro son: “$PATH”, “$HOME”, “$USER”, “$PWD”, “$SHELL”, “$TERM”, “$LANG”, “$HOSTNAME”, “$RANDOM”. No olvidar que en linux sí importa distinguir entre mayúsculas y minúsculas. Lo recomendable es que el texto a imprimir con este comando esté encerrado en comillas (“texto así”) normales. El símbolo de dólar “$” le indica al comando echo que lo que se quiere imprmir es una variable o parámetro.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">echo</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">echo</span> <span class="pre">&gt;</span> <span class="pre">echo.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Linux Mint.</p>
+<img alt="../../_images/echo.png" src="../../_images/echo.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">-R,</span> <span class="pre">-r,</span> <span class="pre">--recursive</span></code> Cambiar en archivos y directorios recursivamente.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Explique qué se está haciendo.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-c,</span> <span class="pre">--changes</span></code> Igual que verbose pero informa sólo cuando se realiza un cambio.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-c</span> <span class="pre">root:root</span> <span class="pre">multi2</span></code>, en este ejemplo le cambio el propietario y grupo a la carpeta “multi2”, ahora el dueño será el usuario “root”; pero no así de su contenido interno.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-R</span> <span class="pre">demo:demo</span> <span class="pre">multi2</span></code>, aquí cambio el propietario y grupo a la carpeta “multi2”, ahora al usuario y grupo “demo” les pertenece todo el contenido de dicha carpeta.</p>
-<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-vR</span> <span class="pre">:opalencia</span> <span class="pre">multi2</span></code>, en este ejemplo le cambio únicamente el grupo a la carpeta “multi2”, el dueño sigue siendo “demo”, pero no así el grupo que ahora pertenece a “opalencia”.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-e</span></code> Habilitar la interpretación de los escapes de barra invertida. Es obligación anteponer primero este parámetro para que funcionen los demás parámetros de abajo, de lo contrario se imprimirá el texto tal y cual se escribe.</p>
+<p><code class="docutils literal notranslate"><span class="pre">\n</span></code> Imprimir una línea nueva.</p>
+<p><code class="docutils literal notranslate"><span class="pre">\t</span></code> Imprimir un espacio horizontal de la tecla tab.</p>
+<p><code class="docutils literal notranslate"><span class="pre">\v</span></code> Imprimir un espacio vertical de la tecla tab.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">-e</span> <span class="pre">&quot;$USER\n$HOME\n$SHELL\n$TERM\n$LANG&quot;</span></code>, en este ejemplo imprimo en pantalla varias variables de entorno creadas por la distro y le digo que muestre cada variable en una sola línea.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">alfa=`echo</span> <span class="pre">{a..z}`</span> <span class="pre">&amp;&amp;</span> <span class="pre">echo</span> <span class="pre">$alfa</span> <span class="pre">&amp;&amp;</span> <span class="pre">echo</span> <span class="pre">$alfa</span> <span class="pre">|</span> <span class="pre">wc</span> <span class="pre">-w</span></code>, en este emplo creo una variable temporal “alfa” para almacenar el alfabeto usado en mi idioma castellano y luego imprimo dicha variable, posteriormente cuento la cantidad de palabras que usa dicha variable, en este caso el número de letras que tiene mi alfabeto del idioma castellano.</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">numeros=`echo</span> <span class="pre">{1..10}`</span> <span class="pre">&amp;&amp;</span> <span class="pre">echo</span> <span class="pre">$numeros</span> <span class="pre">&amp;&amp;</span> <span class="pre">echo</span> <span class="pre">$numeros</span> <span class="pre">|</span> <span class="pre">wc</span> <span class="pre">-w</span></code>, en este ejemplo imprimo los números del 1 al 10 con echo, solo con el objetivo de mostrar la variedad de cosas que este comando permite imprimir. No se limita solo a imprimir texto.</p>
+<p><strong>Ejemplo 4:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">-e</span> <span class="pre">&quot;H\no\nl\na\v\nM\nu\nn\nd\no&quot;</span></code>, esto es lo básico de este comando, imprimir en pantalla una línea de texto contenida entre comillas comunes. Para este caso imprimo en pantalla la frase “Hola Mundo” de manera vertical.</p>
 </div>
 
 
@@ -220,10 +222,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="diff.html" class="btn btn-neutral float-right" title="Comparar dos archivos &gt; diff" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../unidadesalmacenamiento.html" class="btn btn-neutral float-right" title="Unidades de Almacenamiento" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="apropos.html" class="btn btn-neutral float-left" title="Buscar un comando por su descripción &gt; apropos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cat.html" class="btn btn-neutral float-left" title="Leer-crear archivos desde la terminal &gt; cat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

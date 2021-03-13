@@ -24,3 +24,4 @@ Carpetas y Archivos
    carpetasarchivos/pdfunite
    carpetasarchivos/sort
    carpetasarchivos/cat
+   carpetasarchivos/echo

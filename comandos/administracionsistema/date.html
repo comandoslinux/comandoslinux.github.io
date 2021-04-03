@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tiempo en que el sistema ha estado encendido &gt; uptime &mdash; documentación de TerminalLinux - 0.2</title>
+  <title>Administrar la fecha y hora del sistema operativo &gt; date &mdash; documentación de TerminalLinux - 0.2</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Administrar la fecha y hora del sistema operativo &gt; date" href="date.html" />
-    <link rel="prev" title="Apagar-Reiniciar el sistema &gt; shutdown" href="shutdown.html" /> 
+    <link rel="next" title="Audio y Video" href="../audiovideo.html" />
+    <link rel="prev" title="Tiempo en que el sistema ha estado encendido &gt; uptime" href="uptime.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,8 +101,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../red.html">Componentes de Red</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../administracionsistema.html">Administración del Sistema</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="shutdown.html">Apagar-Reiniciar el sistema &gt; shutdown</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Tiempo en que el sistema ha estado encendido &gt; uptime</a></li>
-<li class="toctree-l3"><a class="reference internal" href="date.html">Administrar la fecha y hora del sistema operativo &gt; date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uptime.html">Tiempo en que el sistema ha estado encendido &gt; uptime</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Administrar la fecha y hora del sistema operativo &gt; date</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../audiovideo.html">Audio y Video</a></li>
@@ -159,13 +159,13 @@
         
           <li><a href="../administracionsistema.html">Administración del Sistema</a> &raquo;</li>
         
-      <li>Tiempo en que el sistema ha estado encendido &gt; uptime</li>
+      <li>Administrar la fecha y hora del sistema operativo &gt; date</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/comandos/administracionsistema/uptime.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/comandos/administracionsistema/date.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -178,20 +178,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tiempo-en-que-el-sistema-ha-estado-encendido-uptime">
-<h1>Tiempo en que el sistema ha estado encendido &gt; uptime<a class="headerlink" href="#tiempo-en-que-el-sistema-ha-estado-encendido-uptime" title="Enlazar permanentemente con este título">¶</a></h1>
-<p><strong>Nombre del comando:</strong> uptime</p>
-<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/uptime">https://linux.die.net/man/1/uptime</a></p>
-<p><strong>Descripción:</strong> Este comando muestra en una sola línea la siguiente información, la hora actual, el tiempo que ha estado encendido el sistema operativo, cuántos usuarios han iniciado sesión actualmente y un promedio de los procesos activos y en espera de ser ejecutados por el CPU.</p>
-<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">uptime</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">uptime</span> <span class="pre">&gt;</span> <span class="pre">uptime.txt</span></code></p>
+  <div class="section" id="administrar-la-fecha-y-hora-del-sistema-operativo-date">
+<h1>Administrar la fecha y hora del sistema operativo &gt; date<a class="headerlink" href="#administrar-la-fecha-y-hora-del-sistema-operativo-date" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> date</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/date">https://linux.die.net/man/1/date</a></p>
+<p><strong>Descripción:</strong> Mostrar la fecha y hora actual del sistema operativo, también se puede asignar otra fecha y hora si la actual no es la correcta a nuestra zona horaria (esta configuración solo se usa cuando el sistema operativo no tiene ninguna interfaz gráfica y toca hacer todo por consola). Cada país usa un formato determinado para la fecha, así que hay que considerar ese detalle si queremos mostrar la fecha correcta a un usuario (en el caso que nuestra computadora funcione como servidor). Por ejemplo, en mi país El Salvador se usa el formato DD-MM-AAAA (Dia - Mes - Año), si otro país usa el formato MM-DD-AAAA (Estados Unidos), al tener un dato de fecha solo de esa forma puede confundir a cualquiera (de hecho ya me pasó una vez, recibí un documento de Estados Unidos y la recepcionista no consideró el formato y al final se generó un problema grande). Fecha 03-04-2021 (El Salvador), fecha 03-04-2021 (Estados Unidos), algo tan simple puede generar problemas y perdidas de tiempo innecesarios.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">date</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">date</span> <span class="pre">&gt;</span> <span class="pre">date.txt</span></code></p>
 <p><strong>Instalado por defecto:</strong> Sí, al menos en Linux Mint.</p>
-<img alt="../../_images/uptime.png" src="../../_images/uptime.png" />
+<img alt="../../_images/date.png" src="../../_images/date.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">-p,</span> <span class="pre">--pretty</span></code> Mostrar el tiempo que ha estado encendido de forma simple y agradable.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-s,</span> <span class="pre">--since</span></code> Mostrar la fecha y hora exacta en que fue encendido el sistema operativo en el siguiente formato: yyyy-mm-dd HH:MM:SS.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--help</span></code> Mostrar la ayuda de este comando.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">uptime</span> <span class="pre">-p</span></code>, muestre el tiempo que ha estado encendido el sistema operativo de forma agradable.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">uptime</span> <span class="pre">-s</span></code>, muestre la fecha y hora exacta en que se encendió el sistema operativo.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-d,</span> <span class="pre">--date=STRING</span></code> Mostrar la fecha según lo indicado en el STRING. Esta opción puede ser útil para averiguar qué dia era o será en una fecha determinada. Por ejemplo si alguién quiere saber qué día era cuando nació (yo no sabía ese detallito, pero ahora sí lo sé) solo tendría que escribirlo de esta forma (MM/DD/AAAA), veamos que día era cuando nació la reina Isabel II: “date -d «04/21/1926»”, era un día miércoles cuando la reina nació.</p>
+<p><code class="docutils literal notranslate"><span class="pre">--version</span></code> Mostrar la versión de date.</p>
+<p><code class="docutils literal notranslate"><span class="pre">+%</span></code> Asignar el formato deseado para la fecha y hora según las letras mostradas en la man page (dale un vistazo).</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">date</span></code>, mostrar la fecha y hora actuales.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">date</span> <span class="pre">+%F%t%T</span></code>, mostrar la fecha y hora en el formato AAAA-MM-DD HH:MM:SS (2021-04-03 08:50:16).</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">date</span> <span class="pre">+%d%m%Y%R%S%Z</span></code>, mostrar la fecha y hora actuales según el formato de El Salvador (DD-MM-AAAA-HH:MM:SS).</p>
 </div>
 
 
@@ -202,10 +203,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="date.html" class="btn btn-neutral float-right" title="Administrar la fecha y hora del sistema operativo &gt; date" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../audiovideo.html" class="btn btn-neutral float-right" title="Audio y Video" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="shutdown.html" class="btn btn-neutral float-left" title="Apagar-Reiniciar el sistema &gt; shutdown" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="uptime.html" class="btn btn-neutral float-left" title="Tiempo en que el sistema ha estado encendido &gt; uptime" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

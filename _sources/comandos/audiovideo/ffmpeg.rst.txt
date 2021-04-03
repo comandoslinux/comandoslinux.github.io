@@ -1,5 +1,5 @@
-Convertir videos a otros formatos> ffmpeg
------------------------------------------
+Convertir videos a otros formatos > ffmpeg
+------------------------------------------
 
 **Nombre del comando:** ffmpeg
 

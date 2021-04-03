@@ -7,3 +7,4 @@ Administración del Sistema
 	
    administracionsistema/shutdown
    administracionsistema/uptime
+   administracionsistema/date

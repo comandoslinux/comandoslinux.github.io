@@ -46,7 +46,7 @@ Descargar archivos de internet > wget
 
 **Ejemplo 3:** ``$ wget -i allpackages.txt``, en este ejemplo se descargarán a la carpeta actual todos los archivos que contenga URL'S propiamente definidas en el archivo de texto 'allpackages.txt'. En el archivo 'allpackages.txt' no debe haber espacios ni nada raro, solo las URL'S separadas por un ENTER.
 
-**Ejemplo 4:** ``$ wget -r --no-parent https://comandoslinux.github.io/``, en este ejemplo descargo todo el sitio web de esta documentación de los comandos linux para tener una compia exacta en mi computadora. Recomiendo hacer tu propio respaldo si usas esta documentación, ya que no se si github será para siempre.
+**Ejemplo 4:** ``$ wget -r --no-parent https://comandoslinux.github.io/``, en este ejemplo descargo todo el sitio web de esta documentación de los comandos linux para tener una copia exacta en mi computadora. Recomiendo hacer tu propio respaldo si usas esta documentación, ya que no se si github será para siempre.
 
 
 

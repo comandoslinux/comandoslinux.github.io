@@ -22,6 +22,18 @@ Comparar dos archivos > diff
 ``-s, --report-identical-files`` Reportar cuando dos archivos son iguales, si lo son dirá el mensaje 'are identical', sino son iguales mostrará las diferencias que existen entre ambos.
 
 
-**Ejemplo 1:** ``$ diff '/home/opalencia/githubProject/comandoslinux.github.io/acerca.html' '/home/opalencia/githubProject/html/acerca.html'``, en este ejemplo se va a comparar las diferencias entre los archivos acerca.html y acerca.html. Lleva un poco de tiempo familiarizarse con los resultados que se muestran en la consola, pero si se analiza correctamente se puede apreciar en dónde se encuentran las diferencias entre ambos archivos.
+**Ejemplo 1:**
 
-**Ejemplo 2:** ``$ diff '/home/opalencia/Documentos/carpeta1' '/home/opalencia/Documentos/carpeta2'``, en este ejemplo se va a comparar el contenido de la carpeta1 y la carpeta2, esto es muy util ya que comparar dos carpetas con la vista puede generar errores y hacerlo así lleva muchos tiempo.
+::
+
+   diff '/home/opalencia/githubProject/comandoslinux.github.io/acerca.html' '/home/opalencia/githubProject/html/acerca.html' 
+   
+en este ejemplo se va a comparar las diferencias entre los archivos acerca.html y acerca.html. Lleva un poco de tiempo familiarizarse con los resultados que se muestran en la consola, pero si se analiza correctamente se puede apreciar en dónde se encuentran las diferencias entre ambos archivos.
+
+**Ejemplo 2:** 
+
+::
+
+   diff '/home/opalencia/Documentos/carpeta1' '/home/opalencia/Documentos/carpeta2' 
+   
+en este ejemplo se va a comparar el contenido de la carpeta1 y la carpeta2, esto es muy util ya que comparar dos carpetas con la vista puede generar errores y hacerlo así lleva muchos tiempo.

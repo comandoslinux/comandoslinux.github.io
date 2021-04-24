@@ -178,7 +178,11 @@
 <p><strong>Ampersand (&amp;&amp;)</strong>, ejecutar los comandos en orden de izquierda a derecha si y solo si el comando anterior se ejecuta satisfactoriamente, de lo contrario la instrucción se interrumpe y ya no sigue ejecutándose.</p>
 <p><strong>Pleca o barra vertical (|)</strong>, una pleca individual significa que el resultado del primer comando ejecutado servirá como parámetro para el segundo comando, por tanto, si el primer comando no devuelve resultados, entonces el segundo comando no tendrá datos para ser utilizados y no se ejecutará.</p>
 <p><strong>Pleca o barra vertical (||)</strong>, ejecuta solo uno de los comandos sin importar que se escriban varios comandos, estas dobles plecas buscan que se ejecute uno u otro comando; pero nunca ambos o todos los comandos escritos en la instrucción.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">-v</span> <span class="pre">carpetax;</span> <span class="pre">cd</span> <span class="pre">carpetax;</span> <span class="pre">echo</span> <span class="pre">&quot;hola</span> <span class="pre">mundo&quot;&gt;</span> <span class="pre">hola.txt</span></code>, en este ejemplo creo una carpeta llamada “carpetax” (si existe dicha carpeta no la crea y pasa al siguiente comando), luego hago un “cd” a dicha carpeta para posteriormente crear un archivo llamado “hola.txt” con el contenido de “hola mundo” en él; el cual es creado en la carpeta antes creada.</p>
+<p><strong>Ejemplo 1:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">v</span> <span class="n">carpetax</span><span class="p">;</span> <span class="n">cd</span> <span class="n">carpetax</span><span class="p">;</span> <span class="n">echo</span> <span class="s2">&quot;hola mundo&quot;</span><span class="o">&gt;</span> <span class="n">hola</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>en este ejemplo creo una carpeta llamada “carpetax” (si existe dicha carpeta no la crea y pasa al siguiente comando), luego hago un “cd” a dicha carpeta para posteriormente crear un archivo llamado “hola.txt” con el contenido de “hola mundo” en él; el cual es creado en la carpeta antes creada.</p>
 <img alt="../_images/muchoscomandos1.png" src="../_images/muchoscomandos1.png" />
 <p>Script que realiza la misma tarea del ejemplo 1:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
@@ -189,7 +193,11 @@
 </pre></div>
 </div>
 <p>Recordar guardar el sript en un archivo llamado “varioscomandos1.sh” y darle permisos de ejecución con “$ chmod +x varioscomandos1.sh” y luego ejecutarlo con “$ ./varioscomandos1.sh”.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">-v</span> <span class="pre">carpetax</span> <span class="pre">&amp;&amp;</span> <span class="pre">cd</span> <span class="pre">carpetax</span> <span class="pre">&amp;&amp;</span> <span class="pre">today=`date</span> <span class="pre">+%d%m%Y%R%S%Z`</span> <span class="pre">&amp;&amp;</span> <span class="pre">echo</span> <span class="pre">$today</span> <span class="pre">&gt;</span> <span class="pre">$today.txt</span></code>, este es el mismo ejemplo 1, solamente con unos cambios sutiles. Si el directorio “carpetax” existe la instrucción se detiene y ya no sigue ejecutando el siguiente comando, esa es la función del ampersand (“&amp;”) que se ejecuten los comandos si y solo si el anterior fue exitoso. La diferencia importante respecto al ejemplo 1 es que creo un archivo de texto conteniendo la fecha actual, el cual tendrá como nombre la fecha actual en el formato usado en mi país El Salvador que es: “DD-MM-AAAA:HHMMSS”; en otras palabras (Día del mes actual + mes actual + año actual + hora (formato 24 horas) + los minutos + los segundos + la zona horaria); ejemplo: “1502202110:1136CST” es la fecha actual al escribir estas líneas. No prestarle atención al comando “date”, lo escribiré en la documentación luego.</p>
+<p><strong>Ejemplo 2:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir -v carpetax &amp;&amp; cd carpetax &amp;&amp; today=`date +%d%m%Y%R%S%Z` &amp;&amp; echo $today &gt; $today.txt
+</pre></div>
+</div>
+<p>este es el mismo ejemplo 1, solamente con unos cambios sutiles. Si el directorio “carpetax” existe la instrucción se detiene y ya no sigue ejecutando el siguiente comando, esa es la función del ampersand (“&amp;”) que se ejecuten los comandos si y solo si el anterior fue exitoso. La diferencia importante respecto al ejemplo 1 es que creo un archivo de texto conteniendo la fecha actual, el cual tendrá como nombre la fecha actual en el formato usado en mi país El Salvador que es: “DD-MM-AAAA:HHMMSS”; en otras palabras (Día del mes actual + mes actual + año actual + hora (formato 24 horas) + los minutos + los segundos + la zona horaria); ejemplo: “1502202110:1136CST” es la fecha actual al escribir estas líneas. No prestarle atención al comando “date”, lo escribiré en la documentación luego.</p>
 <img alt="../_images/muchoscomandos2.png" src="../_images/muchoscomandos2.png" />
 <p>Script que realiza la misma tarea del ejemplo 2:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
@@ -203,7 +211,11 @@ echo $today &gt; $today.txt
 </pre></div>
 </div>
 <p>Recordar guardar el sript en un archivo llamado “varioscomandos2.sh” y darle permisos de ejecución con “$ chmod +x varioscomandos2.sh” y luego ejecutarlo con “$ ./varioscomandos2.sh”.</p>
-<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">-v</span> <span class="pre">carpetax</span> <span class="pre">||</span> <span class="pre">cd</span> <span class="pre">carpetax</span></code>, en este ejemplo sino existe la “carpetax” el comando “mkdir” se ejecutará y la creará, pero si existe dicha carpeta entonces se ejecutará el comando “cd” y hará un “cd” a la carpeta en cuestión.</p>
+<p><strong>Ejemplo 3:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">v</span> <span class="n">carpetax</span> <span class="o">||</span> <span class="n">cd</span> <span class="n">carpetax</span>
+</pre></div>
+</div>
+<p>en este ejemplo sino existe la “carpetax” el comando “mkdir” se ejecutará y la creará, pero si existe dicha carpeta entonces se ejecutará el comando “cd” y hará un “cd” a la carpeta en cuestión.</p>
 <img alt="../_images/muchoscomandos3.png" src="../_images/muchoscomandos3.png" />
 <p>Script que realiza la misma tarea del ejemplo 3:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
@@ -216,7 +228,11 @@ echo $today &gt; $today.txt
 <p>Recordar guardar el sript en un archivo llamado “varioscomandos3.sh” y darle permisos de ejecución con “$ chmod +x varioscomandos3.sh” y luego ejecutarlo con “$ ./varioscomandos3.sh”.</p>
 <p><strong>Combinación de operadores</strong></p>
 <p>Para aprovechar de la mejor manera la combinación de los comandos linux en una sola instrucción habrá que utilizar y combinar los diferentes operadores arriba descritos.</p>
-<p><strong>Ejemplo 4:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">-v</span> <span class="pre">carpetax;</span> <span class="pre">cd</span> <span class="pre">carpetax</span> <span class="pre">&amp;&amp;</span> <span class="pre">today=`date</span> <span class="pre">+%d%m%Y%R%S%Z`</span> <span class="pre">&amp;&amp;</span> <span class="pre">echo</span> <span class="pre">$today</span> <span class="pre">&gt;</span> <span class="pre">$today.txt</span></code>, en este ejemplo me aseguro que la actividad principal (crear un archivo de texto con la fecha actual) se ejecute y no sea interrumpida por algún comando que no sea exitoso.</p>
+<p><strong>Ejemplo 4:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir -v carpetax; cd carpetax &amp;&amp; today=`date +%d%m%Y%R%S%Z` &amp;&amp; echo $today &gt; $today.txt
+</pre></div>
+</div>
+<p>en este ejemplo me aseguro que la actividad principal (crear un archivo de texto con la fecha actual) se ejecute y no sea interrumpida por algún comando que no sea exitoso.</p>
 <p>Script que realiza la misma tarea del ejemplo 4:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 
@@ -228,7 +244,11 @@ echo $today &gt; $today.txt
 </pre></div>
 </div>
 <p>Recordar guardar el sript en un archivo llamado “varioscomandos4.sh” y darle permisos de ejecución con “$ chmod +x varioscomandos4.sh” y luego ejecutarlo con “$ ./varioscomandos4.sh”.</p>
-<p><strong>Ejemplo 5:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">-v</span> <span class="pre">carpetax;</span> <span class="pre">cd</span> <span class="pre">carpetax</span> <span class="pre">&amp;&amp;</span> <span class="pre">today=`date</span> <span class="pre">+%d%m%Y%R%S%Z`</span> <span class="pre">&amp;&amp;</span> <span class="pre">echo</span> <span class="pre">$today</span> <span class="pre">&gt;</span> <span class="pre">$today.txt</span> <span class="pre">&amp;&amp;</span> <span class="pre">find</span> <span class="pre">|</span> <span class="pre">sort</span> <span class="pre">-n</span> <span class="pre">&gt;</span> <span class="pre">todaydatefiles.txt</span></code>, este es el mismo ejemplo 4, con la diferencia que creo otro archivo de texto que contiene todos los archivos de texto con la fecha actual antes creados y el que se acaba de crear.</p>
+<p><strong>Ejemplo 5:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir -v carpetax; cd carpetax &amp;&amp; today=`date +%d%m%Y%R%S%Z` &amp;&amp; echo $today &gt; $today.txt &amp;&amp; find | sort -n &gt; todaydatefiles.txt
+</pre></div>
+</div>
+<p>este es el mismo ejemplo 4, con la diferencia que creo otro archivo de texto que contiene todos los archivos de texto con la fecha actual antes creados y el que se acaba de crear.</p>
 <p>Script que realiza la misma tarea del ejemplo 5:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 
@@ -240,7 +260,11 @@ echo $today &gt; $today.txt &amp;&amp; find | sort -n &gt; todaydatefiles.txt
 </pre></div>
 </div>
 <p>Recordar guardar el sript en un archivo llamado “varioscomandos5.sh” y darle permisos de ejecución con “$ chmod +x varioscomandos5.sh” y luego ejecutarlo con “$ ./varioscomandos5.sh”.</p>
-<p><strong>Ejemplo 6:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">publicip=`wget</span> <span class="pre">-qO-</span> <span class="pre">http://ipecho.net/plain;</span> <span class="pre">echo`</span> <span class="pre">&amp;&amp;</span> <span class="pre">today=`date</span> <span class="pre">+%d%m%Y%R%S%Z`</span> <span class="pre">&amp;&amp;</span> <span class="pre">echo</span> <span class="pre">$publicip$today</span> <span class="pre">&gt;&gt;</span> <span class="pre">publicip.txt</span></code>, en este ejemplo creo una variable temporal “publicip” que me almacena la ip pública que está usando mi computadora y le digo que la guarde en un archivo de texto; además le agrego la fecha actual en otra variable “today” y le digo que la guarde en una sola línea en un archivo de texto llamado “publicip.txt” (si existe el archivo solo insertará una línea con los datos y si no existe lo creará y le insertará los valores de las dos variables temporales).</p>
+<p><strong>Ejemplo 6:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>publicip=`wget -qO- http://ipecho.net/plain; echo` &amp;&amp; today=`date +%d%m%Y%R%S%Z` &amp;&amp; echo $publicip$today &gt;&gt; publicip.txt
+</pre></div>
+</div>
+<p>en este ejemplo creo una variable temporal “publicip” que me almacena la ip pública que está usando mi computadora y le digo que la guarde en un archivo de texto; además le agrego la fecha actual en otra variable “today” y le digo que la guarde en una sola línea en un archivo de texto llamado “publicip.txt” (si existe el archivo solo insertará una línea con los datos y si no existe lo creará y le insertará los valores de las dos variables temporales).</p>
 <p>Script que realiza la misma tarea del ejemplo 6:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 

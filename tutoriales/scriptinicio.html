@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ejecutar script al iniciar sesión con sudo &mdash; documentación de TerminalLinux - 0.2</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Ejecutar varios comandos en una instrucción" href="varioscomandosalavez.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> TerminalLinux
+          
+
+          
+            
+            <img src="../_static/logo128x128.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tabla de Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../acerca.html">Acerca de</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../comandos.html">Comandos</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutoriales.html">Lista de pequeños videotutoriales</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="formatearusbdisco.html">Formatear una usb o disco duro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desactivarefimokutil.html">Desactivar/Activar sistema de arranque EFI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tty.html">Resolver problemas usando la TTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpv.html">Reproducir música desde la terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="varioscomandosalavez.html">Ejecutar varios comandos en una instrucción</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Ejecutar script al iniciar sesión con sudo</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TerminalLinux</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutoriales.html">Lista de pequeños videotutoriales</a> &raquo;</li>
+        
+      <li>Ejecutar script al iniciar sesión con sudo</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutoriales/scriptinicio.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ejecutar-script-al-iniciar-sesion-con-sudo">
+<h1>Ejecutar script al iniciar sesión con sudo<a class="headerlink" href="#ejecutar-script-al-iniciar-sesion-con-sudo" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Problema a resolver</strong></p>
+<p>Instalé Manjaro en mi sony vaio viejita y resulta que cada vez que inicio sesión el brillo de mi pantalla se reestablece al 100%, lo cual me genera problemas en la vista y no quiero estar cambiando ese brillo cada vez que enciendo mi laptop. Cada distro es diferente y cada modelo y marca de laptop tienen características distintas también; por lo tanto, siempre habrá problemillas como estos ya que el kernel de linux (el cual controla los componentes de hardware de un dispositivo) no puede resolver todo este asunto de compatibilidad con todos los dispositivos existentes y por haber. Pero la solución es sencilla, la cual escribo a continuación.</p>
+<p><strong>Aclaración</strong> En mi caso las teclas de mi teclado y la aplicación de “Power Manager” de mi entorno de escritorio Xfce para controlar el brillo funcionan perfectamente y puedo cambiarlo a mi gusto con estos métodos. Por eso le llamo problemilla, solo tengo ese defecto que me lo cambia al máximo cada vez que inicio mi laptop.</p>
+<p>Si alguien tiene problemas y no puede cambiar el brillo de su laptop, aqui pueden encontrar alguna solución.</p>
+<p><a class="reference external" href="https://wiki.archlinux.org/index.php/Backlight">https://wiki.archlinux.org/index.php/Backlight</a></p>
+<p><strong>Procedimiento para cambiar el brillo de una sony vaio por medio de un script:</strong></p>
+<p><strong>Paso 1:</strong> Identificar mi tarjeta de video</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">lspci</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">Grap</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">inxi</span> <span class="pre">-Gx</span></code></p>
+<p><strong>Paso 2:</strong> Mostrar los valores actuales del brillo segun mi tarjeta</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ls</span> <span class="pre">/sys/class/backlight</span></code>, como mi tarjeta decía intel, haría los cambios en “intel_backlight”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">backlight</span><span class="o">/</span><span class="n">intel_backlight</span><span class="o">/</span><span class="n">actual_brightness</span>
+
+<span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">backlight</span><span class="o">/</span><span class="n">intel_backlight</span><span class="o">/</span><span class="n">max_brightness</span>
+
+<span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">backlight</span><span class="o">/</span><span class="n">intel_backlight</span><span class="o">/</span><span class="n">brightness</span>
+</pre></div>
+</div>
+<p>éste es el brillo actual y máximo y el actual es el que me interesa que se guarde permanentemente (para ello cambiaría el valor del archivo de texto “brightness”, “actual_brightness” no se toca). En mi caso aparecen números desde el cero al 4882 y el número que me interesa guardar es 1952.</p>
+<img alt="../_images/script1.png" src="../_images/script1.png" />
+<p><strong>Paso 3:</strong> Guardar el número de brillo deseado en el archivo de texto “brightness”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="mi">1952</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">backlight</span><span class="o">/</span><span class="n">intel_backlight</span><span class="o">/</span><span class="n">brightness</span>
+</pre></div>
+</div>
+<p>como se aprecia en la imagen este archivo solo lo puede modificar el usuario “root”, aunque mi usuario pertenezca al grupo de sudo, no puedo modificar dicho archivo.</p>
+<img alt="../_images/script2.png" src="../_images/script2.png" />
+<p><strong>Paso 4:</strong> Crear un script para modificar el valor del brillo contenido en el archivo de texto “brightness”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># set my correct brightness because every startup it go back to max level and hurts my eyes.</span>
+
+<span class="n">echo</span> <span class="mi">1952</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">backlight</span><span class="o">/</span><span class="n">intel_backlight</span><span class="o">/</span><span class="n">brightness</span>
+</pre></div>
+</div>
+<p>recordar guardar dicho escript con el nombre “setbrightness.sh” y asignarle permisos de ejecución con “chmod +x setbrightness.sh”. Recomiendo guardar dicho escript en una carpeta del usuario actual, esta es mi ruta: /home/opalencia/bash/brightness/setbrightness.sh</p>
+<img alt="../_images/script3.png" src="../_images/script3.png" />
+<p><strong>Paso 5:</strong> Agregar una regla al archivo “/etc/sudoers” con el editor “visudo” con el usuario “root” (hay que abrir una terminal e ingresar las credenciales del usuario root, la cual permitirá guardar el brillo en el archivo “brightness” con el escript arriba creado y para el usuario ahi mencionado. Ver la imagen de abajo por si alguien no está familiarizado a usar el usuario root y el editor visudo.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">opalencia</span> <span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span> <span class="n">NOPASSWD</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">opalencia</span><span class="o">/</span><span class="n">bash</span><span class="o">/</span><span class="n">brightness</span><span class="o">/</span><span class="n">setbrightness</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>“opalencia” es el usuario que deseo que ejecute el script y le doy la ruta en dónde se encuentra dicho script, “NOPASSWD” permite que el usuario ahí mencionado pueda ejecutar el script sin necesidad de escribir la contraseña en ningún lado. Asegurarse que el usuario sea el mismo que inició sesión y la ruta del script sea la correcta, de no ser así, el brillo no cambiaría y no serviría para nada el scritp.</p>
+<img alt="../_images/script4.png" src="../_images/script4.png" />
+<p><strong>Paso 6:</strong> Agregar el script a las aplicaciones de inicio de sesión</p>
+<p>Mi entorno de escritorio es Xfce version 4.16, cada entorno de escritorio tiene diferentes rutas de dónde es que se agregan las aplicaciones de inicio de sesión. En mi caso entro a “session and startup” y ahí hay una pestaña de “Application Autostart” y luego hago clic en el símbolo mas para agregar una aplicación, le agrego nombre, una descripción y el comando que ejecutará el cual será la dirección al scritp antes creado, pero antes anteponerle “sudo”, ver la imagen de abajo para mayor claridad.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">opalencia</span><span class="o">/</span><span class="n">bash</span><span class="o">/</span><span class="n">brightness</span><span class="o">/</span><span class="n">setbrightness</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>esto es lo mas importante y se agrega donde dice “command”, como dice la etiqueta “command” aquí se inserta el comando que deseamos que se ejecute cada vez que se inicia la sesión en nuestra laptop. Es muy importante no agregar nada raro sino que solo el comando o en este caso el “sudo” mas la dirección en donde guardamos nuestro script.</p>
+<img alt="../_images/script5.png" src="../_images/script5.png" />
+<p>De esta manera si el brillo se resetea cada vez que apago mi laptop, entonces con este escript volverá al valor que deseo cada vez que inicio mi laptop, sin necesidad de cambiarlo manualmente ni hacer ya mas nada sino que solo me tomaría la molestia de realizar esta actividad una única vez.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="varioscomandosalavez.html" class="btn btn-neutral float-left" title="Ejecutar varios comandos en una instrucción" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2017 - 2021, Orlando Palencia Belloso
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

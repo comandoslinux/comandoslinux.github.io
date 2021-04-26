@@ -10,3 +10,4 @@ Lista de pequeños videotutoriales
    tutoriales/tty
    tutoriales/mpv
    tutoriales/varioscomandosalavez
+   tutoriales/scriptinicio

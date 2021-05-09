@@ -25,3 +25,4 @@ Carpetas y Archivos
    carpetasarchivos/sort
    carpetasarchivos/cat
    carpetasarchivos/echo
+   carpetasarchivos/pwd

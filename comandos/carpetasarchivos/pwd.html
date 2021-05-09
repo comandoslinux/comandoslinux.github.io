@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>MoverRenombrar carpetas y archivos &gt; mv &mdash; documentación de TerminalLinux - 0.2</title>
+  <title>Imprimir el nombre del directorio actual de trabajo &gt; pwd &mdash; documentación de TerminalLinux - 0.2</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Eliminar carpetas y archivos &gt; rm" href="rm.html" />
-    <link rel="prev" title="Copiar carpetas y archivos &gt; cp" href="cp.html" /> 
+    <link rel="next" title="Unidades de Almacenamiento" href="../unidadesalmacenamiento.html" />
+    <link rel="prev" title="Leer en pantalla o escribir a un archivo el valor de una variable &gt; echo" href="echo.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -100,7 +100,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ls.html">Mostrar carpetas y archivos &gt; ls</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mkdir.html">Crear carpetas &gt; mkdir</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cp.html">Copiar carpetas y archivos &gt; cp</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">MoverRenombrar carpetas y archivos &gt; mv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mv.html">MoverRenombrar carpetas y archivos &gt; mv</a></li>
 <li class="toctree-l3"><a class="reference internal" href="rm.html">Eliminar carpetas y archivos &gt; rm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="rename.html">Renombrar archivos masivos &gt; rename</a></li>
 <li class="toctree-l3"><a class="reference internal" href="find.html">Buscar carpetas y archivos &gt; find</a></li>
@@ -116,7 +116,7 @@
 <li class="toctree-l3"><a class="reference internal" href="sort.html">Ordenar el contenido de archivos de texto y crear lista de reproducción de videos &gt; sort</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cat.html">Leer-crear archivos desde la terminal &gt; cat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="echo.html">Leer en pantalla o escribir a un archivo el valor de una variable &gt; echo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pwd.html">Imprimir el nombre del directorio actual de trabajo  &gt; pwd</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Imprimir el nombre del directorio actual de trabajo  &gt; pwd</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
@@ -177,13 +177,13 @@
         
           <li><a href="../carpetasarchivos.html">Carpetas y Archivos</a> &raquo;</li>
         
-      <li>MoverRenombrar carpetas y archivos &gt; mv</li>
+      <li>Imprimir el nombre del directorio actual de trabajo  &gt; pwd</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/comandos/carpetasarchivos/mv.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/comandos/carpetasarchivos/pwd.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -196,21 +196,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="moverrenombrar-carpetas-y-archivos-mv">
-<h1>MoverRenombrar carpetas y archivos &gt; mv<a class="headerlink" href="#moverrenombrar-carpetas-y-archivos-mv" title="Enlazar permanentemente con este título">¶</a></h1>
-<p><strong>Nombre del comando:</strong> mv</p>
-<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/mv">https://linux.die.net/man/1/mv</a></p>
-<p><strong>Descripción:</strong> Mover o renombrar carpetas y archivos de un lugar a otro. Importante: este comando sólo renombra un archivo o carpeta a la vez, si buscas renombar varios objetos a la vez, usa el comando <strong>rename</strong>.</p>
-<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">mv</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">mv</span> <span class="pre">&gt;</span> <span class="pre">mv.txt</span></code></p>
-<p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
-<img alt="../../_images/mv.png" src="../../_images/mv.png" />
+  <div class="section" id="imprimir-el-nombre-del-directorio-actual-de-trabajo-pwd">
+<h1>Imprimir el nombre del directorio actual de trabajo  &gt; pwd<a class="headerlink" href="#imprimir-el-nombre-del-directorio-actual-de-trabajo-pwd" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> pwd</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/pwd">https://linux.die.net/man/1/pwd</a></p>
+<p><strong>Descripción:</strong> Imprime el nombre del archivo completo del directorio de trabajo actual. Este comando será de utilidad cuando no sepamos la ruta del directorio actual en el que estamos trabajando en la terminal.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">pwd</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">pwd</span> <span class="pre">&gt;</span> <span class="pre">pwd.txt</span></code></p>
+<p><strong>Instalado por defecto:</strong> Sí, al menos en Linux Mint.</p>
+<img alt="../../_images/pwd.png" src="../../_images/pwd.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">-f,</span> <span class="pre">--force</span></code> No solicite antes de sobreescribir.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Explique qué se está haciendo.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-u,</span> <span class="pre">--update</span></code> Mover solo cuando el archivo SOURCE es más nuevo que el archivo de destino o cuando falta el archivo de destino. En palabras simples solo mueve si existe carpetas y archivos nuevos.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mv</span> <span class="pre">-vf</span> <span class="pre">Games</span> <span class="pre">games2</span></code>, renombra la carpeta Games a games2.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mv</span> <span class="pre">-v</span> <span class="pre">Games/*</span> <span class="pre">games2</span></code>, mueve todo el contenido de la carpeta Games a games2, no así la carpeta Games.</p>
-<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mv</span> <span class="pre">-vu</span> <span class="pre">multi/*</span> <span class="pre">multi2</span></code>, mueve todo el contenido de la carpeta multi a multi2, siempre y cuando, en la carpeta multi2 no existan, no así la carpeta multi.</p>
+<p><code class="docutils literal notranslate"><span class="pre">--help</span></code> Mostrar la ayuda de este comando.</p>
+<p>Según la nota de la man page, es posible que la terminal instalada tenga su propia versión de este comando “pwd”; por lo tanto, para asegurarnos de cual versión de este comando estamos usando al escribirlo en la terminal, bastaría con buscarlo con el comando “whereis pwd”. Cada emulador de terminal tendrá sus características particulares, estos son algunos nombres de emuladores de terminales: “GNOME Terminal (mi favorito)”, “xfce4-terminal”, “xterm”, “Terminator”, entre otros.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pwd</span></code>, mostrar la ruta completa del directorio actual en el que estamos trabajando dentro de un emulador de terminal.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">whereis</span> <span class="pre">pwd</span></code>, este comando solo nos sirve para identificar en dónde se encuentra instalado el comando “pwd”.</p>
 </div>
 
 
@@ -221,10 +219,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="rm.html" class="btn btn-neutral float-right" title="Eliminar carpetas y archivos &gt; rm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../unidadesalmacenamiento.html" class="btn btn-neutral float-right" title="Unidades de Almacenamiento" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cp.html" class="btn btn-neutral float-left" title="Copiar carpetas y archivos &gt; cp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="echo.html" class="btn btn-neutral float-left" title="Leer en pantalla o escribir a un archivo el valor de una variable &gt; echo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

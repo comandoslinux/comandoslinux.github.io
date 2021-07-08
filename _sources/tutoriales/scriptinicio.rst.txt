@@ -62,7 +62,7 @@ recordar guardar dicho escript con el nombre 'setbrightness.sh' y asignarle perm
 
 .. image:: /_static/imgs/script3.png
 
-**Paso 5:** Agregar una regla al archivo '/etc/sudoers' con el comando 'visudo' con el usuario 'root' (hay que abrir una terminal e ingresar las credenciales del usuario root, la cual permitirá guardar el brillo en el archivo 'brightness' con el escript arriba creado y para el usuario ahi mencionado. Ver la imagen de abajo por si alguien no está familiarizado a usar el usuario root y el comando visudo.
+**Paso 5:** Agregar una regla al archivo '/etc/sudoers' con el comando 'visudo' con el usuario 'root' (hay que abrir una terminal e ingresar las credenciales del usuario root), la cual permitirá guardar el brillo en el archivo 'brightness' con el escript arriba creado y para el usuario ahi mencionado. Ver la imagen de abajo por si alguien no está familiarizado a usar el usuario root y el comando visudo.
 
 ::
 

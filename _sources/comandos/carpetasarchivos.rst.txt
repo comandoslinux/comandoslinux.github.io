@@ -26,3 +26,4 @@ Carpetas y Archivos
    carpetasarchivos/cat
    carpetasarchivos/echo
    carpetasarchivos/pwd
+   carpetasarchivos/stat

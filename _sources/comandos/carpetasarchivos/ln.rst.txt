@@ -5,7 +5,7 @@ Crear enlaces entre archivos > ln
 
 **Man page online:** https://linux.die.net/man/1/ln
 
-**Descripción:** Crear enlaces o hipervínculos entre archivos. **Importante:** no acepta varios parámetros a la vez cuando se usa el parámetro '-t'.
+**Descripción:** Crear enlaces o hipervínculos entre archivos. **Importante:** no acepta varios parámetros a la vez cuando se usa el parámetro '-t'. Los dos tipos de enlaces importantes son 'enlaces simbólicos' y 'enlaces duros', la diferencia entre ellos es que el enlace simbólico queda en estado 'roto o inservible' una vez el archivo original haya sido eliminado, mientras que el enlace duro sigue funcional y actualizado con la última data que tenía el archivo original. Los enlaces a archivos son muy importantes porque se evitan las copias de un archivo que se modifica constantemente y dicho archivo se puede modificar desde diferentes lugares. Los enlaces duros tienen la desventaja que no se puede localizar la ubicación del archivo original; en los enlaces simbólicos por otro lado, es fácil encontrar su ubicación con 'ls -l' o 'readlink -f'. Para identificar si un archivo tiene enlaces se puede usar el comando 'stat archivo.txt', en donde si dice que enlaces es mayor que 1, esto quiere decir que sí tiene enlaces. Hay un indicador que se llama 'inode', el cual es un número que se muestra al usar el comando 'stat', en el caso de los enlaces de un archivo, todos ellos comparten el mismo inode; lo cual significa que son la misma cosa.
 
 **Man page local:** ``$ man ln`` o ``$ man ln > ln.txt``
 
@@ -21,10 +21,12 @@ Crear enlaces entre archivos > ln
 
 ``-t, --target-directory=DIRECTORY`` Especifica el DIRECTORIO en el cual crear los enlaces.
 
+``-P, --physical`` Realizar enlaces duros. El comportamiento por defecto es crear un enlace duro, así que este parámetro sería opcional y solo sirve como descripción que se está creando un enlace duro.
+
 ``-v, --verbose`` Imprimir el nombre de cada archivo vinculado.
 
 
-**Ejemplo 1:** ``$ ln -t Desktop Desktop/hola/hola.txt``, en este ejemplo se creará un enlace al archivo hola.txt con el mismo nombre y dicho enlace se guardará en la ruta /home/currentuser/Desktop.
+**Ejemplo 1:** ``$ ln -t Desktop Desktop/hola/hola.txt``, en este ejemplo se creará un enlace duro al archivo hola.txt con el mismo nombre y dicho enlace se guardará en la ruta /home/currentuser/Desktop.
 
 **Ejemplo 2:** ``$ ln -vs hola/hola.txt holaLink``, en este ejemplo se creará un enlace simbólico al archivo hola.txt con el nombre de holaLink.
 

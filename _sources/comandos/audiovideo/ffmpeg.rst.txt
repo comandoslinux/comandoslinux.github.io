@@ -11,7 +11,7 @@ Estos comandos serán de utilidad a la hora de usar ffmpeg:
 
 '$ ffmpeg -version', ver la versión de ffmpeg y confirmar si se compiló correctamente.
 
-'$ ffprobe Alizee.mkv', ver el formato original del audio y video del archivo.
+'$ ffprobe Alizee.mkv', ver el formato original del audio y video del archivo. Hay mucha información contenida en los metadatos de los audios y videos y solo se pueden visualizar con este comando u otra aplicación especializada en metadatos.
 
 '$ ffmpeg -formats', ver los formatos soportados.
 
@@ -59,9 +59,9 @@ https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu#FFmpeg
 
 ``-i url (input)`` Especificar la ubicación y nombre del archivo de audio o video.
 
-``-acodec codec (input/output)`` Configurar el codec de audio. Para ver los codecs soportados '$ ffmpeg -encoders'. Se recomienda siempre agregar el codec para evitar perder calidad en el video.
+``-acodec codec (input/output)`` Configurar el codec de audio. Para ver los codecs soportados '$ ffmpeg -encoders'. Se recomienda siempre agregar el codec para evitar perder calidad en el audio.
 
-``-vcodec codec (output)`` Configurar el codec de video. Para ver los codecs soportados '$ ffmpeg -encoders'. Se recomienda siempre agregar el codec para evitar perder calidad en el audio.
+``-vcodec codec (output)`` Configurar el codec de video. Para ver los codecs soportados '$ ffmpeg -encoders'. Se recomienda siempre agregar el codec para evitar perder calidad en el video.
 
 ``Stream copy`` Hace que ffmpeg omita el paso de decodificación y codificación para la secuencia especificada, por lo que solo hace demuxing y muxing. Dado que no hay decodificación ni codificación, es muy rápido y no hay pérdida de calidad. Sin embargo, es posible que no funcione en algunos casos debido a muchos factores.
 
@@ -71,3 +71,5 @@ https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu#FFmpeg
 **Ejemplo 2:** ``$ ffmpeg -i Alizee.mkv -acodec aac Alizee.aac``, extraer el audio de un video al formato 'aac', en este caso el video 'Alizee.mkv' lo convierto a 'Alizee.aac' extrayendo su audio únicamente. 
  
 **Ejemplo 3:** ``$ ffmpeg -i Alizee.mkv -acodec mp3 Alizee.mp3``, extraer el audio de un video al formato universal 'mp3'. El ffmpeg que viene con la distro trae desactivado el LAME (--enable-libmp3lame), por tal razón mostrará un mensaje de error y pedirá que se active y eso solo se puede configurar al compilar una nueva versión de ffmpeg.
+
+**Ejemplo 4:** ``$ ffmpeg -i Alizee.mkv -map_metadata 0 -metadata title="" -acodec copy -vcodec copy Alizee2.mkv``, después de revisar los metadatos de algún video, puede ser que alguno de esos datos los querramos eliminar, en este ejemplo elimino el título de los metadatos y el resto de datos los dejo igual (si se quiere eliminar todos los metadatos habrá que agregarle -1 al parámetro -map_metadata en vez de 0). No soy experto en edición, ni mucho menos creación de videos o audios, así que no se como es su estructura. Resulta que cuando le quité el título a un video, dicho video tenía subtítulos incorporados y se activaron. 

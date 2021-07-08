@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Convertir documentos pdf a imágenes (.jpg o .png) &gt; pdftoppm &mdash; documentación de TerminalLinux - 0.2</title>
+  <title>Mostrar el estado de un archivo o carpeta &gt; stat &mdash; documentación de TerminalLinux - 0.2</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Convertir imágenes a un archivo pdf &gt; img2pdf" href="img2pdf.html" />
-    <link rel="prev" title="Estimar el peso en disco de archivos y carpetas &gt; du" href="du.html" /> 
+    <link rel="next" title="Unidades de Almacenamiento" href="../unidadesalmacenamiento.html" />
+    <link rel="prev" title="Imprimir el nombre del directorio actual de trabajo &gt; pwd" href="pwd.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -110,14 +110,14 @@
 <li class="toctree-l3"><a class="reference internal" href="diff.html">Comparar dos archivos &gt; diff</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ln.html">Crear enlaces entre archivos &gt; ln</a></li>
 <li class="toctree-l3"><a class="reference internal" href="du.html">Estimar el peso en disco de archivos y carpetas &gt; du</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Convertir documentos pdf a imágenes (.jpg o .png) &gt; pdftoppm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdftoppm.html">Convertir documentos pdf a imágenes (.jpg o .png) &gt; pdftoppm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="img2pdf.html">Convertir imágenes a un archivo pdf &gt; img2pdf</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pdfunite.html">Combine dos o más archivos pdf en uno solo &gt; pdfunite</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sort.html">Ordenar el contenido de archivos de texto y crear lista de reproducción de videos &gt; sort</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cat.html">Leer-crear archivos desde la terminal &gt; cat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="echo.html">Leer en pantalla o escribir a un archivo el valor de una variable &gt; echo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pwd.html">Imprimir el nombre del directorio actual de trabajo  &gt; pwd</a></li>
-<li class="toctree-l3"><a class="reference internal" href="stat.html">Mostrar el estado de un archivo o carpeta &gt; stat</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Mostrar el estado de un archivo o carpeta &gt; stat</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
@@ -178,13 +178,13 @@
         
           <li><a href="../carpetasarchivos.html">Carpetas y Archivos</a> &raquo;</li>
         
-      <li>Convertir documentos pdf a imágenes (.jpg o .png) &gt; pdftoppm</li>
+      <li>Mostrar el estado de un archivo o carpeta &gt; stat</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/comandos/carpetasarchivos/pdftoppm.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/comandos/carpetasarchivos/stat.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -197,21 +197,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="convertir-documentos-pdf-a-imagenes-jpg-o-png-pdftoppm">
-<h1>Convertir documentos pdf a imágenes (.jpg o .png) &gt; pdftoppm<a class="headerlink" href="#convertir-documentos-pdf-a-imagenes-jpg-o-png-pdftoppm" title="Enlazar permanentemente con este título">¶</a></h1>
-<p><strong>Nombre del comando:</strong> pdftoppm</p>
-<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/pdftoppm">https://linux.die.net/man/1/pdftoppm</a></p>
-<p><strong>Descripción:</strong> Convierte documentos pdf a imágenes en formatos .jpg o .png. Fácil de usar para convertir archivos completos en pdf a una serie de imágenes con alta calidad. Este comando tiene muchas opciones interesantes, si trabajas con imágenes todo el tiempo, recomendaría que pruebes dichas opciones, leyendo la man page por supuesto.</p>
-<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">pdftoppm</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">pdftoppm</span> <span class="pre">&gt;</span> <span class="pre">pdftoppm.txt</span></code></p>
+  <div class="section" id="mostrar-el-estado-de-un-archivo-o-carpeta-stat">
+<h1>Mostrar el estado de un archivo o carpeta &gt; stat<a class="headerlink" href="#mostrar-el-estado-de-un-archivo-o-carpeta-stat" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nombre del comando:</strong> stat</p>
+<p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/stat">https://linux.die.net/man/1/stat</a></p>
+<p><strong>Descripción:</strong> Muestra información relevante de un archivo o carpeta, tales como, fechas del archivo, número “inode”, número de enlaces (mayores a 1 indica que sí tiene enlaces simbólicos o duros), el tipo de archivo, entre otros datos útiles. Este comando es importante para identificar el origen de un archivo, por ejemplo, la mayoría de distros linux usan “python” para realizar diferentes tareas en dicha distro y por ende siempre traen como mínimo una versión de python instalada por defecto, entonces, si queremos investigar dónde están guardados y qué tipos de archivos son habrá que usar este comando junto con otros para averiguarlo. Estos son los comandos que usé para identificar algunas cosas sobre la versión de python que venía instalada en mi distro: “python3 –version”, “whereis python3”, “find /usr/bin -iname «python3»”, “ls -l /usr/bin/python3”, “readlink -f /usr/bin/python3”, “file -bi /usr/bin/python3”. En conclusión, son varios comandos los que hay conocer para averiguar cosas específicas de un archivo.</p>
+<p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">stat</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">stat</span> <span class="pre">&gt;</span> <span class="pre">stat.txt</span></code></p>
 <p><strong>Instalado por defecto:</strong> Sí, al menos en Linux Mint.</p>
-<img alt="../../_images/pdftoppm.png" src="../../_images/pdftoppm.png" />
+<img alt="../../_images/stat.png" src="../../_images/stat.png" />
 <p><strong>Algunas Opciones:</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">-png</span></code> Convierte el archivo .pdf a imágenes con formato .png.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-jpeg</span></code> Convierte el archivo .pdf a imágenes con formato .jpg.</p>
-<p><code class="docutils literal notranslate"><span class="pre">-f</span> <span class="pre">number</span></code> Elija el número por el cual quiere comenzar a convertir el documento .pdf al formato de imagen seleccionado. Por ejemplo, si mi .pdf tiene 25 páginas  y quiero comenzar a convertir desde la página 15 hasta la 25, entonces debería agregar “-f 15”; lo cual ignoraría las primeras 14 páginas y no las convertirá. Ver los ejemplos más abajo para mayor detalle.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pdftoppm</span> <span class="pre">-jpeg</span> <span class="pre">EnglishVerbsComplete.pdf</span> <span class="pre">englishverbs</span></code>, convierta todo el documento “EnglishVerbsComplete.pdf” a imágenes en formato .jpg.</p>
-<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pdftoppm</span> <span class="pre">-f</span> <span class="pre">15</span> <span class="pre">-png</span> <span class="pre">EnglishVerbsComplete.pdf</span> <span class="pre">englishverbs</span></code>, convierta desde la 15 hasta la última página del documento “EnglishVerbsComplete.pdf” a imágenes en formato .png. Las primeras 14 páginas son ignoradas.</p>
-<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pdftoppm</span> <span class="pre">-l</span> <span class="pre">15</span> <span class="pre">-png</span> <span class="pre">EnglishVerbsComplete.pdf</span> <span class="pre">englishverbs</span></code>, convierta desde la 1 hasta la 15 página del documento “EnglishVerbsComplete.pdf” a imágenes en formato .png. Las páginas desde la 15 hasta la última de dicho documento son ignoradas.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-f,</span> <span class="pre">--file-system</span></code>  Muestra el estado del sistema de ficheros en lugar del estado del fichero.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-c</span>&#160; <span class="pre">--format=FORMAT</span></code> Usa el FORMATO especificado en vez del predeterminado; muestra una nueva línea después de cada uso del FORMATO.</p>
+<p><code class="docutils literal notranslate"><span class="pre">--version</span></code> Informa de la versión y finaliza.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">stat</span> <span class="pre">/usr/bin/python3</span></code>, en este ejemplo quiero saber qué tipo de archivo es este python3. Al usar el comando “stat” sin parámetros me da la información que necesito sobre dicho archivo. Me dice que es un enlace simbólico que hace referencia a un archivo “python3.8”, que su número inode es “4195477”, que la fecha de modificación fue “2020-07-03 10:59:44.595306090 -0600”, entre otros datos.</p>
+<p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">stat</span> <span class="pre">$HOME/Escritorio</span></code>, en este ejemplo quiero conocer información de la carpeta “Escritorio” de mi usuario, dice que es un directorio, que su número inode es “16515113”, que la fecha de modificación fue “2021-06-30 05:36:35.803209918 -0600”, entre otros datos.</p>
+<p><strong>Ejemplo 3:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">stat</span> <span class="pre">-c</span> <span class="pre">%h-%i-%F-%y</span> <span class="pre">/etc/lsb-release</span></code>, en este ejemplo quiero la siguiente información de este archivo (el cual guarda información de la versión del Sistema Operativo) que se crea al instalar la distro: el número de enlaces “1”, el número inode “4718787”, el tipo de archivo “fichero regular” y la fecha en que se modificó “2020-04-09 05:44:08.000000000 -0600”.</p>
 </div>
 
 
@@ -222,10 +222,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="img2pdf.html" class="btn btn-neutral float-right" title="Convertir imágenes a un archivo pdf &gt; img2pdf" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../unidadesalmacenamiento.html" class="btn btn-neutral float-right" title="Unidades de Almacenamiento" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="du.html" class="btn btn-neutral float-left" title="Estimar el peso en disco de archivos y carpetas &gt; du" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pwd.html" class="btn btn-neutral float-left" title="Imprimir el nombre del directorio actual de trabajo &gt; pwd" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

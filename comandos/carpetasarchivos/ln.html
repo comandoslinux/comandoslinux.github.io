@@ -117,6 +117,7 @@
 <li class="toctree-l3"><a class="reference internal" href="cat.html">Leer-crear archivos desde la terminal &gt; cat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="echo.html">Leer en pantalla o escribir a un archivo el valor de una variable &gt; echo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pwd.html">Imprimir el nombre del directorio actual de trabajo  &gt; pwd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stat.html">Mostrar el estado de un archivo o carpeta &gt; stat</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../unidadesalmacenamiento.html">Unidades de Almacenamiento</a></li>
@@ -200,15 +201,16 @@
 <h1>Crear enlaces entre archivos &gt; ln<a class="headerlink" href="#crear-enlaces-entre-archivos-ln" title="Enlazar permanentemente con este título">¶</a></h1>
 <p><strong>Nombre del comando:</strong> ln</p>
 <p><strong>Man page online:</strong> <a class="reference external" href="https://linux.die.net/man/1/ln">https://linux.die.net/man/1/ln</a></p>
-<p><strong>Descripción:</strong> Crear enlaces o hipervínculos entre archivos. <strong>Importante:</strong> no acepta varios parámetros a la vez cuando se usa el parámetro “-t”.</p>
+<p><strong>Descripción:</strong> Crear enlaces o hipervínculos entre archivos. <strong>Importante:</strong> no acepta varios parámetros a la vez cuando se usa el parámetro “-t”. Los dos tipos de enlaces importantes son “enlaces simbólicos” y “enlaces duros”, la diferencia entre ellos es que el enlace simbólico queda en estado “roto o inservible” una vez el archivo original haya sido eliminado, mientras que el enlace duro sigue funcional y actualizado con la última data que tenía el archivo original. Los enlaces a archivos son muy importantes porque se evitan las copias de un archivo que se modifica constantemente y dicho archivo se puede modificar desde diferentes lugares. Los enlaces duros tienen la desventaja que no se puede localizar la ubicación del archivo original; en los enlaces simbólicos por otro lado, es fácil encontrar su ubicación con “ls -l” o “readlink -f”. Para identificar si un archivo tiene enlaces se puede usar el comando “stat archivo.txt”, en donde si dice que enlaces es mayor que 1, esto quiere decir que sí tiene enlaces. Hay un indicador que se llama “inode”, el cual es un número que se muestra al usar el comando “stat”, en el caso de los enlaces de un archivo, todos ellos comparten el mismo inode; lo cual significa que son la misma cosa.</p>
 <p><strong>Man page local:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ln</span></code> o <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">man</span> <span class="pre">ln</span> <span class="pre">&gt;</span> <span class="pre">ln.txt</span></code></p>
 <p><strong>Instalado por defecto:</strong> Sí, al menos en Debian.</p>
 <img alt="../../_images/ln.png" src="../../_images/ln.png" />
 <p><strong>Algunas Opciones:</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">-s,</span> <span class="pre">--symbolic</span></code> Realizar enlaces simbólicos en lugar de enlaces duros.</p>
 <p><code class="docutils literal notranslate"><span class="pre">-t,</span> <span class="pre">--target-directory=DIRECTORY</span></code> Especifica el DIRECTORIO en el cual crear los enlaces.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-P,</span> <span class="pre">--physical</span></code> Realizar enlaces duros. El comportamiento por defecto es crear un enlace duro, así que este parámetro sería opcional y solo sirve como descripción que se está creando un enlace duro.</p>
 <p><code class="docutils literal notranslate"><span class="pre">-v,</span> <span class="pre">--verbose</span></code> Imprimir el nombre de cada archivo vinculado.</p>
-<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ln</span> <span class="pre">-t</span> <span class="pre">Desktop</span> <span class="pre">Desktop/hola/hola.txt</span></code>, en este ejemplo se creará un enlace al archivo hola.txt con el mismo nombre y dicho enlace se guardará en la ruta /home/currentuser/Desktop.</p>
+<p><strong>Ejemplo 1:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ln</span> <span class="pre">-t</span> <span class="pre">Desktop</span> <span class="pre">Desktop/hola/hola.txt</span></code>, en este ejemplo se creará un enlace duro al archivo hola.txt con el mismo nombre y dicho enlace se guardará en la ruta /home/currentuser/Desktop.</p>
 <p><strong>Ejemplo 2:</strong> <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ln</span> <span class="pre">-vs</span> <span class="pre">hola/hola.txt</span> <span class="pre">holaLink</span></code>, en este ejemplo se creará un enlace simbólico al archivo hola.txt con el nombre de holaLink.</p>
 </div>
 

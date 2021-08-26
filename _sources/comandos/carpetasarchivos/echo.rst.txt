@@ -5,7 +5,7 @@ Leer en pantalla o escribir a un archivo el valor de una variable > echo
 
 **Man page online:** https://linux.die.net/man/1/echo
 
-**Descripción:** Mostrar una línea de texto. Este comando es muy útil para imprimir información de ayuda al usuario para que sepa lo que una aplicación está haciendo; dicha información por lo general se almacena en variables temporales o permanentes, las cuales fueron creadas por la distro o definidas por el usuario. Algunas variables de entorno muy importantes que se crearon al instalar la distro son: '$PATH', '$HOME', '$USER', '$PWD', '$SHELL', '$TERM', '$LANG', '$HOSTNAME', '$RANDOM'. No olvidar que en linux sí importa distinguir entre mayúsculas y minúsculas. Lo recomendable es que el texto a imprimir con este comando esté encerrado en comillas ('texto así') normales. El símbolo de dólar '$' le indica al comando echo que lo que se quiere imprmir es una variable o parámetro.
+**Descripción:** Mostrar una línea de texto. Este comando es muy útil para imprimir información de ayuda al usuario para que sepa lo que una aplicación está haciendo; dicha información por lo general se almacena en variables temporales o permanentes, las cuales fueron creadas por la distro o definidas por el usuario. Algunas variables de entorno muy importantes que se crearon al instalar la distro son: '$PATH', '$HOME', '$USER', '$PWD', '$SHELL', '$TERM', '$LANG', '$HOSTNAME', '$RANDOM'. No olvidar que en linux sí importa distinguir entre mayúsculas y minúsculas. Lo recomendable es que el texto a imprimir con este comando esté encerrado en comillas ('texto así') normales. El símbolo de dólar '$' le indica al comando echo que lo que se quiere imprimir es una variable o parámetro.
 
 **Man page local:** ``$ man echo`` o ``$ man echo > echo.txt``
 

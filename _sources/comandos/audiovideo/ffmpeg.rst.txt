@@ -72,4 +72,24 @@ https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu#FFmpeg
  
 **Ejemplo 3:** ``$ ffmpeg -i Alizee.mkv -acodec mp3 Alizee.mp3``, extraer el audio de un video al formato universal 'mp3'. El ffmpeg que viene con la distro trae desactivado el LAME (--enable-libmp3lame), por tal razón mostrará un mensaje de error y pedirá que se active y eso solo se puede configurar al compilar una nueva versión de ffmpeg.
 
-**Ejemplo 4:** ``$ ffmpeg -i Alizee.mkv -map_metadata 0 -metadata title="" -acodec copy -vcodec copy Alizee2.mkv``, después de revisar los metadatos de algún video, puede ser que alguno de esos datos los querramos eliminar, en este ejemplo elimino el título de los metadatos y el resto de datos los dejo igual (si se quiere eliminar todos los metadatos habrá que agregarle -1 al parámetro -map_metadata en vez de 0). No soy experto en edición, ni mucho menos creación de videos o audios, así que no se como es su estructura. Resulta que cuando le quité el título a un video, dicho video tenía subtítulos incorporados y se activaron. 
+**Ejemplo 4:** ``$ ffmpeg -i Alizee.mkv -map_metadata 0 -metadata title="" -acodec copy -vcodec copy Alizee2.mkv``, después de revisar los metadatos de algún video, puede ser que alguno de esos datos los querramos eliminar, en este ejemplo elimino el título de los metadatos y el resto de datos los dejo igual (si se quiere eliminar todos los metadatos habrá que agregarle -1 al parámetro -map_metadata en vez de 0). No soy experto en edición, ni mucho menos creación de videos o audios, así que no se como es su estructura. Resulta que cuando le quité el título a un video, dicho video tenía subtítulos incorporados y se activaron.
+
+**Ejemplo 5:** Unir varios archivos de audio, que tengan el mismo formato.
+
+::
+
+   $ cd ManyAudiosFolder
+   
+   $ wavlist=`find *.wav | sort -n`
+   
+   $ while read line; do echo "file "${line}; done <<< "$wavlist" > wavlist.txt
+   
+   $ ffmpeg -f concat -safe 0 -i wavlist.txt -c copy AudiosMerged.wav
+   
+   Nota: verificar que wavlist.txt tenga la siguiente estructura
+   
+   file Audio1.waw
+   file Audio2.waw
+   file Audio3.waw
+   
+en este ejemplo primero hago un cd a la carpeta que contiene los archivos de audio que quiero unir, segundo creo una variable temporal para guardar los archivos de audio en una lista ordenada, tercero recorro dicha lista para asignarle la palabra 'file' a cada línea (es necesaria) y el cuarto y último paso es el que hace la magia de unir los achivos de audio contenidos en el archivo 'wavlist.txt' en uno solo 'AudiosMerged.wav'.

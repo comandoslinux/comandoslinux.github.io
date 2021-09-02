@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Resolver problemas usando la TTY &mdash; documentación de TerminalLinux - 0.2</title>
+  <title>Bash script para crear audio libros &mdash; documentación de TerminalLinux - 0.2</title>
   
 
   
@@ -42,8 +42,7 @@
     
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="Reproducir música desde la terminal" href="mpv.html" />
-    <link rel="prev" title="Desactivar/Activar sistema de arranque EFI" href="desactivarefimokutil.html" /> 
+    <link rel="prev" title="Ejecutar script al iniciar sesión con sudo" href="scriptinicio.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,11 +95,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../tutoriales.html">Lista de pequeños videotutoriales</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="formatearusbdisco.html">Formatear una usb o disco duro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desactivarefimokutil.html">Desactivar/Activar sistema de arranque EFI</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Resolver problemas usando la TTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tty.html">Resolver problemas usando la TTY</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mpv.html">Reproducir música desde la terminal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="varioscomandosalavez.html">Ejecutar varios comandos en una instrucción</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scriptinicio.html">Ejecutar script al iniciar sesión con sudo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="createaudioscript.html">Bash script para crear audio libros</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Bash script para crear audio libros</a></li>
 </ul>
 </li>
 </ul>
@@ -153,7 +152,7 @@
         
           <li><a href="../tutoriales.html">Lista de pequeños videotutoriales</a> &raquo;</li>
         
-      <li>Resolver problemas usando la TTY</li>
+      <li>Bash script para crear audio libros</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -170,38 +169,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="resolver-problemas-usando-la-tty">
-<h1>Resolver problemas usando la TTY<a class="headerlink" href="#resolver-problemas-usando-la-tty" title="Enlazar permanentemente con este título">¶</a></h1>
+  <div class="section" id="bash-script-para-crear-audio-libros">
+<h1>Bash script para crear audio libros<a class="headerlink" href="#bash-script-para-crear-audio-libros" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Ver el video</p>
-<p><a class="reference external" href="https://youtu.be/JX7JR91DlsM">https://youtu.be/JX7JR91DlsM</a></p>
-<p><strong>¿Qué es esto de la tty?</strong></p>
-<p>En pocas palabras no es más que la terminal que usamos constantemente, con la diferencia, que al entrar en la tty no existe GUI (Grafical User Interface) y solo interactuamos con la computadora a nivel de texto; o sea, a la antigua a puro comandos únicamente usando el teclado. Esto es vital porque en ocaciones tenemos que resolver problemas ya que nuestra GUI Desktop (GNOME, KDE, Cinnamon, MATE, Unity, Xfce, etc.) se queda congelada y no podemos interactuar con ella gráficamente.</p>
-<p><strong>¿Cómo entro a la tty?</strong></p>
-<p>Hay varias tty’s a las que se puede acceder con la combinación de teclas siguientes:</p>
-<p>TTY1: Ctrl + Alt + F1</p>
-<p>TTY2: Ctrl + Alt + F2</p>
-<p>TTY3: Ctrl + Alt + F3</p>
-<p>Abrir una terminal y ejecutar el siguiente comando:</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chvt</span> <span class="pre">3</span></code></p>
-<p><strong>¿Cómo salgo de la tty?</strong></p>
-<p>Por lo general se sale de las tty’s con la combinación de teclado siguiente:</p>
-<p>Ctrl + Alt + F7</p>
-<p>Abrir una terminal y ejecutar el siguiente comando:</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chvt</span> <span class="pre">7</span></code></p>
-<p>Pero como ya conocemos algunos comandos, tales como cp, mv, rm, ls, dir, etc., fácilmente podemos interactuar con la tty. Cuando la GUI Desktop se congela por lo general al reiniciar la computadora se resuelve el problema, pero de no ser así, entonces habrá que hacer uso de nuestros conocimentos adquiridos para, por lo menos realizar un respaldo de la información de nuestra computadora, todo esto se puede hacer dentro de la tty. Los comandos a usar en este video tutorial son los siguientes:</p>
-<p><strong>mount, umount, dir, ls, du, lsblk, cp, shudown</strong></p>
+<p><a class="reference external" href="https://youtu.be/OJHT9ZJtdrU">https://youtu.be/OJHT9ZJtdrU</a></p>
+<p>Descargar el proyecto y seguir las indicaciones de README.md</p>
+<p><a class="reference external" href="https://github.com/comandoslinux/createaudios">https://github.com/comandoslinux/createaudios</a></p>
+<p><strong>¿Por qué molestarme para hacer esto?</strong></p>
+<p>Si has llegado aquí es porque te gusta el mundo linux y toda la libertad que ofrece; cualquiera puede copiar y pegar un comando, pero no sabría toda la capacidad que el lenguaje de programación bash tiene hasta que cree algo como producto final. Muchas cosas se pueden aprender con los audio libros: por entretenimiento, entender un tema en particular, aprender un nuevo idioma, en fin son muchos los usos. Se absorbe más el contenido de un libro con un audio libro que simplemente leerlo y, además es más práctico.</p>
 <p>Ver los pasos</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Usando la tty
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Procedimiento</span> <span class="n">a</span> <span class="n">seguir</span>
 
 
-1. Leer la man page del comando a usar, por si no nos acordamos de los parámetros
-     $ man shutdown
+<span class="mf">1.</span> <span class="n">Crear</span> <span class="n">un</span> <span class="n">archivo</span><span class="o">.</span><span class="n">txt</span> <span class="n">conteniendo</span> <span class="n">el</span> <span class="n">libro</span> <span class="n">que</span> <span class="n">se</span> <span class="n">quiere</span> <span class="n">convertir</span> <span class="n">a</span> <span class="n">audio</span>
 
-2. Realizar respaldo de información valiosa en un disco duro externo o usb
-     $ sudo cp -vR /media/usuario/carpeta /mnt o /media/usuario/usb
 
-3. Reiniciar la computadora
-     $ sudo shutdown -r now
+<span class="mf">2.</span> <span class="n">Ejecutar</span> <span class="n">el</span> <span class="n">script</span> <span class="p">(</span><span class="n">VerifyBooktxt</span><span class="o">.</span><span class="n">sh</span><span class="p">)</span> <span class="n">para</span> <span class="n">verificar</span> <span class="n">que</span> <span class="n">el</span> <span class="n">texto</span> <span class="n">esté</span> <span class="n">bien</span> <span class="n">formateado</span>
+
+
+<span class="mf">3.</span> <span class="n">Ejecutar</span> <span class="n">el</span> <span class="n">script</span> <span class="p">(</span><span class="n">CreateAudios</span><span class="o">.</span><span class="n">sh</span><span class="p">)</span> <span class="n">para</span> <span class="n">crear</span> <span class="n">los</span> <span class="n">audios</span>
+
+
+<span class="mf">4.</span> <span class="n">Unir</span> <span class="n">los</span> <span class="n">archivos</span> <span class="n">de</span> <span class="n">audio</span> <span class="n">creados</span> <span class="p">(</span><span class="n">MergeAudios</span><span class="o">.</span><span class="n">md</span><span class="p">)</span> <span class="n">para</span> <span class="n">tener</span> <span class="n">solo</span> <span class="n">un</span> <span class="n">archivo</span>
+
+
+<span class="mf">5.</span> <span class="n">Eliminar</span> <span class="n">los</span> <span class="n">archivos</span> <span class="n">innecesarios</span> <span class="p">(</span><span class="n">MergeAudios</span><span class="o">.</span><span class="n">md</span><span class="p">)</span> <span class="n">una</span> <span class="n">vez</span> <span class="n">se</span> <span class="n">tenga</span> <span class="n">el</span> <span class="n">audiolibro</span><span class="o">.</span><span class="n">wav</span> <span class="n">perfecto</span>
 </pre></div>
 </div>
 </div>
@@ -212,8 +204,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="mpv.html" class="btn btn-neutral float-right" title="Reproducir música desde la terminal" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="desactivarefimokutil.html" class="btn btn-neutral float-left" title="Desactivar/Activar sistema de arranque EFI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="scriptinicio.html" class="btn btn-neutral float-left" title="Ejecutar script al iniciar sesión con sudo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
     </div>
 
   <hr/>

@@ -1,8 +1,0 @@
-Audio y Video
-=============
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Tabla de Contenido:
-	
-   audiovideo/ffmpeg
